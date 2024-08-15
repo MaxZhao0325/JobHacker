@@ -1,0 +1,56 @@
+2024-08-13 15:48:03 [main] INFO  c.j.j.t.k.s.JobToKafkaServiceApplication - Starting JobToKafkaServiceApplication using Java 17.0.12 with PID 60976 (/Users/zhaohanzhang/Desktop/job-hacker/job-to-kafka-service/target/classes started by zhaohanzhang in /Users/zhaohanzhang/Desktop/job-hacker)
+2024-08-13 15:48:03 [main] INFO  c.j.j.t.k.s.JobToKafkaServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2024-08-13 15:48:03 [main] INFO  c.j.j.t.k.s.JobToKafkaServiceApplication - Started JobToKafkaServiceApplication in 0.259 seconds (process running for 0.506)
+2024-08-13 15:48:03 [main] INFO  c.j.j.t.k.s.JobToKafkaServiceApplication - JobToKafkaServiceApplication started
+2024-08-13 15:48:03 [main] INFO  c.j.j.t.k.s.JobToKafkaServiceApplication - [Java, Microservices, Kafka, Elasticsearch]
+2024-08-13 15:48:46 [main] INFO  c.j.j.t.k.s.JobToKafkaServiceApplication - Starting JobToKafkaServiceApplication using Java 17.0.12 with PID 61008 (/Users/zhaohanzhang/Desktop/job-hacker/job-to-kafka-service/target/classes started by zhaohanzhang in /Users/zhaohanzhang/Desktop/job-hacker)
+2024-08-13 15:48:46 [main] INFO  c.j.j.t.k.s.JobToKafkaServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2024-08-13 15:48:47 [main] INFO  c.j.j.t.k.s.JobToKafkaServiceApplication - Started JobToKafkaServiceApplication in 0.3 seconds (process running for 0.519)
+2024-08-13 15:48:47 [main] INFO  c.j.j.t.k.s.JobToKafkaServiceApplication - Hello microservices!
+2024-08-13 15:48:47 [main] INFO  c.j.j.t.k.s.JobToKafkaServiceApplication - [Java, Microservices, Kafka, Elasticsearch]
+2024-08-13 17:05:47 [main] INFO  c.j.j.t.k.s.JobToKafkaServiceApplication - Starting JobToKafkaServiceApplication using Java 17.0.12 with PID 61890 (/Users/zhaohanzhang/Desktop/job-hacker/job-to-kafka-service/target/classes started by zhaohanzhang in /Users/zhaohanzhang/Desktop/job-hacker)
+2024-08-13 17:05:47 [main] INFO  c.j.j.t.k.s.JobToKafkaServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2024-08-13 17:05:47 [main] INFO  c.j.j.t.k.s.JobToKafkaServiceApplication - Started JobToKafkaServiceApplication in 0.243 seconds (process running for 0.68)
+2024-08-13 17:05:47 [main] INFO  c.j.j.t.k.s.JobToKafkaServiceApplication - Hello microservices!
+2024-08-13 17:05:47 [main] INFO  c.j.j.t.k.s.JobToKafkaServiceApplication - [Java, Microservices, Kafka, Elasticsearch]
+2024-08-13 17:05:47 [main] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Starting mock job posting stream
+2024-08-13 17:05:47 [pool-2-thread-1] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Generated mock job posting: DevOps Engineer at TechCorp
+2024-08-13 17:05:47 [pool-2-thread-1] INFO  c.j.j.t.k.s.l.NewJobPostedEventPublisher - DevOps Engineer TechCorp 1723539947565 https://TechCorp/jobs.example.com/apply/329
+2024-08-13 17:05:52 [pool-2-thread-1] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Generated mock job posting: Backend Developer at AlgoSoft
+2024-08-13 17:05:52 [pool-2-thread-1] INFO  c.j.j.t.k.s.l.NewJobPostedEventPublisher - Backend Developer AlgoSoft 1723539952572 https://AlgoSoft/jobs.example.com/apply/939
+2024-08-13 17:05:57 [pool-2-thread-1] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Generated mock job posting: Data Scientist at InnovateX
+2024-08-13 17:05:57 [pool-2-thread-1] INFO  c.j.j.t.k.s.l.NewJobPostedEventPublisher - Data Scientist InnovateX 1723539957578 https://InnovateX/jobs.example.com/apply/489
+2024-08-13 17:06:02 [pool-2-thread-1] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Generated mock job posting: DevOps Engineer at TechCorp
+2024-08-13 17:06:02 [pool-2-thread-1] INFO  c.j.j.t.k.s.l.NewJobPostedEventPublisher - DevOps Engineer TechCorp 1723539962581 https://TechCorp/jobs.example.com/apply/464
+2024-08-13 17:06:07 [pool-2-thread-1] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Generated mock job posting: DevOps Engineer at InnovateX
+2024-08-13 17:06:07 [pool-2-thread-1] INFO  c.j.j.t.k.s.l.NewJobPostedEventPublisher - DevOps Engineer InnovateX 1723539967586 https://InnovateX/jobs.example.com/apply/346
+2024-08-13 17:06:19 [main] INFO  c.j.j.t.k.s.JobToKafkaServiceApplication - Starting JobToKafkaServiceApplication using Java 17.0.12 with PID 61905 (/Users/zhaohanzhang/Desktop/job-hacker/job-to-kafka-service/target/classes started by zhaohanzhang in /Users/zhaohanzhang/Desktop/job-hacker)
+2024-08-13 17:06:19 [main] INFO  c.j.j.t.k.s.JobToKafkaServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2024-08-13 17:06:19 [main] INFO  c.j.j.t.k.s.JobToKafkaServiceApplication - Started JobToKafkaServiceApplication in 0.269 seconds (process running for 0.482)
+2024-08-13 17:06:19 [main] INFO  c.j.j.t.k.s.JobToKafkaServiceApplication - Hello microservices!
+2024-08-13 17:06:19 [main] INFO  c.j.j.t.k.s.JobToKafkaServiceApplication - [Java, Microservices, Kafka, Elasticsearch]
+2024-08-13 17:06:19 [main] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Starting mock job posting stream
+2024-08-13 17:06:19 [pool-2-thread-1] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Generated mock job posting: Fullstack Developer at DevWorks
+2024-08-13 17:06:19 [pool-2-thread-1] INFO  c.j.j.t.k.s.l.NewJobPostedEventPublisher - Fullstack Developer DevWorks 1723539979163 https://DevWorks/jobs.example.com/apply/985
+2024-08-13 17:06:29 [pool-2-thread-1] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Generated mock job posting: Frontend Developer at CyberNext
+2024-08-13 17:06:29 [pool-2-thread-1] INFO  c.j.j.t.k.s.l.NewJobPostedEventPublisher - Frontend Developer CyberNext 1723539989170 https://CyberNext/jobs.example.com/apply/796
+2024-08-13 17:06:39 [pool-2-thread-1] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Generated mock job posting: Cloud Architect at InnovateX
+2024-08-13 17:06:39 [pool-2-thread-1] INFO  c.j.j.t.k.s.l.NewJobPostedEventPublisher - Cloud Architect InnovateX 1723539999173 https://InnovateX/jobs.example.com/apply/33
+2024-08-13 17:21:57 [main] INFO  c.j.j.t.k.s.JobToKafkaServiceApplication - Starting JobToKafkaServiceApplication using Java 17.0.12 with PID 62202 (/Users/zhaohanzhang/Desktop/job-hacker/job-to-kafka-service/target/classes started by zhaohanzhang in /Users/zhaohanzhang/Desktop/job-hacker)
+2024-08-13 17:21:57 [main] INFO  c.j.j.t.k.s.JobToKafkaServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2024-08-13 17:21:58 [main] INFO  c.j.j.t.k.s.JobToKafkaServiceApplication - Started JobToKafkaServiceApplication in 0.247 seconds (process running for 0.663)
+2024-08-13 17:21:58 [main] INFO  c.j.j.t.k.s.JobToKafkaServiceApplication - Hello microservices!
+2024-08-13 17:21:58 [main] INFO  c.j.j.t.k.s.JobToKafkaServiceApplication - [Java, Microservices, Kafka, Elasticsearch]
+2024-08-13 17:21:58 [main] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Starting mock job posting stream
+2024-08-13 17:21:58 [pool-2-thread-1] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Generated mock job posting: DevOps Engineer at DevWorks
+2024-08-13 17:21:58 [pool-2-thread-1] INFO  c.j.j.t.k.s.l.NewJobPostedEventPublisher - DevOps Engineer DevWorks 1723540918020 https://DevWorks/jobs.example.com/apply/558
+2024-08-13 17:22:08 [pool-2-thread-1] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Generated mock job posting: Cloud Architect at AlgoSoft
+2024-08-13 17:22:08 [pool-2-thread-1] INFO  c.j.j.t.k.s.l.NewJobPostedEventPublisher - Cloud Architect AlgoSoft 1723540928026 https://AlgoSoft/jobs.example.com/apply/596
+2024-08-13 20:35:19 [main] INFO  c.j.j.t.k.s.JobToKafkaServiceApplication - Starting JobToKafkaServiceApplication using Java 17.0.12 with PID 65857 (/Users/zhaohanzhang/Desktop/job-hacker/job-to-kafka-service/target/classes started by zhaohanzhang in /Users/zhaohanzhang/Desktop/job-hacker)
+2024-08-13 20:35:19 [main] INFO  c.j.j.t.k.s.JobToKafkaServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2024-08-13 20:35:19 [main] INFO  c.j.j.t.k.s.JobToKafkaServiceApplication - Started JobToKafkaServiceApplication in 0.28 seconds (process running for 0.676)
+2024-08-13 20:35:19 [main] INFO  c.j.j.t.k.s.JobToKafkaServiceApplication - Hello microservices!
+2024-08-13 20:35:19 [main] INFO  c.j.j.t.k.s.JobToKafkaServiceApplication - [Java, Microservices, Kafka, Elasticsearch]
+2024-08-13 20:35:19 [main] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Starting mock job posting stream
+2024-08-13 20:35:19 [pool-2-thread-1] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Generated mock job posting: Cloud Architect at InnovateX
+2024-08-13 20:35:19 [pool-2-thread-1] INFO  c.j.j.t.k.s.l.NewJobPostedEventPublisher - Cloud Architect InnovateX 1723552519527 https://InnovateX/jobs.example.com/apply/617 San Francisco, CA

@@ -1,0 +1,7 @@
+2024-08-13 15:47:42 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.jobhacker.job.to.kafka.service.JobToKafkaServiceApplicationTests]: JobToKafkaServiceApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2024-08-13 15:47:42 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.jobhacker.job.to.kafka.service.JobToKafkaServiceApplication for test class com.jobhacker.job.to.kafka.service.JobToKafkaServiceApplicationTests
+2024-08-13 15:47:42 [main] INFO  c.j.j.t.k.s.JobToKafkaServiceApplicationTests - Starting JobToKafkaServiceApplicationTests using Java 17.0.12 with PID 60943 (started by zhaohanzhang in /Users/zhaohanzhang/Desktop/job-hacker/job-to-kafka-service)
+2024-08-13 15:47:42 [main] INFO  c.j.j.t.k.s.JobToKafkaServiceApplicationTests - No active profile set, falling back to 1 default profile: "default"
+2024-08-13 15:47:42 [main] INFO  c.j.j.t.k.s.JobToKafkaServiceApplicationTests - Started JobToKafkaServiceApplicationTests in 0.239 seconds (process running for 0.593)
+2024-08-13 15:47:42 [main] INFO  c.j.j.t.k.s.JobToKafkaServiceApplication - JobToKafkaServiceApplication started
+2024-08-13 15:47:42 [main] INFO  c.j.j.t.k.s.JobToKafkaServiceApplication - [Java, Microservices, Kafka, Elasticsearch]

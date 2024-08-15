@@ -1,0 +1,12 @@
+{"namespace": "com.jobhacker.kafka.avro.model",
+  "type": "record",
+  "name": "JobAvroModel",
+  "fields": [
+    {"name": "id", "type": "string"},
+    {"name": "companyName", "type": ["null", "string"]},
+    {"name": "role", "type": ["null", "string"]},
+    {"name": "location", "type": ["null", "string"]},
+    {"name": "link", "type": ["null", "string"]},
+    {"name": "postedAt", "type": ["null", "string"]}
+  ]
+}

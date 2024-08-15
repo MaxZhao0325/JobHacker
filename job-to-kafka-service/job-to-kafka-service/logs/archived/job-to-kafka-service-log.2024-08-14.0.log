@@ -1,0 +1,121 @@
+2024-08-14 22:22:25 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.jobhacker.job.to.kafka.service.JobToKafkaServiceApplicationTests]: JobToKafkaServiceApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2024-08-14 22:22:25 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.jobhacker.job.to.kafka.service.JobToKafkaServiceApplication for test class com.jobhacker.job.to.kafka.service.JobToKafkaServiceApplicationTests
+2024-08-14 22:22:25 [main] INFO  c.j.j.t.k.s.JobToKafkaServiceApplicationTests - Starting JobToKafkaServiceApplicationTests using Java 17.0.12 with PID 84011 (started by zhaohanzhang in /Users/zhaohanzhang/Desktop/job-hacker/job-to-kafka-service)
+2024-08-14 22:22:25 [main] INFO  c.j.j.t.k.s.JobToKafkaServiceApplicationTests - No active profile set, falling back to 1 default profile: "default"
+2024-08-14 22:22:25 [main] INFO  o.a.k.c.admin.AdminClientConfig - AdminClientConfig values: 
+	auto.include.jmx.reporter = true
+	bootstrap.servers = [localhost:19092, localhost:29092, localhost:39092]
+	client.dns.lookup = use_all_dns_ips
+	client.id = 
+	connections.max.idle.ms = 300000
+	default.api.timeout.ms = 60000
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+
+2024-08-14 22:22:25 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka version: 3.4.1
+2024-08-14 22:22:25 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka commitId: 8a516edc2755df89
+2024-08-14 22:22:25 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1723645345961
+2024-08-14 22:22:26 [main] INFO  c.j.j.t.k.s.JobToKafkaServiceApplicationTests - Started JobToKafkaServiceApplicationTests in 0.646 seconds (process running for 1.013)
+2024-08-14 22:22:26 [main] INFO  c.j.k.admin.client.KafkaAdminClient - Creating 1 topics(s), attempt 0
+2024-08-14 22:22:26 [main] INFO  c.j.k.admin.client.KafkaAdminClient - Create topic result [KafkaFuture{value=null,exception=null,done=false}]
+2024-08-14 22:22:26 [main] INFO  c.j.k.admin.client.KafkaAdminClient - Reading kafka topic [job-topic], attempt 0
+2024-08-14 22:22:26 [main] ERROR i.n.r.d.DnsServerAddressStreamProviders - Unable to load io.netty.resolver.dns.macos.MacOSDnsServerAddressStreamProvider, fallback to system defaults. This may result in incorrect DNS resolutions on MacOS. Check whether you have a dependency on 'io.netty:netty-resolver-dns-native-macos'. Use DEBUG level to see the full stack: java.lang.UnsatisfiedLinkError: failed to load the required native library
+2024-08-14 22:22:26 [main] INFO  c.j.j.t.k.s.i.i.KafkaStreamInitializer - Topics with name job-topic is ready for operations!
+2024-08-14 22:22:26 [main] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Starting mock job posting stream
+2024-08-14 22:22:26 [pool-5-thread-1] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Generated mock job posting: DevOps Engineer at AlgoSoft
+2024-08-14 22:22:26 [pool-5-thread-1] INFO  c.j.j.t.k.s.l.NewJobPostedEventPublisher - Received job post AlgoSoft-DevOps Engineer-Chicago, IL-https://AlgoSoft/jobs.example.com/apply/204-1723645346598 sending to kafka topic job-topic
+2024-08-14 22:22:26 [pool-5-thread-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Sending message='{"id": "c8375802-fd3d-470c-8e5f-ac261d0eb567", "companyName": "AlgoSoft", "role": "DevOps Engineer", "location": "Chicago, IL", "link": "https://AlgoSoft/jobs.example.com/apply/204", "postedAt": "1723645346598"}' to topic='job-topic'
+2024-08-14 22:22:26 [pool-5-thread-1] ERROR c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Error creating mock job posting!
+org.apache.kafka.common.config.ConfigException: Invalid value io.confluent.kafka.serializers.KafkaAvroSerializer for configuration value.serializer: Class io.confluent.kafka.serializers.KafkaAvroSerializer could not be found.
+	at org.apache.kafka.common.config.ConfigDef.parseType(ConfigDef.java:744)
+	at org.apache.kafka.common.config.ConfigDef.parseValue(ConfigDef.java:490)
+	at org.apache.kafka.common.config.ConfigDef.parse(ConfigDef.java:483)
+	at org.apache.kafka.common.config.AbstractConfig.<init>(AbstractConfig.java:112)
+	at org.apache.kafka.common.config.AbstractConfig.<init>(AbstractConfig.java:132)
+	at org.apache.kafka.clients.producer.ProducerConfig.<init>(ProducerConfig.java:592)
+	at org.apache.kafka.clients.producer.KafkaProducer.<init>(KafkaProducer.java:290)
+	at org.springframework.kafka.core.DefaultKafkaProducerFactory.createRawProducer(DefaultKafkaProducerFactory.java:878)
+	at org.springframework.kafka.core.DefaultKafkaProducerFactory.createKafkaProducer(DefaultKafkaProducerFactory.java:781)
+	at org.springframework.kafka.core.DefaultKafkaProducerFactory.doCreateProducer(DefaultKafkaProducerFactory.java:751)
+	at org.springframework.kafka.core.DefaultKafkaProducerFactory.createProducer(DefaultKafkaProducerFactory.java:727)
+	at org.springframework.kafka.core.DefaultKafkaProducerFactory.createProducer(DefaultKafkaProducerFactory.java:721)
+	at org.springframework.kafka.core.KafkaTemplate.getTheProducer(KafkaTemplate.java:918)
+	at org.springframework.kafka.core.KafkaTemplate.doSend(KafkaTemplate.java:772)
+	at org.springframework.kafka.core.KafkaTemplate.observeSend(KafkaTemplate.java:754)
+	at org.springframework.kafka.core.KafkaTemplate.send(KafkaTemplate.java:544)
+	at com.jobhacker.kafka.producer.config.service.impl.JobKafkaProducer.send(JobKafkaProducer.java:30)
+	at com.jobhacker.kafka.producer.config.service.impl.JobKafkaProducer.send(JobKafkaProducer.java:16)
+	at com.jobhacker.job.to.kafka.service.listener.NewJobPostedEventPublisher.publishNewJobPostedEvent(NewJobPostedEventPublisher.java:42)
+	at com.jobhacker.job.to.kafka.service.runner.impl.MockKafkaStreamRunner.generateAndPublishMockJobPosting(MockKafkaStreamRunner.java:100)
+	at com.jobhacker.job.to.kafka.service.runner.impl.MockKafkaStreamRunner.lambda$simulateJobPostingStream$0(MockKafkaStreamRunner.java:74)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+2024-08-14 22:22:29 [kafka-admin-client-thread | adminclient-1] INFO  o.a.kafka.common.utils.AppInfoParser - App info kafka.admin.client for adminclient-1 unregistered
+2024-08-14 22:22:29 [kafka-admin-client-thread | adminclient-1] INFO  o.a.kafka.common.metrics.Metrics - Metrics scheduler closed
+2024-08-14 22:22:29 [kafka-admin-client-thread | adminclient-1] INFO  o.a.kafka.common.metrics.Metrics - Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2024-08-14 22:22:29 [kafka-admin-client-thread | adminclient-1] INFO  o.a.kafka.common.metrics.Metrics - Metrics reporters closed
+2024-08-14 22:22:29 [SpringApplicationShutdownHook] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Closing kafka producer!
