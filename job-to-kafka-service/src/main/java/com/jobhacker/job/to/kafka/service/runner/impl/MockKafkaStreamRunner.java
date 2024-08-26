@@ -8,8 +8,11 @@ import org.slf4j.LoggerFactory;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.stereotype.Component;
 
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.Random;
 import java.util.concurrent.Executors;
+import java.util.concurrent.ThreadLocalRandom;
 
 @Component
 @ConditionalOnProperty(name = "job-to-kafka-service.enable-mock-jobs", havingValue = "true")
@@ -92,11 +95,20 @@ public class MockKafkaStreamRunner implements StreamRunner {
         String jobTitle = JOB_TITLES[RANDOM.nextInt(JOB_TITLES.length)];
         String companyName = COMPANIES[RANDOM.nextInt(COMPANIES.length)];
         String applicationLink = "https://" + companyName + "/jobs.example.com/apply/" + RANDOM.nextInt(1000);
-        long postedAt = System.currentTimeMillis();
+//        long postedAt = System.currentTimeMillis();
+
+        DateTimeFormatter DATE_FORMATTER = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+        // Generate a random day between 1 and 31
+        int randomDay = ThreadLocalRandom.current().nextInt(1, 32); // Upper bound is exclusive, so 32 is used
+        // Create a LocalDate with the random day in August 2024
+        LocalDate randomDate = LocalDate.of(2024, 8, randomDay);
+        // Format the date as "yyyy-MM-dd"
+        String formattedDate = randomDate.format(DATE_FORMATTER);
+
         String location = LOCATIONS[RANDOM.nextInt(LOCATIONS.length)];
 
         LOG.info("Generated mock job posting: {} at {}", jobTitle, companyName);
 
-        jobPostedEventPublisher.publishNewJobPostedEvent(companyName, jobTitle, location, applicationLink, Long.toString(postedAt));
+        jobPostedEventPublisher.publishNewJobPostedEvent(companyName, jobTitle, location, applicationLink, formattedDate);
     }
 }

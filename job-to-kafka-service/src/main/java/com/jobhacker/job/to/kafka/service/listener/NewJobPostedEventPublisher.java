@@ -39,6 +39,10 @@ public class NewJobPostedEventPublisher {
         LOG.info("Received job post {} sending to kafka topic {}", jobInfo, kafkaConfigData.getTopicName());
 
         JobAvroModel jobAvroModel = JobToAvroTransformer.getJobAvroModel(companyName, role, location, link, postedAt);
-        kafkaProducer.send(kafkaConfigData.getTopicName(), hashStringToLong(jobAvroModel.getCompanyName()), jobAvroModel);
+//        using companyName as the key to partition may case skew issue where similar companyName jobs will be grouped together
+//        and this cause one partition has far more job posts inside the queue compared to other partitions
+//        kafkaProducer.send(kafkaConfigData.getTopicName(), hashStringToLong(jobAvroModel.getCompanyName()), jobAvroModel);
+//        kafkaProducer.send(kafkaConfigData.getTopicName(), null, jobAvroModel);
+        kafkaProducer.send(kafkaConfigData.getTopicName(), hashStringToLong(jobAvroModel.getId()), jobAvroModel);
     }
 }

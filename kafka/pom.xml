@@ -10,12 +10,6 @@
     </parent>
 
     <artifactId>kafka</artifactId>
-    <packaging>pom</packaging>
-    <modules>
-        <module>kafka-model</module>
-        <module>kafka-admin</module>
-        <module>kafka-producer</module>
-    </modules>
 
     <properties>
         <maven.compiler.source>17</maven.compiler.source>

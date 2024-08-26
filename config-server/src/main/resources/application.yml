@@ -1,0 +1,24 @@
+server:
+  port: 8888
+
+logging:
+  level:
+    ROOT: INFO
+    org.spring.framework.cloud.config: DEBUG
+
+spring:
+  application:
+    name: configserver
+  cloud:
+    config:
+      server:
+        git:
+#          uri: file:///Users/zhaohanzhang/Desktop/job-hacker/config-server-repository
+          uri: https://github.com/MaxZhao0325/jobhacker-config-server
+          username: MaxZhao0325
+          password: ${GITHUB_PASSWORD}
+          default-label: main
+          clone-on-start: true
+    fail-fast: true
+
+#    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
