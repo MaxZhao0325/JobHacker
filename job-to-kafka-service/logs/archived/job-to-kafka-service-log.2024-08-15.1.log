@@ -1,0 +1,1342 @@
+2024-08-16 00:43:03 [main] INFO  c.j.j.t.k.s.JobToKafkaServiceApplication - Starting JobToKafkaServiceApplication using Java 17.0.12 with PID 2313 (/Users/zhaohanzhang/Desktop/job-hacker/job-to-kafka-service/target/classes started by zhaohanzhang in /Users/zhaohanzhang/Desktop/job-hacker)
+2024-08-16 00:43:03 [main] INFO  c.j.j.t.k.s.JobToKafkaServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2024-08-16 00:43:03 [main] INFO  o.a.k.c.admin.AdminClientConfig - AdminClientConfig values: 
+	auto.include.jmx.reporter = true
+	bootstrap.servers = [localhost:19092, localhost:29092, localhost:39092]
+	client.dns.lookup = use_all_dns_ips
+	client.id = 
+	connections.max.idle.ms = 300000
+	default.api.timeout.ms = 60000
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+
+2024-08-16 00:43:03 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka version: 3.4.1
+2024-08-16 00:43:03 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka commitId: 8a516edc2755df89
+2024-08-16 00:43:03 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1723740183459
+2024-08-16 00:43:03 [main] INFO  o.s.b.w.e.netty.NettyWebServer - Netty started on port 8080
+2024-08-16 00:43:03 [main] INFO  c.j.j.t.k.s.JobToKafkaServiceApplication - Started JobToKafkaServiceApplication in 0.724 seconds (process running for 1.181)
+2024-08-16 00:43:03 [main] INFO  c.j.k.admin.client.KafkaAdminClient - Creating 1 topics(s), attempt 0
+2024-08-16 00:43:03 [main] INFO  c.j.k.admin.client.KafkaAdminClient - Create topic result [KafkaFuture{value=null,exception=null,done=false}]
+2024-08-16 00:43:03 [main] INFO  c.j.k.admin.client.KafkaAdminClient - Reading kafka topic [job-topic], attempt 0
+2024-08-16 00:43:03 [main] ERROR i.n.r.d.DnsServerAddressStreamProviders - Unable to load io.netty.resolver.dns.macos.MacOSDnsServerAddressStreamProvider, fallback to system defaults. This may result in incorrect DNS resolutions on MacOS. Check whether you have a dependency on 'io.netty:netty-resolver-dns-native-macos'. Use DEBUG level to see the full stack: java.lang.UnsatisfiedLinkError: failed to load the required native library
+2024-08-16 00:43:03 [main] INFO  c.j.j.t.k.s.i.i.KafkaStreamInitializer - Topics with name job-topic is ready for operations!
+2024-08-16 00:43:03 [main] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Starting mock job posting stream
+2024-08-16 00:43:03 [pool-4-thread-1] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Generated mock job posting: Cloud Architect at DevWorks
+2024-08-16 00:43:03 [pool-4-thread-1] INFO  c.j.j.t.k.s.l.NewJobPostedEventPublisher - Received job post DevWorks-Cloud Architect-Chicago, IL-https://DevWorks/jobs.example.com/apply/596-1723740183875 sending to kafka topic job-topic
+2024-08-16 00:43:03 [pool-4-thread-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Sending message='{"id": "4b1a3349-241d-4017-8d8b-d4f2916a1395", "companyName": "DevWorks", "role": "Cloud Architect", "location": "Chicago, IL", "link": "https://DevWorks/jobs.example.com/apply/596", "postedAt": "1723740183875"}' to topic='job-topic'
+2024-08-16 00:43:03 [pool-4-thread-1] INFO  o.a.k.c.producer.ProducerConfig - ProducerConfig values: 
+	acks = -1
+	auto.include.jmx.reporter = true
+	batch.size = 1638400
+	bootstrap.servers = [localhost:19092, localhost:29092, localhost:39092]
+	buffer.memory = 33554432
+	client.dns.lookup = use_all_dns_ips
+	client.id = producer-1
+	compression.type = snappy
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = true
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.LongSerializer
+	linger.ms = 5
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.adaptive.partitioning.enable = true
+	partitioner.availability.timeout.ms = 0
+	partitioner.class = null
+	partitioner.ignore.keys = false
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 60000
+	retries = 5
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class io.confluent.kafka.serializers.KafkaAvroSerializer
+
+2024-08-16 00:43:03 [pool-4-thread-1] INFO  i.c.k.s.KafkaAvroSerializerConfig - KafkaAvroSerializerConfig values: 
+	auto.register.schemas = true
+	avro.reflection.allow.null = false
+	avro.remove.java.properties = false
+	avro.use.logical.type.converters = false
+	basic.auth.credentials.source = URL
+	basic.auth.user.info = [hidden]
+	bearer.auth.cache.expiry.buffer.seconds = 300
+	bearer.auth.client.id = null
+	bearer.auth.client.secret = null
+	bearer.auth.credentials.source = STATIC_TOKEN
+	bearer.auth.identity.pool.id = null
+	bearer.auth.issuer.endpoint.url = null
+	bearer.auth.logical.cluster = null
+	bearer.auth.scope = null
+	bearer.auth.scope.claim.name = scope
+	bearer.auth.sub.claim.name = sub
+	bearer.auth.token = [hidden]
+	context.name.strategy = class io.confluent.kafka.serializers.context.NullContextNameStrategy
+	id.compatibility.strict = true
+	key.subject.name.strategy = class io.confluent.kafka.serializers.subject.TopicNameStrategy
+	latest.cache.size = 1000
+	latest.cache.ttl.sec = -1
+	latest.compatibility.strict = true
+	max.schemas.per.subject = 1000
+	normalize.schemas = false
+	proxy.host = 
+	proxy.port = -1
+	rule.actions = []
+	rule.executors = []
+	schema.format = null
+	schema.reflection = false
+	schema.registry.basic.auth.user.info = [hidden]
+	schema.registry.ssl.cipher.suites = null
+	schema.registry.ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	schema.registry.ssl.endpoint.identification.algorithm = https
+	schema.registry.ssl.engine.factory.class = null
+	schema.registry.ssl.key.password = null
+	schema.registry.ssl.keymanager.algorithm = SunX509
+	schema.registry.ssl.keystore.certificate.chain = null
+	schema.registry.ssl.keystore.key = null
+	schema.registry.ssl.keystore.location = null
+	schema.registry.ssl.keystore.password = null
+	schema.registry.ssl.keystore.type = JKS
+	schema.registry.ssl.protocol = TLSv1.3
+	schema.registry.ssl.provider = null
+	schema.registry.ssl.secure.random.implementation = null
+	schema.registry.ssl.trustmanager.algorithm = PKIX
+	schema.registry.ssl.truststore.certificates = null
+	schema.registry.ssl.truststore.location = null
+	schema.registry.ssl.truststore.password = null
+	schema.registry.ssl.truststore.type = JKS
+	schema.registry.url = [http://localhost:8081]
+	use.latest.version = false
+	use.latest.with.metadata = null
+	use.schema.id = -1
+	value.subject.name.strategy = class io.confluent.kafka.serializers.subject.TopicNameStrategy
+
+2024-08-16 00:43:03 [pool-4-thread-1] INFO  o.a.k.clients.producer.KafkaProducer - [Producer clientId=producer-1] Instantiated an idempotent producer.
+2024-08-16 00:43:03 [pool-4-thread-1] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka version: 3.4.1
+2024-08-16 00:43:03 [pool-4-thread-1] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka commitId: 8a516edc2755df89
+2024-08-16 00:43:03 [pool-4-thread-1] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1723740183994
+2024-08-16 00:43:03 [kafka-producer-network-thread | producer-1] INFO  org.apache.kafka.clients.Metadata - [Producer clientId=producer-1] Resetting the last seen epoch of partition job-topic-0 to 52 since the associated topicId changed from null to i3EzA0rlRqu-jjmi4J8iDQ
+2024-08-16 00:43:03 [kafka-producer-network-thread | producer-1] INFO  org.apache.kafka.clients.Metadata - [Producer clientId=producer-1] Resetting the last seen epoch of partition job-topic-2 to 50 since the associated topicId changed from null to i3EzA0rlRqu-jjmi4J8iDQ
+2024-08-16 00:43:03 [kafka-producer-network-thread | producer-1] INFO  org.apache.kafka.clients.Metadata - [Producer clientId=producer-1] Resetting the last seen epoch of partition job-topic-1 to 50 since the associated topicId changed from null to i3EzA0rlRqu-jjmi4J8iDQ
+2024-08-16 00:43:03 [kafka-producer-network-thread | producer-1] INFO  org.apache.kafka.clients.Metadata - [Producer clientId=producer-1] Cluster ID: Aw3gdt29QNe_fd9upvSD3g
+2024-08-16 00:43:04 [kafka-producer-network-thread | producer-1] INFO  o.a.k.c.p.i.TransactionManager - [Producer clientId=producer-1] ProducerId set to 3000 with epoch 0
+2024-08-16 00:43:06 [kafka-producer-network-thread | producer-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Received new metadata. Topic: job-topic; Partition 1; Offset 46; Timestamp 1723740184000, at time 3165962671736583
+2024-08-16 00:43:16 [pool-4-thread-1] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Generated mock job posting: Software Engineer at CodeBrew
+2024-08-16 00:43:16 [pool-4-thread-1] INFO  c.j.j.t.k.s.l.NewJobPostedEventPublisher - Received job post CodeBrew-Software Engineer-Chicago, IL-https://CodeBrew/jobs.example.com/apply/56-1723740196573 sending to kafka topic job-topic
+2024-08-16 00:43:16 [pool-4-thread-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Sending message='{"id": "dd28d1e0-25f2-41b1-9d09-f2b68f194f47", "companyName": "CodeBrew", "role": "Software Engineer", "location": "Chicago, IL", "link": "https://CodeBrew/jobs.example.com/apply/56", "postedAt": "1723740196573"}' to topic='job-topic'
+2024-08-16 00:43:16 [kafka-producer-network-thread | producer-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Received new metadata. Topic: job-topic; Partition 0; Offset 19; Timestamp 1723740196576, at time 3165972614403625
+2024-08-16 00:43:26 [pool-4-thread-1] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Generated mock job posting: Product Manager at AI Dynamics
+2024-08-16 00:43:26 [pool-4-thread-1] INFO  c.j.j.t.k.s.l.NewJobPostedEventPublisher - Received job post AI Dynamics-Product Manager-New York, NY-https://AI Dynamics/jobs.example.com/apply/313-1723740206579 sending to kafka topic job-topic
+2024-08-16 00:43:26 [pool-4-thread-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Sending message='{"id": "95b002b6-fb71-4579-b362-dcb79d51fcc8", "companyName": "AI Dynamics", "role": "Product Manager", "location": "New York, NY", "link": "https://AI Dynamics/jobs.example.com/apply/313", "postedAt": "1723740206579"}' to topic='job-topic'
+2024-08-16 00:43:26 [kafka-producer-network-thread | producer-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Received new metadata. Topic: job-topic; Partition 2; Offset 11; Timestamp 1723740206581, at time 3165982634361416
+2024-08-16 00:43:36 [pool-4-thread-1] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Generated mock job posting: Data Scientist at TechCorp
+2024-08-16 00:43:36 [pool-4-thread-1] INFO  c.j.j.t.k.s.l.NewJobPostedEventPublisher - Received job post TechCorp-Data Scientist-Denver, CO-https://TechCorp/jobs.example.com/apply/197-1723740216584 sending to kafka topic job-topic
+2024-08-16 00:43:36 [pool-4-thread-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Sending message='{"id": "261ef46e-06a1-4f21-a789-3b403c699894", "companyName": "TechCorp", "role": "Data Scientist", "location": "Denver, CO", "link": "https://TechCorp/jobs.example.com/apply/197", "postedAt": "1723740216584"}' to topic='job-topic'
+2024-08-16 00:43:36 [kafka-producer-network-thread | producer-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Received new metadata. Topic: job-topic; Partition 1; Offset 47; Timestamp 1723740216586, at time 3165992570949666
+2024-08-16 00:43:46 [pool-4-thread-1] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Generated mock job posting: Fullstack Developer at AI Dynamics
+2024-08-16 00:43:46 [pool-4-thread-1] INFO  c.j.j.t.k.s.l.NewJobPostedEventPublisher - Received job post AI Dynamics-Fullstack Developer-Chicago, IL-https://AI Dynamics/jobs.example.com/apply/953-1723740226592 sending to kafka topic job-topic
+2024-08-16 00:43:46 [pool-4-thread-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Sending message='{"id": "6020378a-94df-47c4-9468-eeef40d5e6f1", "companyName": "AI Dynamics", "role": "Fullstack Developer", "location": "Chicago, IL", "link": "https://AI Dynamics/jobs.example.com/apply/953", "postedAt": "1723740226592"}' to topic='job-topic'
+2024-08-16 00:43:46 [kafka-producer-network-thread | producer-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Received new metadata. Topic: job-topic; Partition 1; Offset 48; Timestamp 1723740226594, at time 3166002573104916
+2024-08-16 00:43:56 [pool-4-thread-1] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Generated mock job posting: Software Engineer at DevWorks
+2024-08-16 00:43:56 [pool-4-thread-1] INFO  c.j.j.t.k.s.l.NewJobPostedEventPublisher - Received job post DevWorks-Software Engineer-Austin, TX-https://DevWorks/jobs.example.com/apply/316-1723740236604 sending to kafka topic job-topic
+2024-08-16 00:43:56 [pool-4-thread-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Sending message='{"id": "d3d126ea-098a-47b0-8975-524b7c622949", "companyName": "DevWorks", "role": "Software Engineer", "location": "Austin, TX", "link": "https://DevWorks/jobs.example.com/apply/316", "postedAt": "1723740236604"}' to topic='job-topic'
+2024-08-16 00:43:56 [kafka-producer-network-thread | producer-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Received new metadata. Topic: job-topic; Partition 0; Offset 20; Timestamp 1723740236606, at time 3166012578297291
+2024-08-16 00:44:06 [pool-4-thread-1] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Generated mock job posting: Fullstack Developer at AI Dynamics
+2024-08-16 00:44:06 [pool-4-thread-1] INFO  c.j.j.t.k.s.l.NewJobPostedEventPublisher - Received job post AI Dynamics-Fullstack Developer-Chicago, IL-https://AI Dynamics/jobs.example.com/apply/54-1723740246614 sending to kafka topic job-topic
+2024-08-16 00:44:06 [pool-4-thread-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Sending message='{"id": "45a419a9-1b48-4489-abfd-25234bdfa27e", "companyName": "AI Dynamics", "role": "Fullstack Developer", "location": "Chicago, IL", "link": "https://AI Dynamics/jobs.example.com/apply/54", "postedAt": "1723740246614"}' to topic='job-topic'
+2024-08-16 00:44:06 [kafka-producer-network-thread | producer-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Received new metadata. Topic: job-topic; Partition 1; Offset 49; Timestamp 1723740246616, at time 3166022579692208
+2024-08-16 00:44:16 [pool-4-thread-1] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Generated mock job posting: Frontend Developer at DevWorks
+2024-08-16 00:44:16 [pool-4-thread-1] INFO  c.j.j.t.k.s.l.NewJobPostedEventPublisher - Received job post DevWorks-Frontend Developer-Austin, TX-https://DevWorks/jobs.example.com/apply/515-1723740256623 sending to kafka topic job-topic
+2024-08-16 00:44:16 [pool-4-thread-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Sending message='{"id": "7b8e42e5-95aa-4ae7-9767-38b71430c431", "companyName": "DevWorks", "role": "Frontend Developer", "location": "Austin, TX", "link": "https://DevWorks/jobs.example.com/apply/515", "postedAt": "1723740256623"}' to topic='job-topic'
+2024-08-16 00:44:16 [kafka-producer-network-thread | producer-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Received new metadata. Topic: job-topic; Partition 0; Offset 21; Timestamp 1723740256624, at time 3166032585226583
+2024-08-16 00:44:26 [pool-4-thread-1] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Generated mock job posting: Data Scientist at SoftSolutions
+2024-08-16 00:44:26 [pool-4-thread-1] INFO  c.j.j.t.k.s.l.NewJobPostedEventPublisher - Received job post SoftSolutions-Data Scientist-Denver, CO-https://SoftSolutions/jobs.example.com/apply/72-1723740266640 sending to kafka topic job-topic
+2024-08-16 00:44:26 [pool-4-thread-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Sending message='{"id": "8e137e4e-85d6-4dad-b248-bb44f144444f", "companyName": "SoftSolutions", "role": "Data Scientist", "location": "Denver, CO", "link": "https://SoftSolutions/jobs.example.com/apply/72", "postedAt": "1723740266640"}' to topic='job-topic'
+2024-08-16 00:44:26 [kafka-producer-network-thread | producer-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Received new metadata. Topic: job-topic; Partition 0; Offset 22; Timestamp 1723740266647, at time 3166042619415125
+2024-08-16 00:44:36 [pool-4-thread-1] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Generated mock job posting: Fullstack Developer at CodeBrew
+2024-08-16 00:44:36 [pool-4-thread-1] INFO  c.j.j.t.k.s.l.NewJobPostedEventPublisher - Received job post CodeBrew-Fullstack Developer-Seattle, WA-https://CodeBrew/jobs.example.com/apply/377-1723740276657 sending to kafka topic job-topic
+2024-08-16 00:44:36 [pool-4-thread-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Sending message='{"id": "762a701b-37aa-4f06-b554-4f95394ecb2c", "companyName": "CodeBrew", "role": "Fullstack Developer", "location": "Seattle, WA", "link": "https://CodeBrew/jobs.example.com/apply/377", "postedAt": "1723740276657"}' to topic='job-topic'
+2024-08-16 00:44:36 [kafka-producer-network-thread | producer-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Received new metadata. Topic: job-topic; Partition 0; Offset 23; Timestamp 1723740276660, at time 3166052623932000
+2024-08-16 00:44:46 [pool-4-thread-1] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Generated mock job posting: DevOps Engineer at DevWorks
+2024-08-16 00:44:46 [pool-4-thread-1] INFO  c.j.j.t.k.s.l.NewJobPostedEventPublisher - Received job post DevWorks-DevOps Engineer-Austin, TX-https://DevWorks/jobs.example.com/apply/428-1723740286664 sending to kafka topic job-topic
+2024-08-16 00:44:46 [pool-4-thread-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Sending message='{"id": "d46461b2-c580-4161-827f-eb95ed2a2aa2", "companyName": "DevWorks", "role": "DevOps Engineer", "location": "Austin, TX", "link": "https://DevWorks/jobs.example.com/apply/428", "postedAt": "1723740286664"}' to topic='job-topic'
+2024-08-16 00:44:46 [kafka-producer-network-thread | producer-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Received new metadata. Topic: job-topic; Partition 1; Offset 50; Timestamp 1723740286666, at time 3166062631518000
+2024-08-16 00:44:56 [pool-4-thread-1] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Generated mock job posting: Software Engineer at CodeBrew
+2024-08-16 00:44:56 [pool-4-thread-1] INFO  c.j.j.t.k.s.l.NewJobPostedEventPublisher - Received job post CodeBrew-Software Engineer-Denver, CO-https://CodeBrew/jobs.example.com/apply/630-1723740296673 sending to kafka topic job-topic
+2024-08-16 00:44:56 [pool-4-thread-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Sending message='{"id": "2a18b6f1-f1d9-42ea-b77f-4068596e3146", "companyName": "CodeBrew", "role": "Software Engineer", "location": "Denver, CO", "link": "https://CodeBrew/jobs.example.com/apply/630", "postedAt": "1723740296673"}' to topic='job-topic'
+2024-08-16 00:44:56 [kafka-producer-network-thread | producer-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Received new metadata. Topic: job-topic; Partition 0; Offset 24; Timestamp 1723740296675, at time 3166072632006916
+2024-08-16 00:45:06 [pool-4-thread-1] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Generated mock job posting: Frontend Developer at AI Dynamics
+2024-08-16 00:45:06 [pool-4-thread-1] INFO  c.j.j.t.k.s.l.NewJobPostedEventPublisher - Received job post AI Dynamics-Frontend Developer-Chicago, IL-https://AI Dynamics/jobs.example.com/apply/111-1723740306678 sending to kafka topic job-topic
+2024-08-16 00:45:06 [pool-4-thread-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Sending message='{"id": "956df470-da73-4231-82a9-abc786f24c8a", "companyName": "AI Dynamics", "role": "Frontend Developer", "location": "Chicago, IL", "link": "https://AI Dynamics/jobs.example.com/apply/111", "postedAt": "1723740306678"}' to topic='job-topic'
+2024-08-16 00:45:06 [kafka-producer-network-thread | producer-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Received new metadata. Topic: job-topic; Partition 0; Offset 25; Timestamp 1723740306681, at time 3166082637550333
+2024-08-16 00:45:16 [pool-4-thread-1] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Generated mock job posting: Fullstack Developer at CodeBrew
+2024-08-16 00:45:16 [pool-4-thread-1] INFO  c.j.j.t.k.s.l.NewJobPostedEventPublisher - Received job post CodeBrew-Fullstack Developer-Denver, CO-https://CodeBrew/jobs.example.com/apply/228-1723740316687 sending to kafka topic job-topic
+2024-08-16 00:45:16 [pool-4-thread-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Sending message='{"id": "f8c64eac-6da4-45cf-9b66-1171e2c3a1b9", "companyName": "CodeBrew", "role": "Fullstack Developer", "location": "Denver, CO", "link": "https://CodeBrew/jobs.example.com/apply/228", "postedAt": "1723740316687"}' to topic='job-topic'
+2024-08-16 00:45:16 [kafka-producer-network-thread | producer-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Received new metadata. Topic: job-topic; Partition 2; Offset 12; Timestamp 1723740316688, at time 3166092660354416
+2024-08-16 00:45:26 [pool-4-thread-1] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Generated mock job posting: Fullstack Developer at AlgoSoft
+2024-08-16 00:45:26 [pool-4-thread-1] INFO  c.j.j.t.k.s.l.NewJobPostedEventPublisher - Received job post AlgoSoft-Fullstack Developer-Austin, TX-https://AlgoSoft/jobs.example.com/apply/906-1723740326692 sending to kafka topic job-topic
+2024-08-16 00:45:26 [pool-4-thread-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Sending message='{"id": "0621701f-c5af-417f-8620-65ada3db8c51", "companyName": "AlgoSoft", "role": "Fullstack Developer", "location": "Austin, TX", "link": "https://AlgoSoft/jobs.example.com/apply/906", "postedAt": "1723740326692"}' to topic='job-topic'
+2024-08-16 00:45:26 [kafka-producer-network-thread | producer-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Received new metadata. Topic: job-topic; Partition 2; Offset 13; Timestamp 1723740326696, at time 3166102661977666
+2024-08-16 00:45:36 [pool-4-thread-1] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Generated mock job posting: Cloud Architect at AI Dynamics
+2024-08-16 00:45:36 [pool-4-thread-1] INFO  c.j.j.t.k.s.l.NewJobPostedEventPublisher - Received job post AI Dynamics-Cloud Architect-Los Angeles, CA-https://AI Dynamics/jobs.example.com/apply/34-1723740336701 sending to kafka topic job-topic
+2024-08-16 00:45:36 [pool-4-thread-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Sending message='{"id": "d4d289dc-1be9-4a90-a34c-8b70c02b9793", "companyName": "AI Dynamics", "role": "Cloud Architect", "location": "Los Angeles, CA", "link": "https://AI Dynamics/jobs.example.com/apply/34", "postedAt": "1723740336701"}' to topic='job-topic'
+2024-08-16 00:45:36 [kafka-producer-network-thread | producer-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Received new metadata. Topic: job-topic; Partition 1; Offset 51; Timestamp 1723740336703, at time 3166112670442208
+2024-08-16 00:45:46 [pool-4-thread-1] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Generated mock job posting: Cloud Architect at AI Dynamics
+2024-08-16 00:45:46 [pool-4-thread-1] INFO  c.j.j.t.k.s.l.NewJobPostedEventPublisher - Received job post AI Dynamics-Cloud Architect-Los Angeles, CA-https://AI Dynamics/jobs.example.com/apply/389-1723740346709 sending to kafka topic job-topic
+2024-08-16 00:45:46 [pool-4-thread-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Sending message='{"id": "2cbf4f86-3da6-48d7-afc9-19439c71b481", "companyName": "AI Dynamics", "role": "Cloud Architect", "location": "Los Angeles, CA", "link": "https://AI Dynamics/jobs.example.com/apply/389", "postedAt": "1723740346709"}' to topic='job-topic'
+2024-08-16 00:45:46 [kafka-producer-network-thread | producer-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Received new metadata. Topic: job-topic; Partition 1; Offset 52; Timestamp 1723740346710, at time 3166122667069375
+2024-08-16 00:45:56 [pool-4-thread-1] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Generated mock job posting: Cloud Architect at AlgoSoft
+2024-08-16 00:45:56 [pool-4-thread-1] INFO  c.j.j.t.k.s.l.NewJobPostedEventPublisher - Received job post AlgoSoft-Cloud Architect-Los Angeles, CA-https://AlgoSoft/jobs.example.com/apply/37-1723740356714 sending to kafka topic job-topic
+2024-08-16 00:45:56 [pool-4-thread-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Sending message='{"id": "86749563-6d78-42d0-b028-b924989484c2", "companyName": "AlgoSoft", "role": "Cloud Architect", "location": "Los Angeles, CA", "link": "https://AlgoSoft/jobs.example.com/apply/37", "postedAt": "1723740356714"}' to topic='job-topic'
+2024-08-16 00:45:56 [kafka-producer-network-thread | producer-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Received new metadata. Topic: job-topic; Partition 1; Offset 53; Timestamp 1723740356716, at time 3166132671865333
+2024-08-16 00:46:06 [pool-4-thread-1] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Generated mock job posting: Backend Developer at CodeBrew
+2024-08-16 00:46:06 [pool-4-thread-1] INFO  c.j.j.t.k.s.l.NewJobPostedEventPublisher - Received job post CodeBrew-Backend Developer-San Francisco, CA-https://CodeBrew/jobs.example.com/apply/733-1723740366721 sending to kafka topic job-topic
+2024-08-16 00:46:06 [pool-4-thread-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Sending message='{"id": "01833c3a-c7c1-48d1-8285-698723ea2495", "companyName": "CodeBrew", "role": "Backend Developer", "location": "San Francisco, CA", "link": "https://CodeBrew/jobs.example.com/apply/733", "postedAt": "1723740366721"}' to topic='job-topic'
+2024-08-16 00:46:06 [kafka-producer-network-thread | producer-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Received new metadata. Topic: job-topic; Partition 0; Offset 26; Timestamp 1723740366723, at time 3166142678415041
+2024-08-16 00:46:16 [pool-4-thread-1] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Generated mock job posting: Data Scientist at SoftSolutions
+2024-08-16 00:46:16 [pool-4-thread-1] INFO  c.j.j.t.k.s.l.NewJobPostedEventPublisher - Received job post SoftSolutions-Data Scientist-New York, NY-https://SoftSolutions/jobs.example.com/apply/566-1723740376726 sending to kafka topic job-topic
+2024-08-16 00:46:16 [pool-4-thread-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Sending message='{"id": "26bf42b9-0f89-4ddf-b254-0e6ca27eb356", "companyName": "SoftSolutions", "role": "Data Scientist", "location": "New York, NY", "link": "https://SoftSolutions/jobs.example.com/apply/566", "postedAt": "1723740376726"}' to topic='job-topic'
+2024-08-16 00:46:16 [kafka-producer-network-thread | producer-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Received new metadata. Topic: job-topic; Partition 2; Offset 14; Timestamp 1723740376727, at time 3166152683152500
+2024-08-16 00:46:26 [pool-4-thread-1] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Generated mock job posting: Software Engineer at AlgoSoft
+2024-08-16 00:46:26 [pool-4-thread-1] INFO  c.j.j.t.k.s.l.NewJobPostedEventPublisher - Received job post AlgoSoft-Software Engineer-Boston, MA-https://AlgoSoft/jobs.example.com/apply/135-1723740386729 sending to kafka topic job-topic
+2024-08-16 00:46:26 [pool-4-thread-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Sending message='{"id": "1d723a1c-db7a-403a-a9a6-edfe5d0a44ab", "companyName": "AlgoSoft", "role": "Software Engineer", "location": "Boston, MA", "link": "https://AlgoSoft/jobs.example.com/apply/135", "postedAt": "1723740386729"}' to topic='job-topic'
+2024-08-16 00:46:26 [kafka-producer-network-thread | producer-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Received new metadata. Topic: job-topic; Partition 1; Offset 54; Timestamp 1723740386732, at time 3166162687872666
+2024-08-16 00:46:36 [pool-4-thread-1] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Generated mock job posting: Software Engineer at CyberNext
+2024-08-16 00:46:36 [pool-4-thread-1] INFO  c.j.j.t.k.s.l.NewJobPostedEventPublisher - Received job post CyberNext-Software Engineer-New York, NY-https://CyberNext/jobs.example.com/apply/385-1723740396736 sending to kafka topic job-topic
+2024-08-16 00:46:36 [pool-4-thread-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Sending message='{"id": "6009c3dd-984d-4d68-9d5d-730e6142af8f", "companyName": "CyberNext", "role": "Software Engineer", "location": "New York, NY", "link": "https://CyberNext/jobs.example.com/apply/385", "postedAt": "1723740396736"}' to topic='job-topic'
+2024-08-16 00:46:36 [kafka-producer-network-thread | producer-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Received new metadata. Topic: job-topic; Partition 1; Offset 55; Timestamp 1723740396739, at time 3166172699635666
+2024-08-16 00:46:46 [pool-4-thread-1] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Generated mock job posting: Backend Developer at SoftSolutions
+2024-08-16 00:46:46 [pool-4-thread-1] INFO  c.j.j.t.k.s.l.NewJobPostedEventPublisher - Received job post SoftSolutions-Backend Developer-Austin, TX-https://SoftSolutions/jobs.example.com/apply/980-1723740406743 sending to kafka topic job-topic
+2024-08-16 00:46:46 [pool-4-thread-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Sending message='{"id": "062c025f-e495-407c-99c5-3b21a647cc7e", "companyName": "SoftSolutions", "role": "Backend Developer", "location": "Austin, TX", "link": "https://SoftSolutions/jobs.example.com/apply/980", "postedAt": "1723740406743"}' to topic='job-topic'
+2024-08-16 00:46:46 [kafka-producer-network-thread | producer-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Received new metadata. Topic: job-topic; Partition 0; Offset 27; Timestamp 1723740406745, at time 3166182705383833
+2024-08-16 00:46:56 [pool-4-thread-1] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Generated mock job posting: Software Engineer at SoftSolutions
+2024-08-16 00:46:56 [pool-4-thread-1] INFO  c.j.j.t.k.s.l.NewJobPostedEventPublisher - Received job post SoftSolutions-Software Engineer-Los Angeles, CA-https://SoftSolutions/jobs.example.com/apply/33-1723740416751 sending to kafka topic job-topic
+2024-08-16 00:46:56 [pool-4-thread-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Sending message='{"id": "d552d5a0-4eda-4080-96a4-ae674a283b65", "companyName": "SoftSolutions", "role": "Software Engineer", "location": "Los Angeles, CA", "link": "https://SoftSolutions/jobs.example.com/apply/33", "postedAt": "1723740416751"}' to topic='job-topic'
+2024-08-16 00:46:56 [kafka-producer-network-thread | producer-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Received new metadata. Topic: job-topic; Partition 2; Offset 15; Timestamp 1723740416753, at time 3166192709992291
+2024-08-16 00:47:06 [pool-4-thread-1] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Generated mock job posting: Data Scientist at DevWorks
+2024-08-16 00:47:06 [pool-4-thread-1] INFO  c.j.j.t.k.s.l.NewJobPostedEventPublisher - Received job post DevWorks-Data Scientist-Seattle, WA-https://DevWorks/jobs.example.com/apply/470-1723740426757 sending to kafka topic job-topic
+2024-08-16 00:47:06 [pool-4-thread-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Sending message='{"id": "a012f716-3cec-44c1-95d0-2656606acdb6", "companyName": "DevWorks", "role": "Data Scientist", "location": "Seattle, WA", "link": "https://DevWorks/jobs.example.com/apply/470", "postedAt": "1723740426757"}' to topic='job-topic'
+2024-08-16 00:47:06 [kafka-producer-network-thread | producer-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Received new metadata. Topic: job-topic; Partition 2; Offset 16; Timestamp 1723740426761, at time 3166202721830625
+2024-08-16 00:47:16 [pool-4-thread-1] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Generated mock job posting: Cloud Architect at TechCorp
+2024-08-16 00:47:16 [pool-4-thread-1] INFO  c.j.j.t.k.s.l.NewJobPostedEventPublisher - Received job post TechCorp-Cloud Architect-Seattle, WA-https://TechCorp/jobs.example.com/apply/255-1723740436767 sending to kafka topic job-topic
+2024-08-16 00:47:16 [pool-4-thread-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Sending message='{"id": "da7e7c77-1f85-4e1b-a719-1f811806f375", "companyName": "TechCorp", "role": "Cloud Architect", "location": "Seattle, WA", "link": "https://TechCorp/jobs.example.com/apply/255", "postedAt": "1723740436767"}' to topic='job-topic'
+2024-08-16 00:47:16 [kafka-producer-network-thread | producer-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Received new metadata. Topic: job-topic; Partition 2; Offset 17; Timestamp 1723740436768, at time 3166212722797791
+2024-08-16 00:47:26 [pool-4-thread-1] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Generated mock job posting: Data Scientist at TechCorp
+2024-08-16 00:47:26 [pool-4-thread-1] INFO  c.j.j.t.k.s.l.NewJobPostedEventPublisher - Received job post TechCorp-Data Scientist-Austin, TX-https://TechCorp/jobs.example.com/apply/623-1723740446772 sending to kafka topic job-topic
+2024-08-16 00:47:26 [pool-4-thread-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Sending message='{"id": "197a2db0-4ab7-4dcd-9770-c662bba91028", "companyName": "TechCorp", "role": "Data Scientist", "location": "Austin, TX", "link": "https://TechCorp/jobs.example.com/apply/623", "postedAt": "1723740446772"}' to topic='job-topic'
+2024-08-16 00:47:26 [kafka-producer-network-thread | producer-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Received new metadata. Topic: job-topic; Partition 2; Offset 18; Timestamp 1723740446775, at time 3166222736407041
+2024-08-16 00:47:36 [pool-4-thread-1] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Generated mock job posting: Product Manager at AI Dynamics
+2024-08-16 00:47:36 [pool-4-thread-1] INFO  c.j.j.t.k.s.l.NewJobPostedEventPublisher - Received job post AI Dynamics-Product Manager-Denver, CO-https://AI Dynamics/jobs.example.com/apply/98-1723740456781 sending to kafka topic job-topic
+2024-08-16 00:47:36 [pool-4-thread-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Sending message='{"id": "8c6d824c-6a4f-4059-b8ce-0db312055abb", "companyName": "AI Dynamics", "role": "Product Manager", "location": "Denver, CO", "link": "https://AI Dynamics/jobs.example.com/apply/98", "postedAt": "1723740456781"}' to topic='job-topic'
+2024-08-16 00:47:36 [kafka-producer-network-thread | producer-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Received new metadata. Topic: job-topic; Partition 2; Offset 19; Timestamp 1723740456784, at time 3166232737252291
+2024-08-16 00:47:46 [pool-4-thread-1] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Generated mock job posting: DevOps Engineer at AlgoSoft
+2024-08-16 00:47:46 [pool-4-thread-1] INFO  c.j.j.t.k.s.l.NewJobPostedEventPublisher - Received job post AlgoSoft-DevOps Engineer-Boston, MA-https://AlgoSoft/jobs.example.com/apply/726-1723740466789 sending to kafka topic job-topic
+2024-08-16 00:47:46 [pool-4-thread-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Sending message='{"id": "2be4748d-481d-465a-95f0-c03a47104186", "companyName": "AlgoSoft", "role": "DevOps Engineer", "location": "Boston, MA", "link": "https://AlgoSoft/jobs.example.com/apply/726", "postedAt": "1723740466789"}' to topic='job-topic'
+2024-08-16 00:47:46 [kafka-producer-network-thread | producer-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Received new metadata. Topic: job-topic; Partition 0; Offset 28; Timestamp 1723740466792, at time 3166242749443125
+2024-08-16 00:47:56 [pool-4-thread-1] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Generated mock job posting: Product Manager at SoftSolutions
+2024-08-16 00:47:56 [pool-4-thread-1] INFO  c.j.j.t.k.s.l.NewJobPostedEventPublisher - Received job post SoftSolutions-Product Manager-Denver, CO-https://SoftSolutions/jobs.example.com/apply/310-1723740476796 sending to kafka topic job-topic
+2024-08-16 00:47:56 [pool-4-thread-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Sending message='{"id": "23d89f02-b79a-42d6-a717-d1120be3b064", "companyName": "SoftSolutions", "role": "Product Manager", "location": "Denver, CO", "link": "https://SoftSolutions/jobs.example.com/apply/310", "postedAt": "1723740476796"}' to topic='job-topic'
+2024-08-16 00:47:56 [kafka-producer-network-thread | producer-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Received new metadata. Topic: job-topic; Partition 2; Offset 20; Timestamp 1723740476799, at time 3166252751393625
+2024-08-16 00:48:03 [kafka-admin-client-thread | adminclient-1] INFO  o.apache.kafka.clients.NetworkClient - [AdminClient clientId=adminclient-1] Node -1 disconnected.
+2024-08-16 00:48:06 [pool-4-thread-1] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Generated mock job posting: Backend Developer at SoftSolutions
+2024-08-16 00:48:06 [pool-4-thread-1] INFO  c.j.j.t.k.s.l.NewJobPostedEventPublisher - Received job post SoftSolutions-Backend Developer-Boston, MA-https://SoftSolutions/jobs.example.com/apply/114-1723740486804 sending to kafka topic job-topic
+2024-08-16 00:48:06 [pool-4-thread-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Sending message='{"id": "99cc5f42-f14b-47f6-aecc-42ae44eca74c", "companyName": "SoftSolutions", "role": "Backend Developer", "location": "Boston, MA", "link": "https://SoftSolutions/jobs.example.com/apply/114", "postedAt": "1723740486804"}' to topic='job-topic'
+2024-08-16 00:48:06 [kafka-producer-network-thread | producer-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Received new metadata. Topic: job-topic; Partition 0; Offset 29; Timestamp 1723740486805, at time 3166262765233875
+2024-08-16 00:48:16 [pool-4-thread-1] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Generated mock job posting: Backend Developer at AlgoSoft
+2024-08-16 00:48:16 [pool-4-thread-1] INFO  c.j.j.t.k.s.l.NewJobPostedEventPublisher - Received job post AlgoSoft-Backend Developer-Los Angeles, CA-https://AlgoSoft/jobs.example.com/apply/527-1723740496811 sending to kafka topic job-topic
+2024-08-16 00:48:16 [pool-4-thread-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Sending message='{"id": "36ab9bb1-461f-4f0b-9445-c8d308b7f7f5", "companyName": "AlgoSoft", "role": "Backend Developer", "location": "Los Angeles, CA", "link": "https://AlgoSoft/jobs.example.com/apply/527", "postedAt": "1723740496811"}' to topic='job-topic'
+2024-08-16 00:48:16 [kafka-producer-network-thread | producer-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Received new metadata. Topic: job-topic; Partition 2; Offset 21; Timestamp 1723740496813, at time 3166272771837791
+2024-08-16 00:48:26 [pool-4-thread-1] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Generated mock job posting: Data Scientist at AlgoSoft
+2024-08-16 00:48:26 [pool-4-thread-1] INFO  c.j.j.t.k.s.l.NewJobPostedEventPublisher - Received job post AlgoSoft-Data Scientist-Chicago, IL-https://AlgoSoft/jobs.example.com/apply/598-1723740506819 sending to kafka topic job-topic
+2024-08-16 00:48:26 [pool-4-thread-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Sending message='{"id": "879648bc-6273-43a7-85eb-013051cb9a0a", "companyName": "AlgoSoft", "role": "Data Scientist", "location": "Chicago, IL", "link": "https://AlgoSoft/jobs.example.com/apply/598", "postedAt": "1723740506819"}' to topic='job-topic'
+2024-08-16 00:48:26 [kafka-producer-network-thread | producer-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Received new metadata. Topic: job-topic; Partition 2; Offset 22; Timestamp 1723740506821, at time 3166282770432750
+2024-08-16 00:48:36 [pool-4-thread-1] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Generated mock job posting: Fullstack Developer at InnovateX
+2024-08-16 00:48:36 [pool-4-thread-1] INFO  c.j.j.t.k.s.l.NewJobPostedEventPublisher - Received job post InnovateX-Fullstack Developer-Los Angeles, CA-https://InnovateX/jobs.example.com/apply/324-1723740516827 sending to kafka topic job-topic
+2024-08-16 00:48:36 [pool-4-thread-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Sending message='{"id": "c960e23f-932d-4035-a12f-ef84d05216f3", "companyName": "InnovateX", "role": "Fullstack Developer", "location": "Los Angeles, CA", "link": "https://InnovateX/jobs.example.com/apply/324", "postedAt": "1723740516827"}' to topic='job-topic'
+2024-08-16 00:48:36 [kafka-producer-network-thread | producer-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Received new metadata. Topic: job-topic; Partition 1; Offset 56; Timestamp 1723740516828, at time 3166292792647000
+2024-08-16 00:48:46 [pool-4-thread-1] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Generated mock job posting: Backend Developer at InnovateX
+2024-08-16 00:48:46 [pool-4-thread-1] INFO  c.j.j.t.k.s.l.NewJobPostedEventPublisher - Received job post InnovateX-Backend Developer-New York, NY-https://InnovateX/jobs.example.com/apply/742-1723740526834 sending to kafka topic job-topic
+2024-08-16 00:48:46 [pool-4-thread-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Sending message='{"id": "facf9125-ce24-4ae4-8ff9-539267fbf656", "companyName": "InnovateX", "role": "Backend Developer", "location": "New York, NY", "link": "https://InnovateX/jobs.example.com/apply/742", "postedAt": "1723740526834"}' to topic='job-topic'
+2024-08-16 00:48:46 [kafka-producer-network-thread | producer-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Received new metadata. Topic: job-topic; Partition 1; Offset 57; Timestamp 1723740526835, at time 3166302790487625
+2024-08-16 00:48:56 [pool-4-thread-1] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Generated mock job posting: Backend Developer at SoftSolutions
+2024-08-16 00:48:56 [pool-4-thread-1] INFO  c.j.j.t.k.s.l.NewJobPostedEventPublisher - Received job post SoftSolutions-Backend Developer-New York, NY-https://SoftSolutions/jobs.example.com/apply/206-1723740536839 sending to kafka topic job-topic
+2024-08-16 00:48:56 [pool-4-thread-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Sending message='{"id": "44d5f45d-007c-4be2-9ceb-9a76900e9739", "companyName": "SoftSolutions", "role": "Backend Developer", "location": "New York, NY", "link": "https://SoftSolutions/jobs.example.com/apply/206", "postedAt": "1723740536839"}' to topic='job-topic'
+2024-08-16 00:48:56 [kafka-producer-network-thread | producer-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Received new metadata. Topic: job-topic; Partition 2; Offset 23; Timestamp 1723740536842, at time 3166312795066541
+2024-08-16 00:49:06 [pool-4-thread-1] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Generated mock job posting: Fullstack Developer at TechCorp
+2024-08-16 00:49:06 [pool-4-thread-1] INFO  c.j.j.t.k.s.l.NewJobPostedEventPublisher - Received job post TechCorp-Fullstack Developer-Los Angeles, CA-https://TechCorp/jobs.example.com/apply/662-1723740546844 sending to kafka topic job-topic
+2024-08-16 00:49:06 [pool-4-thread-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Sending message='{"id": "8642ca7c-11ee-43a4-a6f2-71a5815f22d7", "companyName": "TechCorp", "role": "Fullstack Developer", "location": "Los Angeles, CA", "link": "https://TechCorp/jobs.example.com/apply/662", "postedAt": "1723740546844"}' to topic='job-topic'
+2024-08-16 00:49:06 [kafka-producer-network-thread | producer-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Received new metadata. Topic: job-topic; Partition 2; Offset 24; Timestamp 1723740546847, at time 3166322799449291
+2024-08-16 00:49:16 [pool-4-thread-1] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Generated mock job posting: DevOps Engineer at TechCorp
+2024-08-16 00:49:16 [pool-4-thread-1] INFO  c.j.j.t.k.s.l.NewJobPostedEventPublisher - Received job post TechCorp-DevOps Engineer-San Francisco, CA-https://TechCorp/jobs.example.com/apply/552-1723740556851 sending to kafka topic job-topic
+2024-08-16 00:49:16 [pool-4-thread-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Sending message='{"id": "2ec21e75-dad1-4645-b875-1c9a2e04820f", "companyName": "TechCorp", "role": "DevOps Engineer", "location": "San Francisco, CA", "link": "https://TechCorp/jobs.example.com/apply/552", "postedAt": "1723740556851"}' to topic='job-topic'
+2024-08-16 00:49:16 [kafka-producer-network-thread | producer-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Received new metadata. Topic: job-topic; Partition 0; Offset 30; Timestamp 1723740556857, at time 3166332828026916
+2024-08-16 00:49:26 [pool-4-thread-1] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Generated mock job posting: Cloud Architect at InnovateX
+2024-08-16 00:49:26 [pool-4-thread-1] INFO  c.j.j.t.k.s.l.NewJobPostedEventPublisher - Received job post InnovateX-Cloud Architect-Los Angeles, CA-https://InnovateX/jobs.example.com/apply/519-1723740566866 sending to kafka topic job-topic
+2024-08-16 00:49:26 [pool-4-thread-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Sending message='{"id": "c01704ee-ab1d-40ae-96e6-37c4bd3490cd", "companyName": "InnovateX", "role": "Cloud Architect", "location": "Los Angeles, CA", "link": "https://InnovateX/jobs.example.com/apply/519", "postedAt": "1723740566866"}' to topic='job-topic'
+2024-08-16 00:49:26 [kafka-producer-network-thread | producer-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Received new metadata. Topic: job-topic; Partition 0; Offset 31; Timestamp 1723740566867, at time 3166342817088000
+2024-08-16 00:49:36 [pool-4-thread-1] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Generated mock job posting: Cloud Architect at InnovateX
+2024-08-16 00:49:36 [pool-4-thread-1] INFO  c.j.j.t.k.s.l.NewJobPostedEventPublisher - Received job post InnovateX-Cloud Architect-Los Angeles, CA-https://InnovateX/jobs.example.com/apply/86-1723740576873 sending to kafka topic job-topic
+2024-08-16 00:49:36 [pool-4-thread-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Sending message='{"id": "c313d58d-82ac-4f98-86f9-09df3303f4e5", "companyName": "InnovateX", "role": "Cloud Architect", "location": "Los Angeles, CA", "link": "https://InnovateX/jobs.example.com/apply/86", "postedAt": "1723740576873"}' to topic='job-topic'
+2024-08-16 00:49:36 [kafka-producer-network-thread | producer-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Received new metadata. Topic: job-topic; Partition 1; Offset 58; Timestamp 1723740576880, at time 3166352860751125
+2024-08-16 00:49:46 [kafka-admin-client-thread | adminclient-1] INFO  o.a.kafka.common.utils.AppInfoParser - App info kafka.admin.client for adminclient-1 unregistered
+2024-08-16 00:49:46 [kafka-admin-client-thread | adminclient-1] INFO  o.a.kafka.common.metrics.Metrics - Metrics scheduler closed
+2024-08-16 00:49:46 [kafka-admin-client-thread | adminclient-1] INFO  o.a.kafka.common.metrics.Metrics - Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2024-08-16 00:49:46 [kafka-admin-client-thread | adminclient-1] INFO  o.a.kafka.common.metrics.Metrics - Metrics reporters closed
+2024-08-16 00:49:46 [SpringApplicationShutdownHook] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Closing kafka producer!
+2024-08-16 00:49:46 [SpringApplicationShutdownHook] INFO  o.a.k.clients.producer.KafkaProducer - [Producer clientId=producer-1] Closing the Kafka producer with timeoutMillis = 30000 ms.
+2024-08-16 00:49:46 [SpringApplicationShutdownHook] INFO  o.a.kafka.common.metrics.Metrics - Metrics scheduler closed
+2024-08-16 00:49:46 [SpringApplicationShutdownHook] INFO  o.a.kafka.common.metrics.Metrics - Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2024-08-16 00:49:46 [SpringApplicationShutdownHook] INFO  o.a.kafka.common.metrics.Metrics - Metrics reporters closed
+2024-08-16 00:49:46 [SpringApplicationShutdownHook] INFO  o.a.kafka.common.utils.AppInfoParser - App info kafka.producer for producer-1 unregistered
+2024-08-16 00:49:46 [pool-4-thread-1] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Generated mock job posting: Backend Developer at AI Dynamics
+2024-08-16 00:49:46 [pool-4-thread-1] INFO  c.j.j.t.k.s.l.NewJobPostedEventPublisher - Received job post AI Dynamics-Backend Developer-Seattle, WA-https://AI Dynamics/jobs.example.com/apply/891-1723740586885 sending to kafka topic job-topic
+2024-08-16 00:49:46 [pool-4-thread-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Sending message='{"id": "2d1563d5-689d-4e42-8b7b-bfded0ad22f2", "companyName": "AI Dynamics", "role": "Backend Developer", "location": "Seattle, WA", "link": "https://AI Dynamics/jobs.example.com/apply/891", "postedAt": "1723740586885"}' to topic='job-topic'
+2024-08-16 00:49:46 [pool-4-thread-1] INFO  o.a.k.c.producer.ProducerConfig - ProducerConfig values: 
+	acks = -1
+	auto.include.jmx.reporter = true
+	batch.size = 1638400
+	bootstrap.servers = [localhost:19092, localhost:29092, localhost:39092]
+	buffer.memory = 33554432
+	client.dns.lookup = use_all_dns_ips
+	client.id = producer-2
+	compression.type = snappy
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = true
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.LongSerializer
+	linger.ms = 5
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.adaptive.partitioning.enable = true
+	partitioner.availability.timeout.ms = 0
+	partitioner.class = null
+	partitioner.ignore.keys = false
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 60000
+	retries = 5
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class io.confluent.kafka.serializers.KafkaAvroSerializer
+
+2024-08-16 00:49:46 [pool-4-thread-1] INFO  i.c.k.s.KafkaAvroSerializerConfig - KafkaAvroSerializerConfig values: 
+	auto.register.schemas = true
+	avro.reflection.allow.null = false
+	avro.remove.java.properties = false
+	avro.use.logical.type.converters = false
+	basic.auth.credentials.source = URL
+	basic.auth.user.info = [hidden]
+	bearer.auth.cache.expiry.buffer.seconds = 300
+	bearer.auth.client.id = null
+	bearer.auth.client.secret = null
+	bearer.auth.credentials.source = STATIC_TOKEN
+	bearer.auth.identity.pool.id = null
+	bearer.auth.issuer.endpoint.url = null
+	bearer.auth.logical.cluster = null
+	bearer.auth.scope = null
+	bearer.auth.scope.claim.name = scope
+	bearer.auth.sub.claim.name = sub
+	bearer.auth.token = [hidden]
+	context.name.strategy = class io.confluent.kafka.serializers.context.NullContextNameStrategy
+	id.compatibility.strict = true
+	key.subject.name.strategy = class io.confluent.kafka.serializers.subject.TopicNameStrategy
+	latest.cache.size = 1000
+	latest.cache.ttl.sec = -1
+	latest.compatibility.strict = true
+	max.schemas.per.subject = 1000
+	normalize.schemas = false
+	proxy.host = 
+	proxy.port = -1
+	rule.actions = []
+	rule.executors = []
+	schema.format = null
+	schema.reflection = false
+	schema.registry.basic.auth.user.info = [hidden]
+	schema.registry.ssl.cipher.suites = null
+	schema.registry.ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	schema.registry.ssl.endpoint.identification.algorithm = https
+	schema.registry.ssl.engine.factory.class = null
+	schema.registry.ssl.key.password = null
+	schema.registry.ssl.keymanager.algorithm = SunX509
+	schema.registry.ssl.keystore.certificate.chain = null
+	schema.registry.ssl.keystore.key = null
+	schema.registry.ssl.keystore.location = null
+	schema.registry.ssl.keystore.password = null
+	schema.registry.ssl.keystore.type = JKS
+	schema.registry.ssl.protocol = TLSv1.3
+	schema.registry.ssl.provider = null
+	schema.registry.ssl.secure.random.implementation = null
+	schema.registry.ssl.trustmanager.algorithm = PKIX
+	schema.registry.ssl.truststore.certificates = null
+	schema.registry.ssl.truststore.location = null
+	schema.registry.ssl.truststore.password = null
+	schema.registry.ssl.truststore.type = JKS
+	schema.registry.url = [http://localhost:8081]
+	use.latest.version = false
+	use.latest.with.metadata = null
+	use.schema.id = -1
+	value.subject.name.strategy = class io.confluent.kafka.serializers.subject.TopicNameStrategy
+
+2024-08-16 00:49:46 [pool-4-thread-1] INFO  o.a.k.clients.producer.KafkaProducer - [Producer clientId=producer-2] Instantiated an idempotent producer.
+2024-08-16 00:49:46 [pool-4-thread-1] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka version: 3.4.1
+2024-08-16 00:49:46 [pool-4-thread-1] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka commitId: 8a516edc2755df89
+2024-08-16 00:49:46 [pool-4-thread-1] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1723740586889
+2024-08-16 00:49:46 [kafka-producer-network-thread | producer-2] INFO  org.apache.kafka.clients.Metadata - [Producer clientId=producer-2] Resetting the last seen epoch of partition job-topic-0 to 52 since the associated topicId changed from null to i3EzA0rlRqu-jjmi4J8iDQ
+2024-08-16 00:49:46 [kafka-producer-network-thread | producer-2] INFO  org.apache.kafka.clients.Metadata - [Producer clientId=producer-2] Resetting the last seen epoch of partition job-topic-2 to 50 since the associated topicId changed from null to i3EzA0rlRqu-jjmi4J8iDQ
+2024-08-16 00:49:46 [kafka-producer-network-thread | producer-2] INFO  org.apache.kafka.clients.Metadata - [Producer clientId=producer-2] Resetting the last seen epoch of partition job-topic-1 to 50 since the associated topicId changed from null to i3EzA0rlRqu-jjmi4J8iDQ
+2024-08-16 00:49:46 [kafka-producer-network-thread | producer-2] INFO  org.apache.kafka.clients.Metadata - [Producer clientId=producer-2] Cluster ID: Aw3gdt29QNe_fd9upvSD3g
+2024-08-16 00:49:46 [kafka-producer-network-thread | producer-2] INFO  o.a.k.c.p.i.TransactionManager - [Producer clientId=producer-2] ProducerId set to 3001 with epoch 0
+2024-08-16 00:49:46 [kafka-producer-network-thread | producer-2] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Received new metadata. Topic: job-topic; Partition 1; Offset 59; Timestamp 1723740586901, at time 3166362905086416
+2024-08-16 01:16:28 [main] INFO  c.j.j.t.k.s.JobToKafkaServiceApplication - Starting JobToKafkaServiceApplication using Java 17.0.12 with PID 3288 (/Users/zhaohanzhang/Desktop/job-hacker/job-to-kafka-service/target/classes started by zhaohanzhang in /Users/zhaohanzhang/Desktop/job-hacker)
+2024-08-16 01:16:28 [main] INFO  c.j.j.t.k.s.JobToKafkaServiceApplication - The following 1 profile is active: "job_to_kafka"
+2024-08-16 01:16:28 [main] INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Fetching config from server at : http://localhost:8888
+2024-08-16 01:16:28 [main] INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Located environment: name=job-to-kafka-service,config-client, profiles=[default], label=null, version=0493d3bc73586e668bf16e2d438a2466921768c4, state=null
+2024-08-16 01:16:28 [main] INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Fetching config from server at : http://localhost:8888
+2024-08-16 01:16:28 [main] INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Located environment: name=job-to-kafka-service,config-client, profiles=[job_to_kafka], label=null, version=0493d3bc73586e668bf16e2d438a2466921768c4, state=null
+2024-08-16 01:16:28 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=cb17ef4c-449b-34bf-bbca-3dfd7ced9397
+2024-08-16 01:16:28 [main] INFO  o.a.k.c.admin.AdminClientConfig - AdminClientConfig values: 
+	auto.include.jmx.reporter = true
+	bootstrap.servers = [localhost:19092, localhost:29092, localhost:39092]
+	client.dns.lookup = use_all_dns_ips
+	client.id = 
+	connections.max.idle.ms = 300000
+	default.api.timeout.ms = 60000
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+
+2024-08-16 01:16:28 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka version: 3.4.1
+2024-08-16 01:16:28 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka commitId: 8a516edc2755df89
+2024-08-16 01:16:28 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1723742188698
+2024-08-16 01:16:28 [main] INFO  o.s.b.w.e.netty.NettyWebServer - Netty started on port 8080
+2024-08-16 01:16:28 [main] INFO  c.j.j.t.k.s.JobToKafkaServiceApplication - Started JobToKafkaServiceApplication in 1.266 seconds (process running for 1.505)
+2024-08-16 01:16:28 [main] INFO  c.j.k.admin.client.KafkaAdminClient - Creating 1 topics(s), attempt 0
+2024-08-16 01:16:28 [main] INFO  c.j.k.admin.client.KafkaAdminClient - Create topic result [KafkaFuture{value=null,exception=null,done=false}]
+2024-08-16 01:16:28 [main] INFO  c.j.k.admin.client.KafkaAdminClient - Reading kafka topic [job-topic], attempt 0
+2024-08-16 01:16:28 [main] ERROR i.n.r.d.DnsServerAddressStreamProviders - Unable to load io.netty.resolver.dns.macos.MacOSDnsServerAddressStreamProvider, fallback to system defaults. This may result in incorrect DNS resolutions on MacOS. Check whether you have a dependency on 'io.netty:netty-resolver-dns-native-macos'. Use DEBUG level to see the full stack: java.lang.UnsatisfiedLinkError: failed to load the required native library
+2024-08-16 01:16:29 [reactor-http-nio-3] WARN  r.n.http.client.HttpClientConnect - [abf15570-1, L:/127.0.0.1:55773 - R:localhost/127.0.0.1:8081] The connection observed an error
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:394)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:426)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:256)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+2024-08-16 01:16:31 [reactor-http-nio-4] WARN  r.n.http.client.HttpClientConnect - [9b66b6ee-1, L:/127.0.0.1:55782 - R:localhost/127.0.0.1:8081] The connection observed an error
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:394)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:426)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:256)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+2024-08-16 01:16:35 [reactor-http-nio-5] WARN  r.n.http.client.HttpClientConnect - [8e653127-1, L:/127.0.0.1:55805 - R:localhost/127.0.0.1:8081] The connection observed an error
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:394)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:426)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:256)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+2024-08-16 01:16:43 [reactor-http-nio-6] WARN  r.n.http.client.HttpClientConnect - [2bb8bf9e-1, L:/127.0.0.1:55834 - R:localhost/127.0.0.1:8081] The connection observed an error
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:394)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:426)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:256)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.buffer.WrappedByteBuf.writeBytes(WrappedByteBuf.java:821)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+2024-08-16 01:16:43 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-08-16 01:16:43 [main] ERROR o.s.boot.SpringApplication - Application run failed
+java.lang.IllegalStateException: Failed to execute CommandLineRunner
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:774)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:755)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:319)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at com.jobhacker.job.to.kafka.service.JobToKafkaServiceApplication.main(JobToKafkaServiceApplication.java:30)
+Caused by: com.jobhacker.kafka.admin.exception.KafkaClientException: Reached max number of retry for reading kafka topic(s)!
+	at com.jobhacker.kafka.admin.client.KafkaAdminClient.checkMaxRetry(KafkaAdminClient.java:118)
+	at com.jobhacker.kafka.admin.client.KafkaAdminClient.checkSchemaRegistry(KafkaAdminClient.java:88)
+	at com.jobhacker.job.to.kafka.service.init.impl.KafkaStreamInitializer.init(KafkaStreamInitializer.java:27)
+	at com.jobhacker.job.to.kafka.service.JobToKafkaServiceApplication.run(JobToKafkaServiceApplication.java:35)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:771)
+	... 5 common frames omitted
+2024-08-16 01:16:43 [kafka-admin-client-thread | adminclient-1] INFO  o.a.kafka.common.utils.AppInfoParser - App info kafka.admin.client for adminclient-1 unregistered
+2024-08-16 01:16:43 [kafka-admin-client-thread | adminclient-1] INFO  o.a.kafka.common.metrics.Metrics - Metrics scheduler closed
+2024-08-16 01:16:43 [kafka-admin-client-thread | adminclient-1] INFO  o.a.kafka.common.metrics.Metrics - Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2024-08-16 01:16:43 [kafka-admin-client-thread | adminclient-1] INFO  o.a.kafka.common.metrics.Metrics - Metrics reporters closed
+2024-08-16 01:16:43 [main] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Closing kafka producer!
+2024-08-16 01:17:51 [main] INFO  c.j.j.t.k.s.JobToKafkaServiceApplication - Starting JobToKafkaServiceApplication using Java 17.0.12 with PID 3323 (/Users/zhaohanzhang/Desktop/job-hacker/job-to-kafka-service/target/classes started by zhaohanzhang in /Users/zhaohanzhang/Desktop/job-hacker)
+2024-08-16 01:17:51 [main] INFO  c.j.j.t.k.s.JobToKafkaServiceApplication - The following 1 profile is active: "job_to_kafka"
+2024-08-16 01:17:51 [main] INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Fetching config from server at : http://localhost:8888
+2024-08-16 01:17:51 [main] INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Located environment: name=job-to-kafka-service,config-client, profiles=[default], label=null, version=0493d3bc73586e668bf16e2d438a2466921768c4, state=null
+2024-08-16 01:17:51 [main] INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Fetching config from server at : http://localhost:8888
+2024-08-16 01:17:51 [main] INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Located environment: name=job-to-kafka-service,config-client, profiles=[job_to_kafka], label=null, version=0493d3bc73586e668bf16e2d438a2466921768c4, state=null
+2024-08-16 01:17:51 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=cb17ef4c-449b-34bf-bbca-3dfd7ced9397
+2024-08-16 01:17:51 [main] INFO  o.a.k.c.admin.AdminClientConfig - AdminClientConfig values: 
+	auto.include.jmx.reporter = true
+	bootstrap.servers = [localhost:19092, localhost:29092, localhost:39092]
+	client.dns.lookup = use_all_dns_ips
+	client.id = 
+	connections.max.idle.ms = 300000
+	default.api.timeout.ms = 60000
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+
+2024-08-16 01:17:51 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka version: 3.4.1
+2024-08-16 01:17:51 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka commitId: 8a516edc2755df89
+2024-08-16 01:17:51 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1723742271518
+2024-08-16 01:17:51 [main] INFO  o.s.b.w.e.netty.NettyWebServer - Netty started on port 8080
+2024-08-16 01:17:51 [main] INFO  c.j.j.t.k.s.JobToKafkaServiceApplication - Started JobToKafkaServiceApplication in 1.131 seconds (process running for 1.385)
+2024-08-16 01:17:51 [main] INFO  c.j.k.admin.client.KafkaAdminClient - Creating 1 topics(s), attempt 0
+2024-08-16 01:17:51 [main] INFO  c.j.k.admin.client.KafkaAdminClient - Create topic result [KafkaFuture{value=null,exception=null,done=false}]
+2024-08-16 01:17:51 [main] INFO  c.j.k.admin.client.KafkaAdminClient - Reading kafka topic [job-topic], attempt 0
+2024-08-16 01:17:51 [main] ERROR i.n.r.d.DnsServerAddressStreamProviders - Unable to load io.netty.resolver.dns.macos.MacOSDnsServerAddressStreamProvider, fallback to system defaults. This may result in incorrect DNS resolutions on MacOS. Check whether you have a dependency on 'io.netty:netty-resolver-dns-native-macos'. Use DEBUG level to see the full stack: java.lang.UnsatisfiedLinkError: failed to load the required native library
+2024-08-16 01:18:05 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-08-16 01:18:05 [main] ERROR o.s.boot.SpringApplication - Application run failed
+java.lang.IllegalStateException: Failed to execute CommandLineRunner
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:774)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:755)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:319)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at com.jobhacker.job.to.kafka.service.JobToKafkaServiceApplication.main(JobToKafkaServiceApplication.java:30)
+Caused by: com.jobhacker.kafka.admin.exception.KafkaClientException: Reached max number of retry for reading kafka topic(s)!
+	at com.jobhacker.kafka.admin.client.KafkaAdminClient.checkMaxRetry(KafkaAdminClient.java:118)
+	at com.jobhacker.kafka.admin.client.KafkaAdminClient.checkSchemaRegistry(KafkaAdminClient.java:88)
+	at com.jobhacker.job.to.kafka.service.init.impl.KafkaStreamInitializer.init(KafkaStreamInitializer.java:27)
+	at com.jobhacker.job.to.kafka.service.JobToKafkaServiceApplication.run(JobToKafkaServiceApplication.java:35)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:771)
+	... 5 common frames omitted
+2024-08-16 01:18:05 [kafka-admin-client-thread | adminclient-1] INFO  o.a.kafka.common.utils.AppInfoParser - App info kafka.admin.client for adminclient-1 unregistered
+2024-08-16 01:18:05 [kafka-admin-client-thread | adminclient-1] INFO  o.a.kafka.common.metrics.Metrics - Metrics scheduler closed
+2024-08-16 01:18:05 [kafka-admin-client-thread | adminclient-1] INFO  o.a.kafka.common.metrics.Metrics - Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2024-08-16 01:18:05 [kafka-admin-client-thread | adminclient-1] INFO  o.a.kafka.common.metrics.Metrics - Metrics reporters closed
+2024-08-16 01:18:05 [main] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Closing kafka producer!
+2024-08-16 01:19:54 [main] INFO  c.j.j.t.k.s.JobToKafkaServiceApplication - Starting JobToKafkaServiceApplication using Java 17.0.12 with PID 3341 (/Users/zhaohanzhang/Desktop/job-hacker/job-to-kafka-service/target/classes started by zhaohanzhang in /Users/zhaohanzhang/Desktop/job-hacker)
+2024-08-16 01:19:54 [main] INFO  c.j.j.t.k.s.JobToKafkaServiceApplication - The following 1 profile is active: "job_to_kafka"
+2024-08-16 01:19:54 [main] INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Fetching config from server at : http://localhost:8888
+2024-08-16 01:19:54 [main] INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Located environment: name=job-to-kafka-service,config-client, profiles=[default], label=null, version=0493d3bc73586e668bf16e2d438a2466921768c4, state=null
+2024-08-16 01:19:54 [main] INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Fetching config from server at : http://localhost:8888
+2024-08-16 01:19:54 [main] INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Located environment: name=job-to-kafka-service,config-client, profiles=[job_to_kafka], label=null, version=0493d3bc73586e668bf16e2d438a2466921768c4, state=null
+2024-08-16 01:19:54 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=cb17ef4c-449b-34bf-bbca-3dfd7ced9397
+2024-08-16 01:19:54 [main] INFO  o.a.k.c.admin.AdminClientConfig - AdminClientConfig values: 
+	auto.include.jmx.reporter = true
+	bootstrap.servers = [localhost:19092, localhost:29092, localhost:39092]
+	client.dns.lookup = use_all_dns_ips
+	client.id = 
+	connections.max.idle.ms = 300000
+	default.api.timeout.ms = 60000
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+
+2024-08-16 01:19:54 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka version: 3.4.1
+2024-08-16 01:19:54 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka commitId: 8a516edc2755df89
+2024-08-16 01:19:54 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1723742394739
+2024-08-16 01:19:54 [main] INFO  o.s.b.w.e.netty.NettyWebServer - Netty started on port 8080
+2024-08-16 01:19:54 [main] INFO  c.j.j.t.k.s.JobToKafkaServiceApplication - Started JobToKafkaServiceApplication in 1.03 seconds (process running for 1.288)
+2024-08-16 01:19:54 [main] INFO  c.j.k.admin.client.KafkaAdminClient - Creating 1 topics(s), attempt 0
+2024-08-16 01:19:54 [main] INFO  c.j.k.admin.client.KafkaAdminClient - Create topic result [KafkaFuture{value=null,exception=null,done=false}]
+2024-08-16 01:19:54 [main] INFO  c.j.k.admin.client.KafkaAdminClient - Reading kafka topic [job-topic], attempt 0
+2024-08-16 01:19:54 [main] ERROR i.n.r.d.DnsServerAddressStreamProviders - Unable to load io.netty.resolver.dns.macos.MacOSDnsServerAddressStreamProvider, fallback to system defaults. This may result in incorrect DNS resolutions on MacOS. Check whether you have a dependency on 'io.netty:netty-resolver-dns-native-macos'. Use DEBUG level to see the full stack: java.lang.UnsatisfiedLinkError: failed to load the required native library
+2024-08-16 01:20:09 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-08-16 01:20:09 [main] ERROR o.s.boot.SpringApplication - Application run failed
+java.lang.IllegalStateException: Failed to execute CommandLineRunner
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:774)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:755)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:319)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at com.jobhacker.job.to.kafka.service.JobToKafkaServiceApplication.main(JobToKafkaServiceApplication.java:30)
+Caused by: com.jobhacker.kafka.admin.exception.KafkaClientException: Reached max number of retry for reading kafka topic(s)!
+	at com.jobhacker.kafka.admin.client.KafkaAdminClient.checkMaxRetry(KafkaAdminClient.java:118)
+	at com.jobhacker.kafka.admin.client.KafkaAdminClient.checkSchemaRegistry(KafkaAdminClient.java:88)
+	at com.jobhacker.job.to.kafka.service.init.impl.KafkaStreamInitializer.init(KafkaStreamInitializer.java:27)
+	at com.jobhacker.job.to.kafka.service.JobToKafkaServiceApplication.run(JobToKafkaServiceApplication.java:35)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:771)
+	... 5 common frames omitted
+2024-08-16 01:20:09 [kafka-admin-client-thread | adminclient-1] INFO  o.a.kafka.common.utils.AppInfoParser - App info kafka.admin.client for adminclient-1 unregistered
+2024-08-16 01:20:09 [kafka-admin-client-thread | adminclient-1] INFO  o.a.kafka.common.metrics.Metrics - Metrics scheduler closed
+2024-08-16 01:20:09 [kafka-admin-client-thread | adminclient-1] INFO  o.a.kafka.common.metrics.Metrics - Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2024-08-16 01:20:09 [kafka-admin-client-thread | adminclient-1] INFO  o.a.kafka.common.metrics.Metrics - Metrics reporters closed
+2024-08-16 01:20:09 [main] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Closing kafka producer!
+2024-08-16 01:24:36 [main] INFO  c.j.j.t.k.s.JobToKafkaServiceApplication - Starting JobToKafkaServiceApplication using Java 17.0.12 with PID 3541 (/Users/zhaohanzhang/Desktop/job-hacker/job-to-kafka-service/target/classes started by zhaohanzhang in /Users/zhaohanzhang/Desktop/job-hacker)
+2024-08-16 01:24:36 [main] INFO  c.j.j.t.k.s.JobToKafkaServiceApplication - The following 1 profile is active: "job_to_kafka"
+2024-08-16 01:24:36 [main] INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Fetching config from server at : http://localhost:8888
+2024-08-16 01:24:36 [main] INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Located environment: name=job-to-kafka-service,config-client, profiles=[default], label=null, version=0493d3bc73586e668bf16e2d438a2466921768c4, state=null
+2024-08-16 01:24:36 [main] INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Fetching config from server at : http://localhost:8888
+2024-08-16 01:24:36 [main] INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Located environment: name=job-to-kafka-service,config-client, profiles=[job_to_kafka], label=null, version=0493d3bc73586e668bf16e2d438a2466921768c4, state=null
+2024-08-16 01:24:37 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=cb17ef4c-449b-34bf-bbca-3dfd7ced9397
+2024-08-16 01:24:37 [main] INFO  o.a.k.c.admin.AdminClientConfig - AdminClientConfig values: 
+	auto.include.jmx.reporter = true
+	bootstrap.servers = [localhost:19092, localhost:29092, localhost:39092]
+	client.dns.lookup = use_all_dns_ips
+	client.id = 
+	connections.max.idle.ms = 300000
+	default.api.timeout.ms = 60000
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+
+2024-08-16 01:24:37 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka version: 3.4.1
+2024-08-16 01:24:37 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka commitId: 8a516edc2755df89
+2024-08-16 01:24:37 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1723742677265
+2024-08-16 01:24:37 [main] INFO  o.s.b.w.e.netty.NettyWebServer - Netty started on port 8080
+2024-08-16 01:24:37 [main] INFO  c.j.j.t.k.s.JobToKafkaServiceApplication - Started JobToKafkaServiceApplication in 1.301 seconds (process running for 1.717)
+2024-08-16 01:24:37 [main] INFO  c.j.k.admin.client.KafkaAdminClient - Creating 1 topics(s), attempt 0
+2024-08-16 01:24:37 [main] INFO  c.j.k.admin.client.KafkaAdminClient - Create topic result [KafkaFuture{value=null,exception=null,done=false}]
+2024-08-16 01:24:37 [main] INFO  c.j.k.admin.client.KafkaAdminClient - Reading kafka topic [job-topic], attempt 0
+2024-08-16 01:24:37 [main] ERROR i.n.r.d.DnsServerAddressStreamProviders - Unable to load io.netty.resolver.dns.macos.MacOSDnsServerAddressStreamProvider, fallback to system defaults. This may result in incorrect DNS resolutions on MacOS. Check whether you have a dependency on 'io.netty:netty-resolver-dns-native-macos'. Use DEBUG level to see the full stack: java.lang.UnsatisfiedLinkError: failed to load the required native library
+2024-08-16 01:24:51 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-08-16 01:24:51 [main] ERROR o.s.boot.SpringApplication - Application run failed
+java.lang.IllegalStateException: Failed to execute CommandLineRunner
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:774)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:755)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:319)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at com.jobhacker.job.to.kafka.service.JobToKafkaServiceApplication.main(JobToKafkaServiceApplication.java:30)
+Caused by: com.jobhacker.kafka.admin.exception.KafkaClientException: Reached max number of retry for reading kafka topic(s)!
+	at com.jobhacker.kafka.admin.client.KafkaAdminClient.checkMaxRetry(KafkaAdminClient.java:118)
+	at com.jobhacker.kafka.admin.client.KafkaAdminClient.checkSchemaRegistry(KafkaAdminClient.java:88)
+	at com.jobhacker.job.to.kafka.service.init.impl.KafkaStreamInitializer.init(KafkaStreamInitializer.java:27)
+	at com.jobhacker.job.to.kafka.service.JobToKafkaServiceApplication.run(JobToKafkaServiceApplication.java:35)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:771)
+	... 5 common frames omitted
+2024-08-16 01:24:51 [kafka-admin-client-thread | adminclient-1] INFO  o.a.kafka.common.utils.AppInfoParser - App info kafka.admin.client for adminclient-1 unregistered
+2024-08-16 01:24:51 [kafka-admin-client-thread | adminclient-1] INFO  o.a.kafka.common.metrics.Metrics - Metrics scheduler closed
+2024-08-16 01:24:51 [kafka-admin-client-thread | adminclient-1] INFO  o.a.kafka.common.metrics.Metrics - Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2024-08-16 01:24:51 [kafka-admin-client-thread | adminclient-1] INFO  o.a.kafka.common.metrics.Metrics - Metrics reporters closed
+2024-08-16 01:24:51 [main] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Closing kafka producer!
+2024-08-16 01:29:48 [main] INFO  c.j.j.t.k.s.JobToKafkaServiceApplication - Starting JobToKafkaServiceApplication using Java 17.0.12 with PID 3999 (/Users/zhaohanzhang/Desktop/job-hacker/job-to-kafka-service/target/classes started by zhaohanzhang in /Users/zhaohanzhang/Desktop/job-hacker)
+2024-08-16 01:29:48 [main] INFO  c.j.j.t.k.s.JobToKafkaServiceApplication - The following 1 profile is active: "job_to_kafka"
+2024-08-16 01:29:48 [main] INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Fetching config from server at : http://localhost:8888
+2024-08-16 01:29:48 [main] INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Located environment: name=job-to-kafka-service,config-client, profiles=[default], label=null, version=0493d3bc73586e668bf16e2d438a2466921768c4, state=null
+2024-08-16 01:29:48 [main] INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Fetching config from server at : http://localhost:8888
+2024-08-16 01:29:48 [main] INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Located environment: name=job-to-kafka-service,config-client, profiles=[job_to_kafka], label=null, version=0493d3bc73586e668bf16e2d438a2466921768c4, state=null
+2024-08-16 01:29:48 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=cb17ef4c-449b-34bf-bbca-3dfd7ced9397
+2024-08-16 01:29:48 [main] INFO  o.a.k.c.admin.AdminClientConfig - AdminClientConfig values: 
+	auto.include.jmx.reporter = true
+	bootstrap.servers = [localhost:19092, localhost:29092, localhost:39092]
+	client.dns.lookup = use_all_dns_ips
+	client.id = 
+	connections.max.idle.ms = 300000
+	default.api.timeout.ms = 60000
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+
+2024-08-16 01:29:48 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka version: 3.4.1
+2024-08-16 01:29:48 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka commitId: 8a516edc2755df89
+2024-08-16 01:29:48 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1723742988914
+2024-08-16 01:29:49 [main] INFO  o.s.b.w.e.netty.NettyWebServer - Netty started on port 8080
+2024-08-16 01:29:49 [main] INFO  c.j.j.t.k.s.JobToKafkaServiceApplication - Started JobToKafkaServiceApplication in 1.182 seconds (process running for 1.66)
+2024-08-16 01:29:49 [main] INFO  c.j.k.admin.client.KafkaAdminClient - Creating 1 topics(s), attempt 0
+2024-08-16 01:29:49 [main] INFO  c.j.k.admin.client.KafkaAdminClient - Create topic result [KafkaFuture{value=null,exception=null,done=false}]
+2024-08-16 01:29:49 [main] INFO  c.j.k.admin.client.KafkaAdminClient - Reading kafka topic [job-topic], attempt 0
+2024-08-16 01:29:49 [main] ERROR i.n.r.d.DnsServerAddressStreamProviders - Unable to load io.netty.resolver.dns.macos.MacOSDnsServerAddressStreamProvider, fallback to system defaults. This may result in incorrect DNS resolutions on MacOS. Check whether you have a dependency on 'io.netty:netty-resolver-dns-native-macos'. Use DEBUG level to see the full stack: java.lang.UnsatisfiedLinkError: failed to load the required native library
+2024-08-16 01:29:49 [main] INFO  c.j.j.t.k.s.i.i.KafkaStreamInitializer - Topics with name job-topic is ready for operations!
+2024-08-16 01:29:49 [main] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Starting mock job posting stream
+2024-08-16 01:29:49 [pool-4-thread-1] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Generated mock job posting: DevOps Engineer at DevWorks
+2024-08-16 01:29:49 [pool-4-thread-1] INFO  c.j.j.t.k.s.l.NewJobPostedEventPublisher - Received job post DevWorks-DevOps Engineer-New York, NY-https://DevWorks/jobs.example.com/apply/382-1723742989346 sending to kafka topic job-topic
+2024-08-16 01:29:49 [pool-4-thread-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Sending message='{"id": "e23bb63a-ece2-46e2-9081-5986c1133a18", "companyName": "DevWorks", "role": "DevOps Engineer", "location": "New York, NY", "link": "https://DevWorks/jobs.example.com/apply/382", "postedAt": "1723742989346"}' to topic='job-topic'
+2024-08-16 01:29:49 [pool-4-thread-1] INFO  o.a.k.c.producer.ProducerConfig - ProducerConfig values: 
+	acks = -1
+	auto.include.jmx.reporter = true
+	batch.size = 1638400
+	bootstrap.servers = [localhost:19092, localhost:29092, localhost:39092]
+	buffer.memory = 33554432
+	client.dns.lookup = use_all_dns_ips
+	client.id = producer-1
+	compression.type = snappy
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = true
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.LongSerializer
+	linger.ms = 5
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.adaptive.partitioning.enable = true
+	partitioner.availability.timeout.ms = 0
+	partitioner.class = null
+	partitioner.ignore.keys = false
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 60000
+	retries = 5
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class io.confluent.kafka.serializers.KafkaAvroSerializer
+
+2024-08-16 01:29:49 [pool-4-thread-1] INFO  i.c.k.s.KafkaAvroSerializerConfig - KafkaAvroSerializerConfig values: 
+	auto.register.schemas = true
+	avro.reflection.allow.null = false
+	avro.remove.java.properties = false
+	avro.use.logical.type.converters = false
+	basic.auth.credentials.source = URL
+	basic.auth.user.info = [hidden]
+	bearer.auth.cache.expiry.buffer.seconds = 300
+	bearer.auth.client.id = null
+	bearer.auth.client.secret = null
+	bearer.auth.credentials.source = STATIC_TOKEN
+	bearer.auth.identity.pool.id = null
+	bearer.auth.issuer.endpoint.url = null
+	bearer.auth.logical.cluster = null
+	bearer.auth.scope = null
+	bearer.auth.scope.claim.name = scope
+	bearer.auth.sub.claim.name = sub
+	bearer.auth.token = [hidden]
+	context.name.strategy = class io.confluent.kafka.serializers.context.NullContextNameStrategy
+	id.compatibility.strict = true
+	key.subject.name.strategy = class io.confluent.kafka.serializers.subject.TopicNameStrategy
+	latest.cache.size = 1000
+	latest.cache.ttl.sec = -1
+	latest.compatibility.strict = true
+	max.schemas.per.subject = 1000
+	normalize.schemas = false
+	proxy.host = 
+	proxy.port = -1
+	rule.actions = []
+	rule.executors = []
+	schema.format = null
+	schema.reflection = false
+	schema.registry.basic.auth.user.info = [hidden]
+	schema.registry.ssl.cipher.suites = null
+	schema.registry.ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	schema.registry.ssl.endpoint.identification.algorithm = https
+	schema.registry.ssl.engine.factory.class = null
+	schema.registry.ssl.key.password = null
+	schema.registry.ssl.keymanager.algorithm = SunX509
+	schema.registry.ssl.keystore.certificate.chain = null
+	schema.registry.ssl.keystore.key = null
+	schema.registry.ssl.keystore.location = null
+	schema.registry.ssl.keystore.password = null
+	schema.registry.ssl.keystore.type = JKS
+	schema.registry.ssl.protocol = TLSv1.3
+	schema.registry.ssl.provider = null
+	schema.registry.ssl.secure.random.implementation = null
+	schema.registry.ssl.trustmanager.algorithm = PKIX
+	schema.registry.ssl.truststore.certificates = null
+	schema.registry.ssl.truststore.location = null
+	schema.registry.ssl.truststore.password = null
+	schema.registry.ssl.truststore.type = JKS
+	schema.registry.url = [http://localhost:8081]
+	use.latest.version = false
+	use.latest.with.metadata = null
+	use.schema.id = -1
+	value.subject.name.strategy = class io.confluent.kafka.serializers.subject.TopicNameStrategy
+
+2024-08-16 01:29:49 [pool-4-thread-1] INFO  o.a.k.clients.producer.KafkaProducer - [Producer clientId=producer-1] Instantiated an idempotent producer.
+2024-08-16 01:29:49 [pool-4-thread-1] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka version: 3.4.1
+2024-08-16 01:29:49 [pool-4-thread-1] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka commitId: 8a516edc2755df89
+2024-08-16 01:29:49 [pool-4-thread-1] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1723742989459
+2024-08-16 01:29:49 [kafka-producer-network-thread | producer-1] INFO  org.apache.kafka.clients.Metadata - [Producer clientId=producer-1] Resetting the last seen epoch of partition job-topic-0 to 65 since the associated topicId changed from null to i3EzA0rlRqu-jjmi4J8iDQ
+2024-08-16 01:29:49 [kafka-producer-network-thread | producer-1] INFO  org.apache.kafka.clients.Metadata - [Producer clientId=producer-1] Resetting the last seen epoch of partition job-topic-1 to 64 since the associated topicId changed from null to i3EzA0rlRqu-jjmi4J8iDQ
+2024-08-16 01:29:49 [kafka-producer-network-thread | producer-1] INFO  org.apache.kafka.clients.Metadata - [Producer clientId=producer-1] Resetting the last seen epoch of partition job-topic-2 to 62 since the associated topicId changed from null to i3EzA0rlRqu-jjmi4J8iDQ
+2024-08-16 01:29:49 [kafka-producer-network-thread | producer-1] INFO  org.apache.kafka.clients.Metadata - [Producer clientId=producer-1] Cluster ID: Aw3gdt29QNe_fd9upvSD3g
+2024-08-16 01:29:49 [kafka-producer-network-thread | producer-1] INFO  o.a.k.c.p.i.TransactionManager - [Producer clientId=producer-1] ProducerId set to 4000 with epoch 0
+2024-08-16 01:29:50 [kafka-producer-network-thread | producer-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Received new metadata. Topic: job-topic; Partition 1; Offset 60; Timestamp 1723742989465, at time 3168766295558041
+2024-08-16 01:30:00 [pool-4-thread-1] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Generated mock job posting: Fullstack Developer at AlgoSoft
+2024-08-16 01:30:00 [pool-4-thread-1] INFO  c.j.j.t.k.s.l.NewJobPostedEventPublisher - Received job post AlgoSoft-Fullstack Developer-San Francisco, CA-https://AlgoSoft/jobs.example.com/apply/248-1723743000244 sending to kafka topic job-topic
+2024-08-16 01:30:00 [pool-4-thread-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Sending message='{"id": "c8513310-8c65-4dfa-ae0a-28740a5ff269", "companyName": "AlgoSoft", "role": "Fullstack Developer", "location": "San Francisco, CA", "link": "https://AlgoSoft/jobs.example.com/apply/248", "postedAt": "1723743000244"}' to topic='job-topic'
+2024-08-16 01:30:00 [kafka-producer-network-thread | producer-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Received new metadata. Topic: job-topic; Partition 2; Offset 25; Timestamp 1723743000246, at time 3168776315051041
+2024-08-16 01:30:05 [kafka-admin-client-thread | adminclient-1] INFO  o.a.kafka.common.utils.AppInfoParser - App info kafka.admin.client for adminclient-1 unregistered
+2024-08-16 01:30:05 [kafka-admin-client-thread | adminclient-1] INFO  o.a.kafka.common.metrics.Metrics - Metrics scheduler closed
+2024-08-16 01:30:05 [kafka-admin-client-thread | adminclient-1] INFO  o.a.kafka.common.metrics.Metrics - Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2024-08-16 01:30:05 [kafka-admin-client-thread | adminclient-1] INFO  o.a.kafka.common.metrics.Metrics - Metrics reporters closed
+2024-08-16 01:30:05 [SpringApplicationShutdownHook] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Closing kafka producer!
+2024-08-16 01:30:05 [SpringApplicationShutdownHook] INFO  o.a.k.clients.producer.KafkaProducer - [Producer clientId=producer-1] Closing the Kafka producer with timeoutMillis = 30000 ms.
+2024-08-16 01:30:05 [SpringApplicationShutdownHook] INFO  o.a.kafka.common.metrics.Metrics - Metrics scheduler closed
+2024-08-16 01:30:05 [SpringApplicationShutdownHook] INFO  o.a.kafka.common.metrics.Metrics - Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2024-08-16 01:30:05 [SpringApplicationShutdownHook] INFO  o.a.kafka.common.metrics.Metrics - Metrics reporters closed
+2024-08-16 01:30:05 [SpringApplicationShutdownHook] INFO  o.a.kafka.common.utils.AppInfoParser - App info kafka.producer for producer-1 unregistered

@@ -25,7 +25,9 @@
 		<module>config-server</module>
 		<module>kafka-to-elastic-service</module>
         <module>elastic</module>
-	</modules>
+        <module>elastic-query-service</module>
+        <module>common-util</module>
+    </modules>
 	<packaging>pom</packaging>
 	<url/>
 	<licenses>
@@ -80,12 +82,22 @@
 			</dependency>
 			<dependency>
 				<groupId>com.jobhacker</groupId>
+				<artifactId>elastic-query-client</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.jobhacker</groupId>
 				<artifactId>app-config-data</artifactId>
 				<version>${project.version}</version>
 			</dependency>
 			<dependency>
 				<groupId>com.jobhacker</groupId>
 				<artifactId>common-config</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.jobhacker</groupId>
+				<artifactId>common-util</artifactId>
 				<version>${project.version}</version>
 			</dependency>
 			<dependency>
@@ -111,6 +123,11 @@
 			<dependency>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-starter</artifactId>
+				<version>${spring-boot.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-starter-security</artifactId>
 				<version>${spring-boot.version}</version>
 			</dependency>
 			<dependency>

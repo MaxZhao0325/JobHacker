@@ -1,0 +1,1414 @@
+2024-08-23 19:19:59 [main] INFO  c.j.j.t.k.s.JobToKafkaServiceApplication - Starting JobToKafkaServiceApplication v0.0.1-SNAPSHOT using Java 17.0.7 with PID 441 (/workspace/BOOT-INF/classes started by root in /workspace)
+2024-08-23 19:19:59 [main] INFO  c.j.j.t.k.s.JobToKafkaServiceApplication - The following 1 profile is active: "job_to_kafka"
+2024-08-23 19:19:59 [main] INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Fetching config from server at : http://config-server:8888
+2024-08-23 19:19:59 [main] INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Located environment: name=job-to-kafka-service,config-client, profiles=[default], label=null, version=0493d3bc73586e668bf16e2d438a2466921768c4, state=null
+2024-08-23 19:19:59 [main] INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Fetching config from server at : http://config-server:8888
+2024-08-23 19:19:59 [main] INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Located environment: name=job-to-kafka-service,config-client, profiles=[job_to_kafka], label=null, version=0493d3bc73586e668bf16e2d438a2466921768c4, state=null
+2024-08-23 19:20:00 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=a4aba279-b571-320a-b125-f9fae06fa4a0
+2024-08-23 19:20:01 [main] INFO  o.a.k.c.admin.AdminClientConfig - AdminClientConfig values: 
+	auto.include.jmx.reporter = true
+	bootstrap.servers = [kafka-broker-1:9092, kafka-broker-2:9092, kafka-broker-3:9092]
+	client.dns.lookup = use_all_dns_ips
+	client.id = 
+	connections.max.idle.ms = 300000
+	default.api.timeout.ms = 60000
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+
+2024-08-23 19:20:01 [main] WARN  o.apache.kafka.clients.ClientUtils - Couldn't resolve server kafka-broker-3:9092 from bootstrap.servers as DNS resolution failed for kafka-broker-3
+2024-08-23 19:20:01 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka version: 3.4.1
+2024-08-23 19:20:01 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka commitId: 8a516edc2755df89
+2024-08-23 19:20:01 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1724440801615
+2024-08-23 19:20:02 [main] INFO  o.s.b.w.e.netty.NettyWebServer - Netty started on port 8080
+2024-08-23 19:20:02 [main] INFO  c.j.j.t.k.s.JobToKafkaServiceApplication - Started JobToKafkaServiceApplication in 4.448 seconds (process running for 5.489)
+2024-08-23 19:20:02 [main] INFO  c.j.k.admin.client.KafkaAdminClient - Creating 1 topics(s), attempt 0
+2024-08-23 19:20:02 [main] INFO  c.j.k.admin.client.KafkaAdminClient - Create topic result [KafkaFuture{value=null,exception=null,done=false}]
+2024-08-23 19:20:02 [main] INFO  c.j.k.admin.client.KafkaAdminClient - Reading kafka topic [job-topic], attempt 0
+2024-08-23 19:20:17 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-08-23 19:20:18 [main] ERROR o.s.boot.SpringApplication - Application run failed
+java.lang.IllegalStateException: Failed to execute CommandLineRunner
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:774)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:755)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:319)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at com.jobhacker.job.to.kafka.service.JobToKafkaServiceApplication.main(JobToKafkaServiceApplication.java:30)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at org.springframework.boot.loader.MainMethodRunner.run(MainMethodRunner.java:49)
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:95)
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:58)
+	at org.springframework.boot.loader.JarLauncher.main(JarLauncher.java:65)
+Caused by: com.jobhacker.kafka.admin.exception.KafkaClientException: Reached max number of retry for reading kafka topic(s)!
+	at com.jobhacker.kafka.admin.client.KafkaAdminClient.checkMaxRetry(KafkaAdminClient.java:118)
+	at com.jobhacker.kafka.admin.client.KafkaAdminClient.checkSchemaRegistry(KafkaAdminClient.java:88)
+	at com.jobhacker.job.to.kafka.service.init.impl.KafkaStreamInitializer.init(KafkaStreamInitializer.java:27)
+	at com.jobhacker.job.to.kafka.service.JobToKafkaServiceApplication.run(JobToKafkaServiceApplication.java:35)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:771)
+	... 13 common frames omitted
+2024-08-23 19:20:18 [kafka-admin-client-thread | adminclient-1] INFO  o.a.kafka.common.utils.AppInfoParser - App info kafka.admin.client for adminclient-1 unregistered
+2024-08-23 19:20:18 [kafka-admin-client-thread | adminclient-1] INFO  o.a.kafka.common.metrics.Metrics - Metrics scheduler closed
+2024-08-23 19:20:18 [kafka-admin-client-thread | adminclient-1] INFO  o.a.kafka.common.metrics.Metrics - Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2024-08-23 19:20:18 [kafka-admin-client-thread | adminclient-1] INFO  o.a.kafka.common.metrics.Metrics - Metrics reporters closed
+2024-08-23 19:20:18 [main] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Closing kafka producer!
+2024-08-23 19:21:17 [main] INFO  c.j.j.t.k.s.JobToKafkaServiceApplication - Starting JobToKafkaServiceApplication v0.0.1-SNAPSHOT using Java 17.0.7 with PID 184 (/workspace/BOOT-INF/classes started by root in /workspace)
+2024-08-23 19:21:17 [main] INFO  c.j.j.t.k.s.JobToKafkaServiceApplication - The following 1 profile is active: "job_to_kafka"
+2024-08-23 19:21:17 [main] INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Fetching config from server at : http://config-server:8888
+2024-08-23 19:21:17 [main] INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Located environment: name=job-to-kafka-service,config-client, profiles=[default], label=null, version=0493d3bc73586e668bf16e2d438a2466921768c4, state=null
+2024-08-23 19:21:17 [main] INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Fetching config from server at : http://config-server:8888
+2024-08-23 19:21:17 [main] INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Located environment: name=job-to-kafka-service,config-client, profiles=[job_to_kafka], label=null, version=0493d3bc73586e668bf16e2d438a2466921768c4, state=null
+2024-08-23 19:21:19 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=a4aba279-b571-320a-b125-f9fae06fa4a0
+2024-08-23 19:21:19 [main] INFO  o.a.k.c.admin.AdminClientConfig - AdminClientConfig values: 
+	auto.include.jmx.reporter = true
+	bootstrap.servers = [kafka-broker-1:9092, kafka-broker-2:9092, kafka-broker-3:9092]
+	client.dns.lookup = use_all_dns_ips
+	client.id = 
+	connections.max.idle.ms = 300000
+	default.api.timeout.ms = 60000
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+
+2024-08-23 19:21:20 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka version: 3.4.1
+2024-08-23 19:21:20 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka commitId: 8a516edc2755df89
+2024-08-23 19:21:20 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1724440880087
+2024-08-23 19:21:20 [main] INFO  o.s.b.w.e.netty.NettyWebServer - Netty started on port 8080
+2024-08-23 19:21:20 [main] INFO  c.j.j.t.k.s.JobToKafkaServiceApplication - Started JobToKafkaServiceApplication in 4.86 seconds (process running for 5.997)
+2024-08-23 19:21:20 [main] INFO  c.j.k.admin.client.KafkaAdminClient - Creating 1 topics(s), attempt 0
+2024-08-23 19:21:21 [main] INFO  c.j.k.admin.client.KafkaAdminClient - Create topic result [KafkaFuture{value=null,exception=null,done=false}]
+2024-08-23 19:21:21 [main] INFO  c.j.k.admin.client.KafkaAdminClient - Reading kafka topic [job-topic], attempt 0
+2024-08-23 19:21:21 [main] INFO  c.j.j.t.k.s.i.i.KafkaStreamInitializer - Topics with name job-topic is ready for operations!
+2024-08-23 19:21:21 [main] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Starting mock job posting stream
+2024-08-23 19:21:21 [pool-4-thread-1] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Generated mock job posting: Product Manager at TechCorp
+2024-08-23 19:21:21 [pool-4-thread-1] INFO  c.j.j.t.k.s.l.NewJobPostedEventPublisher - Received job post TechCorp-Product Manager-New York, NY-https://TechCorp/jobs.example.com/apply/847-1724440881273 sending to kafka topic job-topic
+2024-08-23 19:21:21 [pool-4-thread-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Sending message='{"id": "75b177e5-73ce-4211-bc0a-093aed535ceb", "companyName": "TechCorp", "role": "Product Manager", "location": "New York, NY", "link": "https://TechCorp/jobs.example.com/apply/847", "postedAt": "1724440881273"}' to topic='job-topic'
+2024-08-23 19:21:21 [pool-4-thread-1] INFO  o.a.k.c.producer.ProducerConfig - ProducerConfig values: 
+	acks = -1
+	auto.include.jmx.reporter = true
+	batch.size = 1638400
+	bootstrap.servers = [kafka-broker-1:9092, kafka-broker-2:9092, kafka-broker-3:9092]
+	buffer.memory = 33554432
+	client.dns.lookup = use_all_dns_ips
+	client.id = producer-1
+	compression.type = snappy
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = true
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.LongSerializer
+	linger.ms = 5
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.adaptive.partitioning.enable = true
+	partitioner.availability.timeout.ms = 0
+	partitioner.class = null
+	partitioner.ignore.keys = false
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 60000
+	retries = 5
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class io.confluent.kafka.serializers.KafkaAvroSerializer
+
+2024-08-23 19:21:21 [pool-4-thread-1] INFO  i.c.k.s.KafkaAvroSerializerConfig - KafkaAvroSerializerConfig values: 
+	auto.register.schemas = true
+	avro.reflection.allow.null = false
+	avro.remove.java.properties = false
+	avro.use.logical.type.converters = false
+	basic.auth.credentials.source = URL
+	basic.auth.user.info = [hidden]
+	bearer.auth.cache.expiry.buffer.seconds = 300
+	bearer.auth.client.id = null
+	bearer.auth.client.secret = null
+	bearer.auth.credentials.source = STATIC_TOKEN
+	bearer.auth.identity.pool.id = null
+	bearer.auth.issuer.endpoint.url = null
+	bearer.auth.logical.cluster = null
+	bearer.auth.scope = null
+	bearer.auth.scope.claim.name = scope
+	bearer.auth.sub.claim.name = sub
+	bearer.auth.token = [hidden]
+	context.name.strategy = class io.confluent.kafka.serializers.context.NullContextNameStrategy
+	id.compatibility.strict = true
+	key.subject.name.strategy = class io.confluent.kafka.serializers.subject.TopicNameStrategy
+	latest.cache.size = 1000
+	latest.cache.ttl.sec = -1
+	latest.compatibility.strict = true
+	max.schemas.per.subject = 1000
+	normalize.schemas = false
+	proxy.host = 
+	proxy.port = -1
+	rule.actions = []
+	rule.executors = []
+	schema.format = null
+	schema.reflection = false
+	schema.registry.basic.auth.user.info = [hidden]
+	schema.registry.ssl.cipher.suites = null
+	schema.registry.ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	schema.registry.ssl.endpoint.identification.algorithm = https
+	schema.registry.ssl.engine.factory.class = null
+	schema.registry.ssl.key.password = null
+	schema.registry.ssl.keymanager.algorithm = SunX509
+	schema.registry.ssl.keystore.certificate.chain = null
+	schema.registry.ssl.keystore.key = null
+	schema.registry.ssl.keystore.location = null
+	schema.registry.ssl.keystore.password = null
+	schema.registry.ssl.keystore.type = JKS
+	schema.registry.ssl.protocol = TLSv1.3
+	schema.registry.ssl.provider = null
+	schema.registry.ssl.secure.random.implementation = null
+	schema.registry.ssl.trustmanager.algorithm = PKIX
+	schema.registry.ssl.truststore.certificates = null
+	schema.registry.ssl.truststore.location = null
+	schema.registry.ssl.truststore.password = null
+	schema.registry.ssl.truststore.type = JKS
+	schema.registry.url = [http://schema-registry:8081]
+	use.latest.version = false
+	use.latest.with.metadata = null
+	use.schema.id = -1
+	value.subject.name.strategy = class io.confluent.kafka.serializers.subject.TopicNameStrategy
+
+2024-08-23 19:21:21 [pool-4-thread-1] INFO  o.a.k.clients.producer.KafkaProducer - [Producer clientId=producer-1] Instantiated an idempotent producer.
+2024-08-23 19:21:21 [pool-4-thread-1] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka version: 3.4.1
+2024-08-23 19:21:21 [pool-4-thread-1] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka commitId: 8a516edc2755df89
+2024-08-23 19:21:21 [pool-4-thread-1] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1724440881683
+2024-08-23 19:21:21 [kafka-producer-network-thread | producer-1] INFO  org.apache.kafka.clients.Metadata - [Producer clientId=producer-1] Cluster ID: QCt67IHwSLuF6vP9d-Y9lg
+2024-08-23 19:21:21 [kafka-producer-network-thread | producer-1] INFO  org.apache.kafka.clients.Metadata - [Producer clientId=producer-1] Resetting the last seen epoch of partition job-topic-0 to 12 since the associated topicId changed from null to F0mq-paRQdadsYMsc2Wkvg
+2024-08-23 19:21:21 [kafka-producer-network-thread | producer-1] INFO  org.apache.kafka.clients.Metadata - [Producer clientId=producer-1] Resetting the last seen epoch of partition job-topic-2 to 11 since the associated topicId changed from null to F0mq-paRQdadsYMsc2Wkvg
+2024-08-23 19:21:21 [kafka-producer-network-thread | producer-1] INFO  org.apache.kafka.clients.Metadata - [Producer clientId=producer-1] Resetting the last seen epoch of partition job-topic-1 to 11 since the associated topicId changed from null to F0mq-paRQdadsYMsc2Wkvg
+2024-08-23 19:21:21 [kafka-producer-network-thread | producer-1] INFO  o.a.k.c.p.i.TransactionManager - [Producer clientId=producer-1] ProducerId set to 2000 with epoch 0
+2024-08-23 19:21:22 [kafka-producer-network-thread | producer-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Received new metadata. Topic: job-topic; Partition 0; Offset 11; Timestamp 1724440881715, at time 219708728476699
+2024-08-23 19:21:31 [pool-4-thread-1] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Generated mock job posting: Cloud Architect at DevWorks
+2024-08-23 19:21:31 [pool-4-thread-1] INFO  c.j.j.t.k.s.l.NewJobPostedEventPublisher - Received job post DevWorks-Cloud Architect-Boston, MA-https://DevWorks/jobs.example.com/apply/544-1724440891976 sending to kafka topic job-topic
+2024-08-23 19:21:31 [pool-4-thread-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Sending message='{"id": "d0375623-9fcc-433c-b829-d4b564000658", "companyName": "DevWorks", "role": "Cloud Architect", "location": "Boston, MA", "link": "https://DevWorks/jobs.example.com/apply/544", "postedAt": "1724440891976"}' to topic='job-topic'
+2024-08-23 19:21:32 [kafka-producer-network-thread | producer-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Received new metadata. Topic: job-topic; Partition 2; Offset 6; Timestamp 1724440891987, at time 219718758267787
+2024-08-23 19:21:41 [pool-4-thread-1] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Generated mock job posting: Cloud Architect at AlgoSoft
+2024-08-23 19:21:42 [pool-4-thread-1] INFO  c.j.j.t.k.s.l.NewJobPostedEventPublisher - Received job post AlgoSoft-Cloud Architect-Boston, MA-https://AlgoSoft/jobs.example.com/apply/660-1724440901992 sending to kafka topic job-topic
+2024-08-23 19:21:42 [pool-4-thread-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Sending message='{"id": "58a91035-5ec1-469d-9775-5c82e20cf5cd", "companyName": "AlgoSoft", "role": "Cloud Architect", "location": "Boston, MA", "link": "https://AlgoSoft/jobs.example.com/apply/660", "postedAt": "1724440901992"}' to topic='job-topic'
+2024-08-23 19:21:42 [kafka-producer-network-thread | producer-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Received new metadata. Topic: job-topic; Partition 1; Offset 7; Timestamp 1724440902004, at time 219728760683499
+2024-08-23 19:21:52 [pool-4-thread-1] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Generated mock job posting: Frontend Developer at DevWorks
+2024-08-23 19:21:52 [pool-4-thread-1] INFO  c.j.j.t.k.s.l.NewJobPostedEventPublisher - Received job post DevWorks-Frontend Developer-Seattle, WA-https://DevWorks/jobs.example.com/apply/597-1724440912009 sending to kafka topic job-topic
+2024-08-23 19:21:52 [pool-4-thread-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Sending message='{"id": "c89a72e6-051c-48fc-acdd-08820213a510", "companyName": "DevWorks", "role": "Frontend Developer", "location": "Seattle, WA", "link": "https://DevWorks/jobs.example.com/apply/597", "postedAt": "1724440912009"}' to topic='job-topic'
+2024-08-23 19:21:52 [kafka-producer-network-thread | producer-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Received new metadata. Topic: job-topic; Partition 1; Offset 8; Timestamp 1724440912016, at time 219738731726587
+2024-08-23 19:22:02 [pool-4-thread-1] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Generated mock job posting: DevOps Engineer at CyberNext
+2024-08-23 19:22:02 [pool-4-thread-1] INFO  c.j.j.t.k.s.l.NewJobPostedEventPublisher - Received job post CyberNext-DevOps Engineer-Chicago, IL-https://CyberNext/jobs.example.com/apply/856-1724440922021 sending to kafka topic job-topic
+2024-08-23 19:22:02 [pool-4-thread-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Sending message='{"id": "4797632a-d001-4625-ae38-06011815d6f8", "companyName": "CyberNext", "role": "DevOps Engineer", "location": "Chicago, IL", "link": "https://CyberNext/jobs.example.com/apply/856", "postedAt": "1724440922021"}' to topic='job-topic'
+2024-08-23 19:22:02 [kafka-producer-network-thread | producer-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Received new metadata. Topic: job-topic; Partition 0; Offset 12; Timestamp 1724440922040, at time 219748759642008
+2024-08-23 19:22:12 [pool-4-thread-1] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Generated mock job posting: DevOps Engineer at CodeBrew
+2024-08-23 19:22:12 [pool-4-thread-1] INFO  c.j.j.t.k.s.l.NewJobPostedEventPublisher - Received job post CodeBrew-DevOps Engineer-San Francisco, CA-https://CodeBrew/jobs.example.com/apply/468-1724440932045 sending to kafka topic job-topic
+2024-08-23 19:22:12 [pool-4-thread-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Sending message='{"id": "7e350f59-37e8-44f9-9dc6-62a56253eecf", "companyName": "CodeBrew", "role": "DevOps Engineer", "location": "San Francisco, CA", "link": "https://CodeBrew/jobs.example.com/apply/468", "postedAt": "1724440932045"}' to topic='job-topic'
+2024-08-23 19:22:12 [kafka-producer-network-thread | producer-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Received new metadata. Topic: job-topic; Partition 1; Offset 9; Timestamp 1724440932052, at time 219758761868054
+2024-08-23 19:22:15 [kafka-admin-client-thread | adminclient-1] INFO  o.apache.kafka.clients.NetworkClient - [AdminClient clientId=adminclient-1] Node -2 disconnected.
+2024-08-23 19:22:15 [kafka-producer-network-thread | producer-1] INFO  o.apache.kafka.clients.NetworkClient - [Producer clientId=producer-1] Node 2 disconnected.
+2024-08-23 19:22:15 [kafka-producer-network-thread | producer-1] INFO  o.apache.kafka.clients.NetworkClient - [Producer clientId=producer-1] Node 1 disconnected.
+2024-08-23 19:22:22 [pool-4-thread-1] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Generated mock job posting: Backend Developer at TechCorp
+2024-08-23 19:22:22 [pool-4-thread-1] INFO  c.j.j.t.k.s.l.NewJobPostedEventPublisher - Received job post TechCorp-Backend Developer-Denver, CO-https://TechCorp/jobs.example.com/apply/525-1724440942059 sending to kafka topic job-topic
+2024-08-23 19:22:22 [pool-4-thread-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Sending message='{"id": "822f02fe-299c-4bbd-a863-7654a52124c2", "companyName": "TechCorp", "role": "Backend Developer", "location": "Denver, CO", "link": "https://TechCorp/jobs.example.com/apply/525", "postedAt": "1724440942059"}' to topic='job-topic'
+2024-08-23 19:22:22 [kafka-producer-network-thread | producer-1] WARN  o.apache.kafka.clients.NetworkClient - [Producer clientId=producer-1] Error connecting to node kafka-broker-1:9092 (id: 1 rack: null)
+java.net.UnknownHostException: kafka-broker-1: Name or service not known
+	at java.base/java.net.Inet4AddressImpl.lookupAllHostAddr(Native Method)
+	at java.base/java.net.InetAddress$PlatformNameService.lookupAllHostAddr(Unknown Source)
+	at java.base/java.net.InetAddress.getAddressesFromNameService(Unknown Source)
+	at java.base/java.net.InetAddress$NameServiceAddresses.get(Unknown Source)
+	at java.base/java.net.InetAddress.getAllByName0(Unknown Source)
+	at java.base/java.net.InetAddress.getAllByName(Unknown Source)
+	at java.base/java.net.InetAddress.getAllByName(Unknown Source)
+	at org.apache.kafka.clients.DefaultHostResolver.resolve(DefaultHostResolver.java:27)
+	at org.apache.kafka.clients.ClientUtils.resolve(ClientUtils.java:110)
+	at org.apache.kafka.clients.ClusterConnectionStates$NodeConnectionState.currentAddress(ClusterConnectionStates.java:510)
+	at org.apache.kafka.clients.ClusterConnectionStates$NodeConnectionState.access$200(ClusterConnectionStates.java:467)
+	at org.apache.kafka.clients.ClusterConnectionStates.currentAddress(ClusterConnectionStates.java:173)
+	at org.apache.kafka.clients.NetworkClient.initiateConnect(NetworkClient.java:990)
+	at org.apache.kafka.clients.NetworkClient.ready(NetworkClient.java:301)
+	at org.apache.kafka.clients.producer.internals.Sender.sendProducerData(Sender.java:354)
+	at org.apache.kafka.clients.producer.internals.Sender.runOnce(Sender.java:327)
+	at org.apache.kafka.clients.producer.internals.Sender.run(Sender.java:243)
+	at java.base/java.lang.Thread.run(Unknown Source)
+2024-08-23 19:22:22 [kafka-producer-network-thread | producer-1] WARN  o.apache.kafka.clients.NetworkClient - [Producer clientId=producer-1] Error connecting to node kafka-broker-1:9092 (id: 1 rack: null)
+java.net.UnknownHostException: kafka-broker-1
+	at java.base/java.net.InetAddress$CachedAddresses.get(Unknown Source)
+	at java.base/java.net.InetAddress.getAllByName0(Unknown Source)
+	at java.base/java.net.InetAddress.getAllByName(Unknown Source)
+	at java.base/java.net.InetAddress.getAllByName(Unknown Source)
+	at org.apache.kafka.clients.DefaultHostResolver.resolve(DefaultHostResolver.java:27)
+	at org.apache.kafka.clients.ClientUtils.resolve(ClientUtils.java:110)
+	at org.apache.kafka.clients.ClusterConnectionStates$NodeConnectionState.currentAddress(ClusterConnectionStates.java:510)
+	at org.apache.kafka.clients.ClusterConnectionStates$NodeConnectionState.access$200(ClusterConnectionStates.java:467)
+	at org.apache.kafka.clients.ClusterConnectionStates.currentAddress(ClusterConnectionStates.java:173)
+	at org.apache.kafka.clients.NetworkClient.initiateConnect(NetworkClient.java:990)
+	at org.apache.kafka.clients.NetworkClient.ready(NetworkClient.java:301)
+	at org.apache.kafka.clients.producer.internals.Sender.sendProducerData(Sender.java:354)
+	at org.apache.kafka.clients.producer.internals.Sender.runOnce(Sender.java:327)
+	at org.apache.kafka.clients.producer.internals.Sender.run(Sender.java:243)
+	at java.base/java.lang.Thread.run(Unknown Source)
+2024-08-23 19:22:22 [kafka-producer-network-thread | producer-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Received new metadata. Topic: job-topic; Partition 2; Offset 7; Timestamp 1724440942072, at time 219769055978976
+2024-08-23 19:38:07 [main] INFO  c.j.j.t.k.s.JobToKafkaServiceApplication - Starting JobToKafkaServiceApplication v0.0.1-SNAPSHOT using Java 17.0.7 with PID 441 (/workspace/BOOT-INF/classes started by root in /workspace)
+2024-08-23 19:38:07 [main] INFO  c.j.j.t.k.s.JobToKafkaServiceApplication - The following 1 profile is active: "job_to_kafka"
+2024-08-23 19:38:07 [main] INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Fetching config from server at : http://config-server:8888
+2024-08-23 19:38:07 [main] INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Located environment: name=job-to-kafka-service,config-client, profiles=[default], label=null, version=410055c824ee1a8c6c7831683ef0805b282d0097, state=null
+2024-08-23 19:38:07 [main] INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Fetching config from server at : http://config-server:8888
+2024-08-23 19:38:07 [main] INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Located environment: name=job-to-kafka-service,config-client, profiles=[job_to_kafka], label=null, version=410055c824ee1a8c6c7831683ef0805b282d0097, state=null
+2024-08-23 19:38:09 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=a4aba279-b571-320a-b125-f9fae06fa4a0
+2024-08-23 19:38:09 [main] INFO  o.a.k.c.admin.AdminClientConfig - AdminClientConfig values: 
+	auto.include.jmx.reporter = true
+	bootstrap.servers = [kafka-broker-1:9092, kafka-broker-2:9092, kafka-broker-3:9092]
+	client.dns.lookup = use_all_dns_ips
+	client.id = 
+	connections.max.idle.ms = 300000
+	default.api.timeout.ms = 60000
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+
+2024-08-23 19:38:09 [main] WARN  o.apache.kafka.clients.ClientUtils - Couldn't resolve server kafka-broker-3:9092 from bootstrap.servers as DNS resolution failed for kafka-broker-3
+2024-08-23 19:38:09 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka version: 3.4.1
+2024-08-23 19:38:09 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka commitId: 8a516edc2755df89
+2024-08-23 19:38:09 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1724441889889
+2024-08-23 19:38:10 [main] INFO  o.s.b.w.e.netty.NettyWebServer - Netty started on port 8181
+2024-08-23 19:38:10 [main] INFO  c.j.j.t.k.s.JobToKafkaServiceApplication - Started JobToKafkaServiceApplication in 4.6 seconds (process running for 5.652)
+2024-08-23 19:38:10 [main] INFO  c.j.k.admin.client.KafkaAdminClient - Creating 1 topics(s), attempt 0
+2024-08-23 19:38:10 [main] INFO  c.j.k.admin.client.KafkaAdminClient - Create topic result [KafkaFuture{value=null,exception=null,done=false}]
+2024-08-23 19:38:10 [main] INFO  c.j.k.admin.client.KafkaAdminClient - Reading kafka topic [job-topic], attempt 0
+2024-08-23 19:38:13 [main] INFO  c.j.k.admin.client.KafkaAdminClient - Reading kafka topic [job-topic], attempt 0
+2024-08-23 19:38:27 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-08-23 19:38:28 [main] ERROR o.s.boot.SpringApplication - Application run failed
+java.lang.IllegalStateException: Failed to execute CommandLineRunner
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:774)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:755)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:319)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at com.jobhacker.job.to.kafka.service.JobToKafkaServiceApplication.main(JobToKafkaServiceApplication.java:30)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at org.springframework.boot.loader.MainMethodRunner.run(MainMethodRunner.java:49)
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:95)
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:58)
+	at org.springframework.boot.loader.JarLauncher.main(JarLauncher.java:65)
+Caused by: com.jobhacker.kafka.admin.exception.KafkaClientException: Reached max number of retry for reading kafka topic(s)!
+	at com.jobhacker.kafka.admin.client.KafkaAdminClient.checkMaxRetry(KafkaAdminClient.java:118)
+	at com.jobhacker.kafka.admin.client.KafkaAdminClient.checkSchemaRegistry(KafkaAdminClient.java:88)
+	at com.jobhacker.job.to.kafka.service.init.impl.KafkaStreamInitializer.init(KafkaStreamInitializer.java:27)
+	at com.jobhacker.job.to.kafka.service.JobToKafkaServiceApplication.run(JobToKafkaServiceApplication.java:35)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:771)
+	... 13 common frames omitted
+2024-08-23 19:38:28 [kafka-admin-client-thread | adminclient-1] INFO  o.a.kafka.common.utils.AppInfoParser - App info kafka.admin.client for adminclient-1 unregistered
+2024-08-23 19:38:28 [kafka-admin-client-thread | adminclient-1] INFO  o.a.kafka.common.metrics.Metrics - Metrics scheduler closed
+2024-08-23 19:38:28 [kafka-admin-client-thread | adminclient-1] INFO  o.a.kafka.common.metrics.Metrics - Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2024-08-23 19:38:28 [kafka-admin-client-thread | adminclient-1] INFO  o.a.kafka.common.metrics.Metrics - Metrics reporters closed
+2024-08-23 19:38:28 [main] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Closing kafka producer!
+2024-08-23 19:39:17 [main] INFO  c.j.j.t.k.s.JobToKafkaServiceApplication - Starting JobToKafkaServiceApplication v0.0.1-SNAPSHOT using Java 17.0.7 with PID 184 (/workspace/BOOT-INF/classes started by root in /workspace)
+2024-08-23 19:39:17 [main] INFO  c.j.j.t.k.s.JobToKafkaServiceApplication - The following 1 profile is active: "job_to_kafka"
+2024-08-23 19:39:17 [main] INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Fetching config from server at : http://config-server:8888
+2024-08-23 19:39:17 [main] INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Located environment: name=job-to-kafka-service,config-client, profiles=[default], label=null, version=410055c824ee1a8c6c7831683ef0805b282d0097, state=null
+2024-08-23 19:39:17 [main] INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Fetching config from server at : http://config-server:8888
+2024-08-23 19:39:17 [main] INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Located environment: name=job-to-kafka-service,config-client, profiles=[job_to_kafka], label=null, version=410055c824ee1a8c6c7831683ef0805b282d0097, state=null
+2024-08-23 19:39:18 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=a4aba279-b571-320a-b125-f9fae06fa4a0
+2024-08-23 19:39:19 [main] INFO  o.a.k.c.admin.AdminClientConfig - AdminClientConfig values: 
+	auto.include.jmx.reporter = true
+	bootstrap.servers = [kafka-broker-1:9092, kafka-broker-2:9092, kafka-broker-3:9092]
+	client.dns.lookup = use_all_dns_ips
+	client.id = 
+	connections.max.idle.ms = 300000
+	default.api.timeout.ms = 60000
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+
+2024-08-23 19:39:19 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka version: 3.4.1
+2024-08-23 19:39:19 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka commitId: 8a516edc2755df89
+2024-08-23 19:39:19 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1724441959629
+2024-08-23 19:39:20 [main] INFO  o.s.b.w.e.netty.NettyWebServer - Netty started on port 8181
+2024-08-23 19:39:20 [main] INFO  c.j.j.t.k.s.JobToKafkaServiceApplication - Started JobToKafkaServiceApplication in 4.411 seconds (process running for 5.525)
+2024-08-23 19:39:20 [main] INFO  c.j.k.admin.client.KafkaAdminClient - Creating 1 topics(s), attempt 0
+2024-08-23 19:39:20 [main] INFO  c.j.k.admin.client.KafkaAdminClient - Create topic result [KafkaFuture{value=null,exception=null,done=false}]
+2024-08-23 19:39:20 [main] INFO  c.j.k.admin.client.KafkaAdminClient - Reading kafka topic [job-topic], attempt 0
+2024-08-23 19:39:20 [main] INFO  c.j.j.t.k.s.i.i.KafkaStreamInitializer - Topics with name job-topic is ready for operations!
+2024-08-23 19:39:20 [main] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Starting mock job posting stream
+2024-08-23 19:39:20 [pool-4-thread-1] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Generated mock job posting: Frontend Developer at TechCorp
+2024-08-23 19:39:20 [pool-4-thread-1] INFO  c.j.j.t.k.s.l.NewJobPostedEventPublisher - Received job post TechCorp-Frontend Developer-Chicago, IL-https://TechCorp/jobs.example.com/apply/606-1724441960566 sending to kafka topic job-topic
+2024-08-23 19:39:20 [pool-4-thread-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Sending message='{"id": "84e7673d-ceca-4d87-a336-bf44bf9a6b0a", "companyName": "TechCorp", "role": "Frontend Developer", "location": "Chicago, IL", "link": "https://TechCorp/jobs.example.com/apply/606", "postedAt": "1724441960566"}' to topic='job-topic'
+2024-08-23 19:39:20 [pool-4-thread-1] INFO  o.a.k.c.producer.ProducerConfig - ProducerConfig values: 
+	acks = -1
+	auto.include.jmx.reporter = true
+	batch.size = 1638400
+	bootstrap.servers = [kafka-broker-1:9092, kafka-broker-2:9092, kafka-broker-3:9092]
+	buffer.memory = 33554432
+	client.dns.lookup = use_all_dns_ips
+	client.id = producer-1
+	compression.type = snappy
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = true
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.LongSerializer
+	linger.ms = 5
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.adaptive.partitioning.enable = true
+	partitioner.availability.timeout.ms = 0
+	partitioner.class = null
+	partitioner.ignore.keys = false
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 60000
+	retries = 5
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class io.confluent.kafka.serializers.KafkaAvroSerializer
+
+2024-08-23 19:39:20 [pool-4-thread-1] INFO  i.c.k.s.KafkaAvroSerializerConfig - KafkaAvroSerializerConfig values: 
+	auto.register.schemas = true
+	avro.reflection.allow.null = false
+	avro.remove.java.properties = false
+	avro.use.logical.type.converters = false
+	basic.auth.credentials.source = URL
+	basic.auth.user.info = [hidden]
+	bearer.auth.cache.expiry.buffer.seconds = 300
+	bearer.auth.client.id = null
+	bearer.auth.client.secret = null
+	bearer.auth.credentials.source = STATIC_TOKEN
+	bearer.auth.identity.pool.id = null
+	bearer.auth.issuer.endpoint.url = null
+	bearer.auth.logical.cluster = null
+	bearer.auth.scope = null
+	bearer.auth.scope.claim.name = scope
+	bearer.auth.sub.claim.name = sub
+	bearer.auth.token = [hidden]
+	context.name.strategy = class io.confluent.kafka.serializers.context.NullContextNameStrategy
+	id.compatibility.strict = true
+	key.subject.name.strategy = class io.confluent.kafka.serializers.subject.TopicNameStrategy
+	latest.cache.size = 1000
+	latest.cache.ttl.sec = -1
+	latest.compatibility.strict = true
+	max.schemas.per.subject = 1000
+	normalize.schemas = false
+	proxy.host = 
+	proxy.port = -1
+	rule.actions = []
+	rule.executors = []
+	schema.format = null
+	schema.reflection = false
+	schema.registry.basic.auth.user.info = [hidden]
+	schema.registry.ssl.cipher.suites = null
+	schema.registry.ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	schema.registry.ssl.endpoint.identification.algorithm = https
+	schema.registry.ssl.engine.factory.class = null
+	schema.registry.ssl.key.password = null
+	schema.registry.ssl.keymanager.algorithm = SunX509
+	schema.registry.ssl.keystore.certificate.chain = null
+	schema.registry.ssl.keystore.key = null
+	schema.registry.ssl.keystore.location = null
+	schema.registry.ssl.keystore.password = null
+	schema.registry.ssl.keystore.type = JKS
+	schema.registry.ssl.protocol = TLSv1.3
+	schema.registry.ssl.provider = null
+	schema.registry.ssl.secure.random.implementation = null
+	schema.registry.ssl.trustmanager.algorithm = PKIX
+	schema.registry.ssl.truststore.certificates = null
+	schema.registry.ssl.truststore.location = null
+	schema.registry.ssl.truststore.password = null
+	schema.registry.ssl.truststore.type = JKS
+	schema.registry.url = [http://schema-registry:8081]
+	use.latest.version = false
+	use.latest.with.metadata = null
+	use.schema.id = -1
+	value.subject.name.strategy = class io.confluent.kafka.serializers.subject.TopicNameStrategy
+
+2024-08-23 19:39:20 [pool-4-thread-1] INFO  o.a.k.clients.producer.KafkaProducer - [Producer clientId=producer-1] Instantiated an idempotent producer.
+2024-08-23 19:39:20 [pool-4-thread-1] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka version: 3.4.1
+2024-08-23 19:39:20 [pool-4-thread-1] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka commitId: 8a516edc2755df89
+2024-08-23 19:39:20 [pool-4-thread-1] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1724441960899
+2024-08-23 19:39:20 [kafka-producer-network-thread | producer-1] INFO  org.apache.kafka.clients.Metadata - [Producer clientId=producer-1] Resetting the last seen epoch of partition job-topic-0 to 18 since the associated topicId changed from null to F0mq-paRQdadsYMsc2Wkvg
+2024-08-23 19:39:20 [kafka-producer-network-thread | producer-1] INFO  org.apache.kafka.clients.Metadata - [Producer clientId=producer-1] Resetting the last seen epoch of partition job-topic-2 to 17 since the associated topicId changed from null to F0mq-paRQdadsYMsc2Wkvg
+2024-08-23 19:39:20 [kafka-producer-network-thread | producer-1] INFO  org.apache.kafka.clients.Metadata - [Producer clientId=producer-1] Resetting the last seen epoch of partition job-topic-1 to 16 since the associated topicId changed from null to F0mq-paRQdadsYMsc2Wkvg
+2024-08-23 19:39:20 [kafka-producer-network-thread | producer-1] INFO  org.apache.kafka.clients.Metadata - [Producer clientId=producer-1] Cluster ID: QCt67IHwSLuF6vP9d-Y9lg
+2024-08-23 19:39:20 [kafka-producer-network-thread | producer-1] INFO  o.a.k.c.p.i.TransactionManager - [Producer clientId=producer-1] ProducerId set to 3000 with epoch 0
+2024-08-23 19:39:21 [kafka-producer-network-thread | producer-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Received new metadata. Topic: job-topic; Partition 1; Offset 10; Timestamp 1724441960919, at time 220787819189729
+2024-08-23 19:39:31 [pool-4-thread-1] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Generated mock job posting: Product Manager at CodeBrew
+2024-08-23 19:39:31 [pool-4-thread-1] INFO  c.j.j.t.k.s.l.NewJobPostedEventPublisher - Received job post CodeBrew-Product Manager-San Francisco, CA-https://CodeBrew/jobs.example.com/apply/137-1724441971106 sending to kafka topic job-topic
+2024-08-23 19:39:31 [pool-4-thread-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Sending message='{"id": "b220baf7-9713-4380-881e-acb62ddbb604", "companyName": "CodeBrew", "role": "Product Manager", "location": "San Francisco, CA", "link": "https://CodeBrew/jobs.example.com/apply/137", "postedAt": "1724441971106"}' to topic='job-topic'
+2024-08-23 19:39:31 [kafka-producer-network-thread | producer-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Received new metadata. Topic: job-topic; Partition 0; Offset 13; Timestamp 1724441971122, at time 220797879833109
+2024-08-23 19:39:41 [pool-4-thread-1] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Generated mock job posting: DevOps Engineer at SoftSolutions
+2024-08-23 19:39:41 [pool-4-thread-1] INFO  c.j.j.t.k.s.l.NewJobPostedEventPublisher - Received job post SoftSolutions-DevOps Engineer-Denver, CO-https://SoftSolutions/jobs.example.com/apply/934-1724441981136 sending to kafka topic job-topic
+2024-08-23 19:39:41 [pool-4-thread-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Sending message='{"id": "d031d888-9a56-4ba8-ad54-ba2989adcb6b", "companyName": "SoftSolutions", "role": "DevOps Engineer", "location": "Denver, CO", "link": "https://SoftSolutions/jobs.example.com/apply/934", "postedAt": "1724441981136"}' to topic='job-topic'
+2024-08-23 19:39:41 [kafka-producer-network-thread | producer-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Received new metadata. Topic: job-topic; Partition 2; Offset 8; Timestamp 1724441981151, at time 220807906428280
+2024-08-23 19:39:51 [pool-4-thread-1] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Generated mock job posting: Software Engineer at TechCorp
+2024-08-23 19:39:51 [pool-4-thread-1] INFO  c.j.j.t.k.s.l.NewJobPostedEventPublisher - Received job post TechCorp-Software Engineer-Seattle, WA-https://TechCorp/jobs.example.com/apply/107-1724441991157 sending to kafka topic job-topic
+2024-08-23 19:39:51 [pool-4-thread-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Sending message='{"id": "4eed95f9-54dd-482e-8e69-e606180d217e", "companyName": "TechCorp", "role": "Software Engineer", "location": "Seattle, WA", "link": "https://TechCorp/jobs.example.com/apply/107", "postedAt": "1724441991157"}' to topic='job-topic'
+2024-08-23 19:39:51 [kafka-producer-network-thread | producer-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Received new metadata. Topic: job-topic; Partition 2; Offset 9; Timestamp 1724441991169, at time 220817872216576
+2024-08-23 19:40:01 [pool-4-thread-1] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Generated mock job posting: Frontend Developer at DevWorks
+2024-08-23 19:40:01 [pool-4-thread-1] INFO  c.j.j.t.k.s.l.NewJobPostedEventPublisher - Received job post DevWorks-Frontend Developer-Denver, CO-https://DevWorks/jobs.example.com/apply/727-1724442001172 sending to kafka topic job-topic
+2024-08-23 19:40:01 [pool-4-thread-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Sending message='{"id": "a00308ca-5cee-42c7-9f56-5e028c888999", "companyName": "DevWorks", "role": "Frontend Developer", "location": "Denver, CO", "link": "https://DevWorks/jobs.example.com/apply/727", "postedAt": "1724442001172"}' to topic='job-topic'
+2024-08-23 19:40:01 [kafka-producer-network-thread | producer-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Received new metadata. Topic: job-topic; Partition 1; Offset 11; Timestamp 1724442001186, at time 220827893608623
+2024-08-23 19:40:11 [pool-4-thread-1] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Generated mock job posting: Cloud Architect at SoftSolutions
+2024-08-23 19:40:11 [pool-4-thread-1] INFO  c.j.j.t.k.s.l.NewJobPostedEventPublisher - Received job post SoftSolutions-Cloud Architect-Seattle, WA-https://SoftSolutions/jobs.example.com/apply/170-1724442011190 sending to kafka topic job-topic
+2024-08-23 19:40:11 [pool-4-thread-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Sending message='{"id": "c1f9ec7a-a5ea-4262-a564-f2f19a805208", "companyName": "SoftSolutions", "role": "Cloud Architect", "location": "Seattle, WA", "link": "https://SoftSolutions/jobs.example.com/apply/170", "postedAt": "1724442011190"}' to topic='job-topic'
+2024-08-23 19:40:11 [kafka-producer-network-thread | producer-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Received new metadata. Topic: job-topic; Partition 0; Offset 14; Timestamp 1724442011192, at time 220837878927419
+2024-08-23 19:40:21 [pool-4-thread-1] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Generated mock job posting: Fullstack Developer at CodeBrew
+2024-08-23 19:40:21 [pool-4-thread-1] INFO  c.j.j.t.k.s.l.NewJobPostedEventPublisher - Received job post CodeBrew-Fullstack Developer-Chicago, IL-https://CodeBrew/jobs.example.com/apply/306-1724442021195 sending to kafka topic job-topic
+2024-08-23 19:40:21 [pool-4-thread-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Sending message='{"id": "126c2086-bdb8-4b1d-bb77-08e72d8165bd", "companyName": "CodeBrew", "role": "Fullstack Developer", "location": "Chicago, IL", "link": "https://CodeBrew/jobs.example.com/apply/306", "postedAt": "1724442021195"}' to topic='job-topic'
+2024-08-23 19:40:21 [kafka-producer-network-thread | producer-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Received new metadata. Topic: job-topic; Partition 1; Offset 12; Timestamp 1724442021208, at time 220847910493257
+2024-08-23 19:40:31 [pool-4-thread-1] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Generated mock job posting: Data Scientist at CodeBrew
+2024-08-23 19:40:31 [pool-4-thread-1] INFO  c.j.j.t.k.s.l.NewJobPostedEventPublisher - Received job post CodeBrew-Data Scientist-Seattle, WA-https://CodeBrew/jobs.example.com/apply/154-1724442031213 sending to kafka topic job-topic
+2024-08-23 19:40:31 [pool-4-thread-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Sending message='{"id": "03395001-3e70-48d3-a9e2-eb1bd74a5869", "companyName": "CodeBrew", "role": "Data Scientist", "location": "Seattle, WA", "link": "https://CodeBrew/jobs.example.com/apply/154", "postedAt": "1724442031213"}' to topic='job-topic'
+2024-08-23 19:40:31 [kafka-producer-network-thread | producer-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Received new metadata. Topic: job-topic; Partition 0; Offset 15; Timestamp 1724442031224, at time 220857923541345
+2024-08-23 19:40:41 [pool-4-thread-1] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Generated mock job posting: Product Manager at TechCorp
+2024-08-23 19:40:41 [pool-4-thread-1] INFO  c.j.j.t.k.s.l.NewJobPostedEventPublisher - Received job post TechCorp-Product Manager-Boston, MA-https://TechCorp/jobs.example.com/apply/549-1724442041231 sending to kafka topic job-topic
+2024-08-23 19:40:41 [pool-4-thread-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Sending message='{"id": "beab3209-b5bc-40e9-9928-db0f5338bed4", "companyName": "TechCorp", "role": "Product Manager", "location": "Boston, MA", "link": "https://TechCorp/jobs.example.com/apply/549", "postedAt": "1724442041231"}' to topic='job-topic'
+2024-08-23 19:40:41 [kafka-producer-network-thread | producer-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Received new metadata. Topic: job-topic; Partition 0; Offset 16; Timestamp 1724442041240, at time 220867942280390
+2024-08-23 19:40:51 [pool-4-thread-1] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Generated mock job posting: Cloud Architect at SoftSolutions
+2024-08-23 19:40:51 [pool-4-thread-1] INFO  c.j.j.t.k.s.l.NewJobPostedEventPublisher - Received job post SoftSolutions-Cloud Architect-Los Angeles, CA-https://SoftSolutions/jobs.example.com/apply/456-1724442051248 sending to kafka topic job-topic
+2024-08-23 19:40:51 [pool-4-thread-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Sending message='{"id": "028ac99f-4710-48ed-9aab-949483abc2a7", "companyName": "SoftSolutions", "role": "Cloud Architect", "location": "Los Angeles, CA", "link": "https://SoftSolutions/jobs.example.com/apply/456", "postedAt": "1724442051248"}' to topic='job-topic'
+2024-08-23 19:40:51 [kafka-producer-network-thread | producer-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Received new metadata. Topic: job-topic; Partition 2; Offset 10; Timestamp 1724442051261, at time 220877957274103
+2024-08-23 19:41:01 [pool-4-thread-1] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Generated mock job posting: Product Manager at CodeBrew
+2024-08-23 19:41:01 [pool-4-thread-1] INFO  c.j.j.t.k.s.l.NewJobPostedEventPublisher - Received job post CodeBrew-Product Manager-San Francisco, CA-https://CodeBrew/jobs.example.com/apply/694-1724442061266 sending to kafka topic job-topic
+2024-08-23 19:41:01 [pool-4-thread-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Sending message='{"id": "b71ba49a-68eb-4c72-9db9-80052931b6ef", "companyName": "CodeBrew", "role": "Product Manager", "location": "San Francisco, CA", "link": "https://CodeBrew/jobs.example.com/apply/694", "postedAt": "1724442061266"}' to topic='job-topic'
+2024-08-23 19:41:01 [kafka-producer-network-thread | producer-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Received new metadata. Topic: job-topic; Partition 1; Offset 13; Timestamp 1724442061272, at time 220887964675941
+2024-08-23 19:41:11 [pool-4-thread-1] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Generated mock job posting: Cloud Architect at CodeBrew
+2024-08-23 19:41:11 [pool-4-thread-1] INFO  c.j.j.t.k.s.l.NewJobPostedEventPublisher - Received job post CodeBrew-Cloud Architect-San Francisco, CA-https://CodeBrew/jobs.example.com/apply/381-1724442071278 sending to kafka topic job-topic
+2024-08-23 19:41:11 [pool-4-thread-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Sending message='{"id": "1400f7c0-0872-42bd-b171-e8f2e28cfdf0", "companyName": "CodeBrew", "role": "Cloud Architect", "location": "San Francisco, CA", "link": "https://CodeBrew/jobs.example.com/apply/381", "postedAt": "1724442071278"}' to topic='job-topic'
+2024-08-23 19:41:11 [kafka-producer-network-thread | producer-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Received new metadata. Topic: job-topic; Partition 0; Offset 17; Timestamp 1724442071317, at time 220898003697112
+2024-08-23 19:41:21 [pool-4-thread-1] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Generated mock job posting: Product Manager at CodeBrew
+2024-08-23 19:41:21 [pool-4-thread-1] INFO  c.j.j.t.k.s.l.NewJobPostedEventPublisher - Received job post CodeBrew-Product Manager-Seattle, WA-https://CodeBrew/jobs.example.com/apply/253-1724442081319 sending to kafka topic job-topic
+2024-08-23 19:41:21 [pool-4-thread-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Sending message='{"id": "9d48d66f-3933-4a59-ad6a-74db0fbd89df", "companyName": "CodeBrew", "role": "Product Manager", "location": "Seattle, WA", "link": "https://CodeBrew/jobs.example.com/apply/253", "postedAt": "1724442081319"}' to topic='job-topic'
+2024-08-23 19:41:21 [kafka-producer-network-thread | producer-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Received new metadata. Topic: job-topic; Partition 0; Offset 18; Timestamp 1724442081331, at time 220908025654075
+2024-08-23 19:41:31 [pool-4-thread-1] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Generated mock job posting: Frontend Developer at TechCorp
+2024-08-23 19:41:31 [pool-4-thread-1] INFO  c.j.j.t.k.s.l.NewJobPostedEventPublisher - Received job post TechCorp-Frontend Developer-Austin, TX-https://TechCorp/jobs.example.com/apply/649-1724442091340 sending to kafka topic job-topic
+2024-08-23 19:41:31 [pool-4-thread-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Sending message='{"id": "662546a4-c8c0-4ab0-8155-57c523c84ebb", "companyName": "TechCorp", "role": "Frontend Developer", "location": "Austin, TX", "link": "https://TechCorp/jobs.example.com/apply/649", "postedAt": "1724442091340"}' to topic='job-topic'
+2024-08-23 19:41:31 [kafka-producer-network-thread | producer-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Received new metadata. Topic: job-topic; Partition 0; Offset 19; Timestamp 1724442091350, at time 220918038815955
+2024-08-23 19:41:41 [pool-4-thread-1] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Generated mock job posting: DevOps Engineer at TechCorp
+2024-08-23 19:41:41 [pool-4-thread-1] INFO  c.j.j.t.k.s.l.NewJobPostedEventPublisher - Received job post TechCorp-DevOps Engineer-Boston, MA-https://TechCorp/jobs.example.com/apply/894-1724442101356 sending to kafka topic job-topic
+2024-08-23 19:41:41 [pool-4-thread-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Sending message='{"id": "cd83e7a1-a099-42bc-a4e3-21412ce34f56", "companyName": "TechCorp", "role": "DevOps Engineer", "location": "Boston, MA", "link": "https://TechCorp/jobs.example.com/apply/894", "postedAt": "1724442101356"}' to topic='job-topic'
+2024-08-23 19:41:41 [kafka-producer-network-thread | producer-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Received new metadata. Topic: job-topic; Partition 2; Offset 11; Timestamp 1724442101360, at time 220928054117876
+2024-08-23 19:41:51 [pool-4-thread-1] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Generated mock job posting: Data Scientist at TechCorp
+2024-08-23 19:41:51 [pool-4-thread-1] INFO  c.j.j.t.k.s.l.NewJobPostedEventPublisher - Received job post TechCorp-Data Scientist-Los Angeles, CA-https://TechCorp/jobs.example.com/apply/592-1724442111367 sending to kafka topic job-topic
+2024-08-23 19:41:51 [pool-4-thread-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Sending message='{"id": "6e35af3a-c587-45ba-933a-f94f730e8448", "companyName": "TechCorp", "role": "Data Scientist", "location": "Los Angeles, CA", "link": "https://TechCorp/jobs.example.com/apply/592", "postedAt": "1724442111367"}' to topic='job-topic'
+2024-08-23 19:41:51 [kafka-producer-network-thread | producer-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Received new metadata. Topic: job-topic; Partition 1; Offset 14; Timestamp 1724442111377, at time 220938070260881
+2024-08-23 19:42:01 [pool-4-thread-1] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Generated mock job posting: Frontend Developer at SoftSolutions
+2024-08-23 19:42:01 [pool-4-thread-1] INFO  c.j.j.t.k.s.l.NewJobPostedEventPublisher - Received job post SoftSolutions-Frontend Developer-Boston, MA-https://SoftSolutions/jobs.example.com/apply/764-1724442121383 sending to kafka topic job-topic
+2024-08-23 19:42:01 [pool-4-thread-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Sending message='{"id": "f00394e4-4874-4c35-a436-5ac34dcff02f", "companyName": "SoftSolutions", "role": "Frontend Developer", "location": "Boston, MA", "link": "https://SoftSolutions/jobs.example.com/apply/764", "postedAt": "1724442121383"}' to topic='job-topic'
+2024-08-23 19:42:01 [kafka-producer-network-thread | producer-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Received new metadata. Topic: job-topic; Partition 1; Offset 15; Timestamp 1724442121391, at time 220948090456969
+2024-08-23 19:42:11 [pool-4-thread-1] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Generated mock job posting: DevOps Engineer at AI Dynamics
+2024-08-23 19:42:11 [pool-4-thread-1] INFO  c.j.j.t.k.s.l.NewJobPostedEventPublisher - Received job post AI Dynamics-DevOps Engineer-Los Angeles, CA-https://AI Dynamics/jobs.example.com/apply/160-1724442131405 sending to kafka topic job-topic
+2024-08-23 19:42:11 [pool-4-thread-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Sending message='{"id": "ef32a7d3-d7d2-40c4-bdd5-12e2012e83b8", "companyName": "AI Dynamics", "role": "DevOps Engineer", "location": "Los Angeles, CA", "link": "https://AI Dynamics/jobs.example.com/apply/160", "postedAt": "1724442131405"}' to topic='job-topic'
+2024-08-23 19:42:11 [kafka-producer-network-thread | producer-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Received new metadata. Topic: job-topic; Partition 2; Offset 12; Timestamp 1724442131419, at time 220958113544556
+2024-08-23 19:42:21 [pool-4-thread-1] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Generated mock job posting: Data Scientist at SoftSolutions
+2024-08-23 19:42:21 [pool-4-thread-1] INFO  c.j.j.t.k.s.l.NewJobPostedEventPublisher - Received job post SoftSolutions-Data Scientist-Chicago, IL-https://SoftSolutions/jobs.example.com/apply/895-1724442141423 sending to kafka topic job-topic
+2024-08-23 19:42:21 [pool-4-thread-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Sending message='{"id": "e4aa6d68-bdc9-43d9-ad9d-7c6aac235c53", "companyName": "SoftSolutions", "role": "Data Scientist", "location": "Chicago, IL", "link": "https://SoftSolutions/jobs.example.com/apply/895", "postedAt": "1724442141423"}' to topic='job-topic'
+2024-08-23 19:42:21 [kafka-producer-network-thread | producer-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Received new metadata. Topic: job-topic; Partition 1; Offset 16; Timestamp 1724442141426, at time 220968114149144
+2024-08-23 19:42:31 [pool-4-thread-1] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Generated mock job posting: Frontend Developer at AlgoSoft
+2024-08-23 19:42:31 [pool-4-thread-1] INFO  c.j.j.t.k.s.l.NewJobPostedEventPublisher - Received job post AlgoSoft-Frontend Developer-Denver, CO-https://AlgoSoft/jobs.example.com/apply/545-1724442151430 sending to kafka topic job-topic
+2024-08-23 19:42:31 [pool-4-thread-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Sending message='{"id": "26a8dd03-ba1d-40bf-a112-c33b0f9bb455", "companyName": "AlgoSoft", "role": "Frontend Developer", "location": "Denver, CO", "link": "https://AlgoSoft/jobs.example.com/apply/545", "postedAt": "1724442151430"}' to topic='job-topic'
+2024-08-23 19:42:31 [kafka-producer-network-thread | producer-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Received new metadata. Topic: job-topic; Partition 0; Offset 20; Timestamp 1724442151443, at time 220978148206482
+2024-08-23 19:42:41 [pool-4-thread-1] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Generated mock job posting: Data Scientist at AI Dynamics
+2024-08-23 19:42:41 [pool-4-thread-1] INFO  c.j.j.t.k.s.l.NewJobPostedEventPublisher - Received job post AI Dynamics-Data Scientist-San Francisco, CA-https://AI Dynamics/jobs.example.com/apply/14-1724442161448 sending to kafka topic job-topic
+2024-08-23 19:42:41 [pool-4-thread-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Sending message='{"id": "0bd9f353-74b0-4557-9403-98d2750d7298", "companyName": "AI Dynamics", "role": "Data Scientist", "location": "San Francisco, CA", "link": "https://AI Dynamics/jobs.example.com/apply/14", "postedAt": "1724442161448"}' to topic='job-topic'
+2024-08-23 19:42:41 [kafka-producer-network-thread | producer-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Received new metadata. Topic: job-topic; Partition 1; Offset 17; Timestamp 1724442161474, at time 220988161568361
+2024-08-23 19:42:51 [pool-4-thread-1] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Generated mock job posting: Fullstack Developer at CodeBrew
+2024-08-23 19:42:51 [pool-4-thread-1] INFO  c.j.j.t.k.s.l.NewJobPostedEventPublisher - Received job post CodeBrew-Fullstack Developer-Chicago, IL-https://CodeBrew/jobs.example.com/apply/483-1724442171479 sending to kafka topic job-topic
+2024-08-23 19:42:51 [pool-4-thread-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Sending message='{"id": "91f1afb1-518b-4ca1-a39a-aad75e8baa40", "companyName": "CodeBrew", "role": "Fullstack Developer", "location": "Chicago, IL", "link": "https://CodeBrew/jobs.example.com/apply/483", "postedAt": "1724442171479"}' to topic='job-topic'
+2024-08-23 19:42:51 [kafka-producer-network-thread | producer-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Received new metadata. Topic: job-topic; Partition 1; Offset 18; Timestamp 1724442171490, at time 220998181980366
+2024-08-23 19:43:01 [pool-4-thread-1] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Generated mock job posting: Frontend Developer at AlgoSoft
+2024-08-23 19:43:01 [pool-4-thread-1] INFO  c.j.j.t.k.s.l.NewJobPostedEventPublisher - Received job post AlgoSoft-Frontend Developer-Boston, MA-https://AlgoSoft/jobs.example.com/apply/269-1724442181496 sending to kafka topic job-topic
+2024-08-23 19:43:01 [pool-4-thread-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Sending message='{"id": "5bf48f42-ba21-4dbe-89f1-2c8c07f81ec3", "companyName": "AlgoSoft", "role": "Frontend Developer", "location": "Boston, MA", "link": "https://AlgoSoft/jobs.example.com/apply/269", "postedAt": "1724442181496"}' to topic='job-topic'
+2024-08-23 19:43:01 [kafka-producer-network-thread | producer-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Received new metadata. Topic: job-topic; Partition 2; Offset 13; Timestamp 1724442181508, at time 221008217375537
+2024-08-23 19:43:11 [pool-4-thread-1] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Generated mock job posting: DevOps Engineer at TechCorp
+2024-08-23 19:43:11 [pool-4-thread-1] INFO  c.j.j.t.k.s.l.NewJobPostedEventPublisher - Received job post TechCorp-DevOps Engineer-New York, NY-https://TechCorp/jobs.example.com/apply/419-1724442191518 sending to kafka topic job-topic
+2024-08-23 19:43:11 [pool-4-thread-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Sending message='{"id": "10c810d2-929d-4647-8796-5d066cf8483d", "companyName": "TechCorp", "role": "DevOps Engineer", "location": "New York, NY", "link": "https://TechCorp/jobs.example.com/apply/419", "postedAt": "1724442191518"}' to topic='job-topic'
+2024-08-23 19:43:11 [kafka-producer-network-thread | producer-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Received new metadata. Topic: job-topic; Partition 2; Offset 14; Timestamp 1724442191527, at time 221018219222500
+2024-08-23 19:43:21 [pool-4-thread-1] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Generated mock job posting: Backend Developer at InnovateX
+2024-08-23 19:43:21 [pool-4-thread-1] INFO  c.j.j.t.k.s.l.NewJobPostedEventPublisher - Received job post InnovateX-Backend Developer-Seattle, WA-https://InnovateX/jobs.example.com/apply/624-1724442201532 sending to kafka topic job-topic
+2024-08-23 19:43:21 [pool-4-thread-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Sending message='{"id": "1b7a188e-7b4a-4755-a655-be0407abc91c", "companyName": "InnovateX", "role": "Backend Developer", "location": "Seattle, WA", "link": "https://InnovateX/jobs.example.com/apply/624", "postedAt": "1724442201532"}' to topic='job-topic'
+2024-08-23 19:43:21 [kafka-producer-network-thread | producer-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Received new metadata. Topic: job-topic; Partition 1; Offset 19; Timestamp 1724442201551, at time 221028251748880
+2024-08-23 19:43:31 [pool-4-thread-1] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Generated mock job posting: Data Scientist at AlgoSoft
+2024-08-23 19:43:31 [pool-4-thread-1] INFO  c.j.j.t.k.s.l.NewJobPostedEventPublisher - Received job post AlgoSoft-Data Scientist-Boston, MA-https://AlgoSoft/jobs.example.com/apply/565-1724442211561 sending to kafka topic job-topic
+2024-08-23 19:43:31 [pool-4-thread-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Sending message='{"id": "dadd1e62-5a5b-46a4-b6df-31e23bae67cd", "companyName": "AlgoSoft", "role": "Data Scientist", "location": "Boston, MA", "link": "https://AlgoSoft/jobs.example.com/apply/565", "postedAt": "1724442211561"}' to topic='job-topic'
+2024-08-23 19:43:31 [kafka-producer-network-thread | producer-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Received new metadata. Topic: job-topic; Partition 1; Offset 20; Timestamp 1724442211565, at time 221038255685884
+2024-08-23 19:43:41 [pool-4-thread-1] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Generated mock job posting: Software Engineer at AlgoSoft
+2024-08-23 19:43:41 [pool-4-thread-1] INFO  c.j.j.t.k.s.l.NewJobPostedEventPublisher - Received job post AlgoSoft-Software Engineer-Boston, MA-https://AlgoSoft/jobs.example.com/apply/397-1724442221570 sending to kafka topic job-topic
+2024-08-23 19:43:41 [pool-4-thread-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Sending message='{"id": "0aaaf8a1-6a0d-4808-8254-c9cb22f713f2", "companyName": "AlgoSoft", "role": "Software Engineer", "location": "Boston, MA", "link": "https://AlgoSoft/jobs.example.com/apply/397", "postedAt": "1724442221570"}' to topic='job-topic'
+2024-08-23 19:43:41 [kafka-producer-network-thread | producer-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Received new metadata. Topic: job-topic; Partition 1; Offset 21; Timestamp 1724442221581, at time 221048271288846
+2024-08-23 19:43:51 [pool-4-thread-1] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Generated mock job posting: DevOps Engineer at AlgoSoft
+2024-08-23 19:43:51 [pool-4-thread-1] INFO  c.j.j.t.k.s.l.NewJobPostedEventPublisher - Received job post AlgoSoft-DevOps Engineer-Chicago, IL-https://AlgoSoft/jobs.example.com/apply/730-1724442231585 sending to kafka topic job-topic
+2024-08-23 19:43:51 [pool-4-thread-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Sending message='{"id": "3fd1838c-5ae9-4a1a-88c8-95de981dc0f5", "companyName": "AlgoSoft", "role": "DevOps Engineer", "location": "Chicago, IL", "link": "https://AlgoSoft/jobs.example.com/apply/730", "postedAt": "1724442231585"}' to topic='job-topic'
+2024-08-23 19:43:51 [kafka-producer-network-thread | producer-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Received new metadata. Topic: job-topic; Partition 2; Offset 15; Timestamp 1724442231594, at time 221058284683851
+2024-08-23 19:44:01 [pool-4-thread-1] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Generated mock job posting: Data Scientist at AlgoSoft
+2024-08-23 19:44:01 [pool-4-thread-1] INFO  c.j.j.t.k.s.l.NewJobPostedEventPublisher - Received job post AlgoSoft-Data Scientist-San Francisco, CA-https://AlgoSoft/jobs.example.com/apply/374-1724442241598 sending to kafka topic job-topic
+2024-08-23 19:44:01 [pool-4-thread-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Sending message='{"id": "97f127cb-a19f-4490-b22e-ae77a86c2b2d", "companyName": "AlgoSoft", "role": "Data Scientist", "location": "San Francisco, CA", "link": "https://AlgoSoft/jobs.example.com/apply/374", "postedAt": "1724442241598"}' to topic='job-topic'
+2024-08-23 19:44:01 [kafka-producer-network-thread | producer-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Received new metadata. Topic: job-topic; Partition 2; Offset 16; Timestamp 1724442241606, at time 221068296740148
+2024-08-23 19:44:11 [pool-4-thread-1] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Generated mock job posting: Data Scientist at TechCorp
+2024-08-23 19:44:11 [pool-4-thread-1] INFO  c.j.j.t.k.s.l.NewJobPostedEventPublisher - Received job post TechCorp-Data Scientist-Austin, TX-https://TechCorp/jobs.example.com/apply/796-1724442251612 sending to kafka topic job-topic
+2024-08-23 19:44:11 [pool-4-thread-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Sending message='{"id": "2c7c855c-5420-4465-b89a-78604fef24bc", "companyName": "TechCorp", "role": "Data Scientist", "location": "Austin, TX", "link": "https://TechCorp/jobs.example.com/apply/796", "postedAt": "1724442251612"}' to topic='job-topic'
+2024-08-23 19:44:11 [kafka-producer-network-thread | producer-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Received new metadata. Topic: job-topic; Partition 0; Offset 21; Timestamp 1724442251624, at time 221078321963443
+2024-08-23 19:44:20 [kafka-admin-client-thread | adminclient-1] INFO  o.apache.kafka.clients.NetworkClient - [AdminClient clientId=adminclient-1] Node -3 disconnected.
+2024-08-23 19:44:21 [pool-4-thread-1] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Generated mock job posting: Data Scientist at CyberNext
+2024-08-23 19:44:21 [pool-4-thread-1] INFO  c.j.j.t.k.s.l.NewJobPostedEventPublisher - Received job post CyberNext-Data Scientist-San Francisco, CA-https://CyberNext/jobs.example.com/apply/596-1724442261634 sending to kafka topic job-topic
+2024-08-23 19:44:21 [pool-4-thread-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Sending message='{"id": "5764f813-337f-4c12-8ecd-447eb28d3c4c", "companyName": "CyberNext", "role": "Data Scientist", "location": "San Francisco, CA", "link": "https://CyberNext/jobs.example.com/apply/596", "postedAt": "1724442261634"}' to topic='job-topic'
+2024-08-23 19:44:21 [kafka-producer-network-thread | producer-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Received new metadata. Topic: job-topic; Partition 2; Offset 17; Timestamp 1724442261641, at time 221088333614615
+2024-08-23 19:44:31 [pool-4-thread-1] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Generated mock job posting: Product Manager at CodeBrew
+2024-08-23 19:44:31 [pool-4-thread-1] INFO  c.j.j.t.k.s.l.NewJobPostedEventPublisher - Received job post CodeBrew-Product Manager-San Francisco, CA-https://CodeBrew/jobs.example.com/apply/549-1724442271647 sending to kafka topic job-topic
+2024-08-23 19:44:31 [pool-4-thread-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Sending message='{"id": "ede619e7-e3da-403c-9775-0119e778e6b9", "companyName": "CodeBrew", "role": "Product Manager", "location": "San Francisco, CA", "link": "https://CodeBrew/jobs.example.com/apply/549", "postedAt": "1724442271647"}' to topic='job-topic'
+2024-08-23 19:44:31 [kafka-producer-network-thread | producer-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Received new metadata. Topic: job-topic; Partition 0; Offset 22; Timestamp 1724442271655, at time 221098345485911
+2024-08-23 19:44:41 [pool-4-thread-1] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Generated mock job posting: Fullstack Developer at SoftSolutions
+2024-08-23 19:44:41 [pool-4-thread-1] INFO  c.j.j.t.k.s.l.NewJobPostedEventPublisher - Received job post SoftSolutions-Fullstack Developer-San Francisco, CA-https://SoftSolutions/jobs.example.com/apply/324-1724442281659 sending to kafka topic job-topic
+2024-08-23 19:44:41 [pool-4-thread-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Sending message='{"id": "aa5db4ce-df7d-473a-8d09-694eb1de832b", "companyName": "SoftSolutions", "role": "Fullstack Developer", "location": "San Francisco, CA", "link": "https://SoftSolutions/jobs.example.com/apply/324", "postedAt": "1724442281659"}' to topic='job-topic'
+2024-08-23 19:44:41 [kafka-producer-network-thread | producer-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Received new metadata. Topic: job-topic; Partition 1; Offset 22; Timestamp 1724442281666, at time 221108362168290
+2024-08-23 19:44:51 [pool-4-thread-1] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Generated mock job posting: Backend Developer at AI Dynamics
+2024-08-23 19:44:51 [pool-4-thread-1] INFO  c.j.j.t.k.s.l.NewJobPostedEventPublisher - Received job post AI Dynamics-Backend Developer-Seattle, WA-https://AI Dynamics/jobs.example.com/apply/547-1724442291677 sending to kafka topic job-topic
+2024-08-23 19:44:51 [pool-4-thread-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Sending message='{"id": "8fce4540-c1ac-44d6-9b66-57e536739527", "companyName": "AI Dynamics", "role": "Backend Developer", "location": "Seattle, WA", "link": "https://AI Dynamics/jobs.example.com/apply/547", "postedAt": "1724442291677"}' to topic='job-topic'
+2024-08-23 19:44:51 [kafka-producer-network-thread | producer-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Received new metadata. Topic: job-topic; Partition 1; Offset 23; Timestamp 1724442291685, at time 221118376030003
+2024-08-23 19:45:01 [pool-4-thread-1] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Generated mock job posting: Frontend Developer at SoftSolutions
+2024-08-23 19:45:01 [pool-4-thread-1] INFO  c.j.j.t.k.s.l.NewJobPostedEventPublisher - Received job post SoftSolutions-Frontend Developer-Chicago, IL-https://SoftSolutions/jobs.example.com/apply/110-1724442301689 sending to kafka topic job-topic
+2024-08-23 19:45:01 [pool-4-thread-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Sending message='{"id": "f9ec9b96-3230-4980-b80e-9f2b1684e68f", "companyName": "SoftSolutions", "role": "Frontend Developer", "location": "Chicago, IL", "link": "https://SoftSolutions/jobs.example.com/apply/110", "postedAt": "1724442301689"}' to topic='job-topic'
+2024-08-23 19:45:01 [kafka-producer-network-thread | producer-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Received new metadata. Topic: job-topic; Partition 2; Offset 18; Timestamp 1724442301698, at time 221128395728883
+2024-08-23 19:45:11 [pool-4-thread-1] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Generated mock job posting: Data Scientist at CodeBrew
+2024-08-23 19:45:11 [pool-4-thread-1] INFO  c.j.j.t.k.s.l.NewJobPostedEventPublisher - Received job post CodeBrew-Data Scientist-Seattle, WA-https://CodeBrew/jobs.example.com/apply/158-1724442311705 sending to kafka topic job-topic
+2024-08-23 19:45:11 [pool-4-thread-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Sending message='{"id": "0f54e42b-3ed5-447a-b0d9-3d535a9cb304", "companyName": "CodeBrew", "role": "Data Scientist", "location": "Seattle, WA", "link": "https://CodeBrew/jobs.example.com/apply/158", "postedAt": "1724442311705"}' to topic='job-topic'
+2024-08-23 19:45:11 [kafka-producer-network-thread | producer-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Received new metadata. Topic: job-topic; Partition 0; Offset 23; Timestamp 1724442311715, at time 221138404852678
+2024-08-23 19:45:21 [pool-4-thread-1] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Generated mock job posting: Backend Developer at InnovateX
+2024-08-23 19:45:21 [pool-4-thread-1] INFO  c.j.j.t.k.s.l.NewJobPostedEventPublisher - Received job post InnovateX-Backend Developer-Chicago, IL-https://InnovateX/jobs.example.com/apply/952-1724442321720 sending to kafka topic job-topic
+2024-08-23 19:45:21 [pool-4-thread-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Sending message='{"id": "cc0856e1-eb2d-4ae2-852b-1bdedbd2f70b", "companyName": "InnovateX", "role": "Backend Developer", "location": "Chicago, IL", "link": "https://InnovateX/jobs.example.com/apply/952", "postedAt": "1724442321720"}' to topic='job-topic'
+2024-08-23 19:45:21 [kafka-producer-network-thread | producer-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Received new metadata. Topic: job-topic; Partition 1; Offset 24; Timestamp 1724442321735, at time 221148424755767
+2024-08-23 19:45:31 [pool-4-thread-1] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Generated mock job posting: Cloud Architect at AI Dynamics
+2024-08-23 19:45:31 [pool-4-thread-1] INFO  c.j.j.t.k.s.l.NewJobPostedEventPublisher - Received job post AI Dynamics-Cloud Architect-Denver, CO-https://AI Dynamics/jobs.example.com/apply/952-1724442331742 sending to kafka topic job-topic
+2024-08-23 19:45:31 [pool-4-thread-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Sending message='{"id": "11552fe5-68fd-4618-9f0f-7a3769565a1c", "companyName": "AI Dynamics", "role": "Cloud Architect", "location": "Denver, CO", "link": "https://AI Dynamics/jobs.example.com/apply/952", "postedAt": "1724442331742"}' to topic='job-topic'
+2024-08-23 19:45:31 [kafka-producer-network-thread | producer-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Received new metadata. Topic: job-topic; Partition 2; Offset 19; Timestamp 1724442331751, at time 221158444219938
+2024-08-23 19:45:41 [pool-4-thread-1] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Generated mock job posting: Product Manager at AI Dynamics
+2024-08-23 19:45:41 [pool-4-thread-1] INFO  c.j.j.t.k.s.l.NewJobPostedEventPublisher - Received job post AI Dynamics-Product Manager-Denver, CO-https://AI Dynamics/jobs.example.com/apply/255-1724442341754 sending to kafka topic job-topic
+2024-08-23 19:45:41 [pool-4-thread-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Sending message='{"id": "54ce42e5-aeb7-4662-be2a-6d6e7c593da1", "companyName": "AI Dynamics", "role": "Product Manager", "location": "Denver, CO", "link": "https://AI Dynamics/jobs.example.com/apply/255", "postedAt": "1724442341754"}' to topic='job-topic'
+2024-08-23 19:45:41 [kafka-producer-network-thread | producer-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Received new metadata. Topic: job-topic; Partition 1; Offset 25; Timestamp 1724442341761, at time 221168450702859
+2024-08-23 19:45:51 [pool-4-thread-1] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Generated mock job posting: Software Engineer at TechCorp
+2024-08-23 19:45:51 [pool-4-thread-1] INFO  c.j.j.t.k.s.l.NewJobPostedEventPublisher - Received job post TechCorp-Software Engineer-San Francisco, CA-https://TechCorp/jobs.example.com/apply/379-1724442351764 sending to kafka topic job-topic
+2024-08-23 19:45:51 [pool-4-thread-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Sending message='{"id": "cd086287-d11e-4699-b36d-8575d017a812", "companyName": "TechCorp", "role": "Software Engineer", "location": "San Francisco, CA", "link": "https://TechCorp/jobs.example.com/apply/379", "postedAt": "1724442351764"}' to topic='job-topic'
+2024-08-23 19:45:51 [kafka-producer-network-thread | producer-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Received new metadata. Topic: job-topic; Partition 2; Offset 20; Timestamp 1724442351772, at time 221178464380280
+2024-08-23 19:46:01 [pool-4-thread-1] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Generated mock job posting: Fullstack Developer at TechCorp
+2024-08-23 19:46:01 [pool-4-thread-1] INFO  c.j.j.t.k.s.l.NewJobPostedEventPublisher - Received job post TechCorp-Fullstack Developer-Denver, CO-https://TechCorp/jobs.example.com/apply/853-1724442361780 sending to kafka topic job-topic
+2024-08-23 19:46:01 [pool-4-thread-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Sending message='{"id": "4e6aebfc-6a0d-4898-bc5e-29d2f60b88f5", "companyName": "TechCorp", "role": "Fullstack Developer", "location": "Denver, CO", "link": "https://TechCorp/jobs.example.com/apply/853", "postedAt": "1724442361780"}' to topic='job-topic'
+2024-08-23 19:46:01 [kafka-producer-network-thread | producer-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Received new metadata. Topic: job-topic; Partition 0; Offset 24; Timestamp 1724442361787, at time 221188481353827
+2024-08-23 19:46:11 [pool-4-thread-1] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Generated mock job posting: Software Engineer at InnovateX
+2024-08-23 19:46:11 [pool-4-thread-1] INFO  c.j.j.t.k.s.l.NewJobPostedEventPublisher - Received job post InnovateX-Software Engineer-San Francisco, CA-https://InnovateX/jobs.example.com/apply/558-1724442371792 sending to kafka topic job-topic
+2024-08-23 19:46:11 [pool-4-thread-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Sending message='{"id": "343768c1-9515-4522-b019-89d36a782c18", "companyName": "InnovateX", "role": "Software Engineer", "location": "San Francisco, CA", "link": "https://InnovateX/jobs.example.com/apply/558", "postedAt": "1724442371792"}' to topic='job-topic'
+2024-08-23 19:46:11 [kafka-producer-network-thread | producer-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Received new metadata. Topic: job-topic; Partition 2; Offset 21; Timestamp 1724442371802, at time 221198493998165
+2024-08-23 19:46:21 [pool-4-thread-1] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Generated mock job posting: Fullstack Developer at CodeBrew
+2024-08-23 19:46:21 [pool-4-thread-1] INFO  c.j.j.t.k.s.l.NewJobPostedEventPublisher - Received job post CodeBrew-Fullstack Developer-Austin, TX-https://CodeBrew/jobs.example.com/apply/795-1724442381810 sending to kafka topic job-topic
+2024-08-23 19:46:21 [pool-4-thread-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Sending message='{"id": "ee58d85b-6cbf-4f5a-96b5-734312b13d6c", "companyName": "CodeBrew", "role": "Fullstack Developer", "location": "Austin, TX", "link": "https://CodeBrew/jobs.example.com/apply/795", "postedAt": "1724442381810"}' to topic='job-topic'
+2024-08-23 19:46:21 [kafka-producer-network-thread | producer-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Received new metadata. Topic: job-topic; Partition 1; Offset 26; Timestamp 1724442381817, at time 221208500989753
+2024-08-23 19:46:31 [pool-4-thread-1] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Generated mock job posting: Fullstack Developer at CodeBrew
+2024-08-23 19:46:31 [pool-4-thread-1] INFO  c.j.j.t.k.s.l.NewJobPostedEventPublisher - Received job post CodeBrew-Fullstack Developer-Seattle, WA-https://CodeBrew/jobs.example.com/apply/48-1724442391821 sending to kafka topic job-topic
+2024-08-23 19:46:31 [pool-4-thread-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Sending message='{"id": "3fabde31-35c4-4c2d-ab13-be28bf22a0a8", "companyName": "CodeBrew", "role": "Fullstack Developer", "location": "Seattle, WA", "link": "https://CodeBrew/jobs.example.com/apply/48", "postedAt": "1724442391821"}' to topic='job-topic'
+2024-08-23 19:46:31 [kafka-producer-network-thread | producer-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Received new metadata. Topic: job-topic; Partition 2; Offset 22; Timestamp 1724442391830, at time 221218524528007
+2024-08-23 19:46:41 [pool-4-thread-1] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Generated mock job posting: Frontend Developer at AlgoSoft
+2024-08-23 19:46:41 [pool-4-thread-1] INFO  c.j.j.t.k.s.l.NewJobPostedEventPublisher - Received job post AlgoSoft-Frontend Developer-Boston, MA-https://AlgoSoft/jobs.example.com/apply/465-1724442401837 sending to kafka topic job-topic
+2024-08-23 19:46:41 [pool-4-thread-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Sending message='{"id": "4c3b6c99-1d21-47f4-a89e-0d8d35a2c368", "companyName": "AlgoSoft", "role": "Frontend Developer", "location": "Boston, MA", "link": "https://AlgoSoft/jobs.example.com/apply/465", "postedAt": "1724442401837"}' to topic='job-topic'
+2024-08-23 19:46:41 [kafka-producer-network-thread | producer-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Received new metadata. Topic: job-topic; Partition 1; Offset 27; Timestamp 1724442401847, at time 221228551594720
+2024-08-23 19:46:51 [pool-4-thread-1] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Generated mock job posting: Backend Developer at CyberNext
+2024-08-23 19:46:51 [pool-4-thread-1] INFO  c.j.j.t.k.s.l.NewJobPostedEventPublisher - Received job post CyberNext-Backend Developer-Austin, TX-https://CyberNext/jobs.example.com/apply/195-1724442411856 sending to kafka topic job-topic
+2024-08-23 19:46:51 [pool-4-thread-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Sending message='{"id": "46ec1b28-385c-44fa-a8ea-d05e436394f7", "companyName": "CyberNext", "role": "Backend Developer", "location": "Austin, TX", "link": "https://CyberNext/jobs.example.com/apply/195", "postedAt": "1724442411856"}' to topic='job-topic'
+2024-08-23 19:46:51 [kafka-producer-network-thread | producer-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Received new metadata. Topic: job-topic; Partition 1; Offset 28; Timestamp 1724442411863, at time 221238556720558
+2024-08-23 19:47:01 [pool-4-thread-1] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Generated mock job posting: Fullstack Developer at TechCorp
+2024-08-23 19:47:01 [pool-4-thread-1] INFO  c.j.j.t.k.s.l.NewJobPostedEventPublisher - Received job post TechCorp-Fullstack Developer-Los Angeles, CA-https://TechCorp/jobs.example.com/apply/552-1724442421867 sending to kafka topic job-topic
+2024-08-23 19:47:01 [pool-4-thread-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Sending message='{"id": "4043073a-2710-45b1-981b-b2c0b3c95c7e", "companyName": "TechCorp", "role": "Fullstack Developer", "location": "Los Angeles, CA", "link": "https://TechCorp/jobs.example.com/apply/552", "postedAt": "1724442421867"}' to topic='job-topic'
+2024-08-23 19:47:01 [kafka-producer-network-thread | producer-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Received new metadata. Topic: job-topic; Partition 1; Offset 29; Timestamp 1724442421873, at time 221248562610521
+2024-08-23 19:47:11 [pool-4-thread-1] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Generated mock job posting: Backend Developer at DevWorks
+2024-08-23 19:47:11 [pool-4-thread-1] INFO  c.j.j.t.k.s.l.NewJobPostedEventPublisher - Received job post DevWorks-Backend Developer-San Francisco, CA-https://DevWorks/jobs.example.com/apply/394-1724442431881 sending to kafka topic job-topic
+2024-08-23 19:47:11 [pool-4-thread-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Sending message='{"id": "ab739bb1-dc34-423b-a548-69f8c7fc646a", "companyName": "DevWorks", "role": "Backend Developer", "location": "San Francisco, CA", "link": "https://DevWorks/jobs.example.com/apply/394", "postedAt": "1724442431881"}' to topic='job-topic'
+2024-08-23 19:47:11 [kafka-producer-network-thread | producer-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Received new metadata. Topic: job-topic; Partition 0; Offset 25; Timestamp 1724442431891, at time 221258581743317
+2024-08-23 19:47:21 [pool-4-thread-1] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Generated mock job posting: Data Scientist at AlgoSoft
+2024-08-23 19:47:21 [pool-4-thread-1] INFO  c.j.j.t.k.s.l.NewJobPostedEventPublisher - Received job post AlgoSoft-Data Scientist-Seattle, WA-https://AlgoSoft/jobs.example.com/apply/159-1724442441895 sending to kafka topic job-topic
+2024-08-23 19:47:21 [pool-4-thread-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Sending message='{"id": "1a7c3c38-3185-463e-95bb-9b92f1d86877", "companyName": "AlgoSoft", "role": "Data Scientist", "location": "Seattle, WA", "link": "https://AlgoSoft/jobs.example.com/apply/159", "postedAt": "1724442441895"}' to topic='job-topic'
+2024-08-23 19:47:21 [kafka-producer-network-thread | producer-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Received new metadata. Topic: job-topic; Partition 2; Offset 23; Timestamp 1724442441906, at time 221268599901155
+2024-08-23 19:47:31 [pool-4-thread-1] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Generated mock job posting: Cloud Architect at DevWorks
+2024-08-23 19:47:31 [pool-4-thread-1] INFO  c.j.j.t.k.s.l.NewJobPostedEventPublisher - Received job post DevWorks-Cloud Architect-Los Angeles, CA-https://DevWorks/jobs.example.com/apply/106-1724442451915 sending to kafka topic job-topic
+2024-08-23 19:47:31 [pool-4-thread-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Sending message='{"id": "c2d3d7be-9c6e-457d-8673-2bed8acca85f", "companyName": "DevWorks", "role": "Cloud Architect", "location": "Los Angeles, CA", "link": "https://DevWorks/jobs.example.com/apply/106", "postedAt": "1724442451915"}' to topic='job-topic'
+2024-08-23 19:47:32 [kafka-producer-network-thread | producer-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Received new metadata. Topic: job-topic; Partition 1; Offset 30; Timestamp 1724442451925, at time 221278730890368
+2024-08-23 19:47:41 [pool-4-thread-1] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Generated mock job posting: Software Engineer at SoftSolutions
+2024-08-23 19:47:41 [pool-4-thread-1] INFO  c.j.j.t.k.s.l.NewJobPostedEventPublisher - Received job post SoftSolutions-Software Engineer-Austin, TX-https://SoftSolutions/jobs.example.com/apply/667-1724442461929 sending to kafka topic job-topic
+2024-08-23 19:47:41 [pool-4-thread-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Sending message='{"id": "141e00d5-d346-4efb-86fe-af6bd3ef9d04", "companyName": "SoftSolutions", "role": "Software Engineer", "location": "Austin, TX", "link": "https://SoftSolutions/jobs.example.com/apply/667", "postedAt": "1724442461929"}' to topic='job-topic'
+2024-08-23 19:47:41 [kafka-producer-network-thread | producer-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Received new metadata. Topic: job-topic; Partition 2; Offset 24; Timestamp 1724442461938, at time 221288630728497
+2024-08-23 19:47:51 [pool-4-thread-1] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Generated mock job posting: Frontend Developer at DevWorks
+2024-08-23 19:47:51 [pool-4-thread-1] INFO  c.j.j.t.k.s.l.NewJobPostedEventPublisher - Received job post DevWorks-Frontend Developer-Denver, CO-https://DevWorks/jobs.example.com/apply/804-1724442471943 sending to kafka topic job-topic
+2024-08-23 19:47:51 [pool-4-thread-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Sending message='{"id": "514c38aa-2a3d-48c9-b743-d2d13fcd64a4", "companyName": "DevWorks", "role": "Frontend Developer", "location": "Denver, CO", "link": "https://DevWorks/jobs.example.com/apply/804", "postedAt": "1724442471943"}' to topic='job-topic'
+2024-08-23 19:47:51 [kafka-producer-network-thread | producer-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Received new metadata. Topic: job-topic; Partition 0; Offset 26; Timestamp 1724442471951, at time 221298638088502
+2024-08-23 19:48:01 [pool-4-thread-1] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Generated mock job posting: Software Engineer at DevWorks
+2024-08-23 19:48:01 [pool-4-thread-1] INFO  c.j.j.t.k.s.l.NewJobPostedEventPublisher - Received job post DevWorks-Software Engineer-Chicago, IL-https://DevWorks/jobs.example.com/apply/452-1724442481960 sending to kafka topic job-topic
+2024-08-23 19:48:01 [pool-4-thread-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Sending message='{"id": "ab338c6e-2eab-4501-acae-dfcd5039cf30", "companyName": "DevWorks", "role": "Software Engineer", "location": "Chicago, IL", "link": "https://DevWorks/jobs.example.com/apply/452", "postedAt": "1724442481960"}' to topic='job-topic'
+2024-08-23 19:48:01 [kafka-producer-network-thread | producer-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Received new metadata. Topic: job-topic; Partition 1; Offset 31; Timestamp 1724442481965, at time 221308650711965
+2024-08-23 19:48:11 [pool-4-thread-1] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Generated mock job posting: Product Manager at SoftSolutions
+2024-08-23 19:48:11 [pool-4-thread-1] INFO  c.j.j.t.k.s.l.NewJobPostedEventPublisher - Received job post SoftSolutions-Product Manager-Chicago, IL-https://SoftSolutions/jobs.example.com/apply/961-1724442491969 sending to kafka topic job-topic
+2024-08-23 19:48:11 [pool-4-thread-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Sending message='{"id": "9137c85f-be47-4046-8c3f-56cbb2d49523", "companyName": "SoftSolutions", "role": "Product Manager", "location": "Chicago, IL", "link": "https://SoftSolutions/jobs.example.com/apply/961", "postedAt": "1724442491969"}' to topic='job-topic'
+2024-08-23 19:48:11 [kafka-producer-network-thread | producer-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Received new metadata. Topic: job-topic; Partition 2; Offset 25; Timestamp 1724442491976, at time 221318666875178
+2024-08-23 19:48:21 [pool-4-thread-1] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Generated mock job posting: Product Manager at AlgoSoft
+2024-08-23 19:48:21 [pool-4-thread-1] INFO  c.j.j.t.k.s.l.NewJobPostedEventPublisher - Received job post AlgoSoft-Product Manager-Denver, CO-https://AlgoSoft/jobs.example.com/apply/414-1724442501979 sending to kafka topic job-topic
+2024-08-23 19:48:21 [pool-4-thread-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Sending message='{"id": "03247429-94ba-4abc-9abd-01adce322104", "companyName": "AlgoSoft", "role": "Product Manager", "location": "Denver, CO", "link": "https://AlgoSoft/jobs.example.com/apply/414", "postedAt": "1724442501979"}' to topic='job-topic'
+2024-08-23 19:48:21 [kafka-producer-network-thread | producer-1] INFO  o.apache.kafka.clients.NetworkClient - [Producer clientId=producer-1] Node -1 disconnected.
+2024-08-23 19:48:22 [kafka-producer-network-thread | producer-1] INFO  o.apache.kafka.clients.NetworkClient - [Producer clientId=producer-1] Node -3 disconnected.
+2024-08-23 19:48:22 [kafka-producer-network-thread | producer-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Received new metadata. Topic: job-topic; Partition 1; Offset 32; Timestamp 1724442501986, at time 221328680271099
+2024-08-23 19:48:31 [pool-4-thread-1] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Generated mock job posting: Product Manager at InnovateX
+2024-08-23 19:48:31 [pool-4-thread-1] INFO  c.j.j.t.k.s.l.NewJobPostedEventPublisher - Received job post InnovateX-Product Manager-Chicago, IL-https://InnovateX/jobs.example.com/apply/84-1724442511990 sending to kafka topic job-topic
+2024-08-23 19:48:31 [pool-4-thread-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Sending message='{"id": "af3b250c-54b8-470a-ab08-49da7af8d5f7", "companyName": "InnovateX", "role": "Product Manager", "location": "Chicago, IL", "link": "https://InnovateX/jobs.example.com/apply/84", "postedAt": "1724442511990"}' to topic='job-topic'
+2024-08-23 19:48:32 [kafka-producer-network-thread | producer-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Received new metadata. Topic: job-topic; Partition 2; Offset 26; Timestamp 1724442511999, at time 221338682934187
+2024-08-23 19:48:42 [pool-4-thread-1] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Generated mock job posting: Product Manager at CodeBrew
+2024-08-23 19:48:42 [pool-4-thread-1] INFO  c.j.j.t.k.s.l.NewJobPostedEventPublisher - Received job post CodeBrew-Product Manager-Denver, CO-https://CodeBrew/jobs.example.com/apply/765-1724442522004 sending to kafka topic job-topic
+2024-08-23 19:48:42 [pool-4-thread-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Sending message='{"id": "d8fdbf81-fae8-4170-b583-e97b0c3a24c4", "companyName": "CodeBrew", "role": "Product Manager", "location": "Denver, CO", "link": "https://CodeBrew/jobs.example.com/apply/765", "postedAt": "1724442522004"}' to topic='job-topic'
+2024-08-23 19:48:42 [kafka-producer-network-thread | producer-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Received new metadata. Topic: job-topic; Partition 2; Offset 27; Timestamp 1724442522017, at time 221348707391233
+2024-08-23 19:48:52 [pool-4-thread-1] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Generated mock job posting: Frontend Developer at CodeBrew
+2024-08-23 19:48:52 [pool-4-thread-1] INFO  c.j.j.t.k.s.l.NewJobPostedEventPublisher - Received job post CodeBrew-Frontend Developer-New York, NY-https://CodeBrew/jobs.example.com/apply/411-1724442532030 sending to kafka topic job-topic
+2024-08-23 19:48:52 [pool-4-thread-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Sending message='{"id": "50ab68bd-e4e3-4139-bf20-7eeff2a3a8c4", "companyName": "CodeBrew", "role": "Frontend Developer", "location": "New York, NY", "link": "https://CodeBrew/jobs.example.com/apply/411", "postedAt": "1724442532030"}' to topic='job-topic'
+2024-08-23 19:48:52 [kafka-producer-network-thread | producer-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Received new metadata. Topic: job-topic; Partition 1; Offset 33; Timestamp 1724442532037, at time 221358727772155
+2024-08-23 19:49:02 [pool-4-thread-1] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Generated mock job posting: Backend Developer at DevWorks
+2024-08-23 19:49:02 [pool-4-thread-1] INFO  c.j.j.t.k.s.l.NewJobPostedEventPublisher - Received job post DevWorks-Backend Developer-Seattle, WA-https://DevWorks/jobs.example.com/apply/511-1724442542043 sending to kafka topic job-topic
+2024-08-23 19:49:02 [pool-4-thread-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Sending message='{"id": "f397a06f-65fb-4eff-b1e3-885574dd60b6", "companyName": "DevWorks", "role": "Backend Developer", "location": "Seattle, WA", "link": "https://DevWorks/jobs.example.com/apply/511", "postedAt": "1724442542043"}' to topic='job-topic'
+2024-08-23 19:49:02 [kafka-producer-network-thread | producer-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Received new metadata. Topic: job-topic; Partition 0; Offset 27; Timestamp 1724442542052, at time 221368747850993
+2024-08-23 19:49:12 [pool-4-thread-1] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Generated mock job posting: Cloud Architect at AlgoSoft
+2024-08-23 19:49:12 [pool-4-thread-1] INFO  c.j.j.t.k.s.l.NewJobPostedEventPublisher - Received job post AlgoSoft-Cloud Architect-Los Angeles, CA-https://AlgoSoft/jobs.example.com/apply/406-1724442552068 sending to kafka topic job-topic
+2024-08-23 19:49:12 [pool-4-thread-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Sending message='{"id": "43af2e50-37c3-4e81-b858-93c6536f5876", "companyName": "AlgoSoft", "role": "Cloud Architect", "location": "Los Angeles, CA", "link": "https://AlgoSoft/jobs.example.com/apply/406", "postedAt": "1724442552068"}' to topic='job-topic'
+2024-08-23 19:49:12 [kafka-producer-network-thread | producer-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Received new metadata. Topic: job-topic; Partition 1; Offset 34; Timestamp 1724442552083, at time 221378769531081
+2024-08-23 19:49:20 [kafka-admin-client-thread | adminclient-1] INFO  o.apache.kafka.clients.NetworkClient - [AdminClient clientId=adminclient-1] Node 2 disconnected.
+2024-08-23 19:49:22 [pool-4-thread-1] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Generated mock job posting: Fullstack Developer at CyberNext
+2024-08-23 19:49:22 [pool-4-thread-1] INFO  c.j.j.t.k.s.l.NewJobPostedEventPublisher - Received job post CyberNext-Fullstack Developer-New York, NY-https://CyberNext/jobs.example.com/apply/166-1724442562090 sending to kafka topic job-topic
+2024-08-23 19:49:22 [pool-4-thread-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Sending message='{"id": "c82739a6-8c34-4b13-a972-ceaa742311bd", "companyName": "CyberNext", "role": "Fullstack Developer", "location": "New York, NY", "link": "https://CyberNext/jobs.example.com/apply/166", "postedAt": "1724442562090"}' to topic='job-topic'
+2024-08-23 19:49:22 [kafka-producer-network-thread | producer-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Received new metadata. Topic: job-topic; Partition 1; Offset 35; Timestamp 1724442562101, at time 221388791165919
+2024-08-23 19:49:32 [pool-4-thread-1] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Generated mock job posting: Cloud Architect at CyberNext
+2024-08-23 19:49:32 [pool-4-thread-1] INFO  c.j.j.t.k.s.l.NewJobPostedEventPublisher - Received job post CyberNext-Cloud Architect-Austin, TX-https://CyberNext/jobs.example.com/apply/966-1724442572105 sending to kafka topic job-topic
+2024-08-23 19:49:32 [pool-4-thread-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Sending message='{"id": "b37d1576-98c5-4235-9eba-44b41e9902c2", "companyName": "CyberNext", "role": "Cloud Architect", "location": "Austin, TX", "link": "https://CyberNext/jobs.example.com/apply/966", "postedAt": "1724442572105"}' to topic='job-topic'
+2024-08-23 19:49:32 [kafka-producer-network-thread | producer-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Received new metadata. Topic: job-topic; Partition 1; Offset 36; Timestamp 1724442572113, at time 221398800066340
+2024-08-23 19:49:42 [pool-4-thread-1] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Generated mock job posting: Cloud Architect at CodeBrew
+2024-08-23 19:49:42 [pool-4-thread-1] INFO  c.j.j.t.k.s.l.NewJobPostedEventPublisher - Received job post CodeBrew-Cloud Architect-Chicago, IL-https://CodeBrew/jobs.example.com/apply/699-1724442582115 sending to kafka topic job-topic
+2024-08-23 19:49:42 [pool-4-thread-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Sending message='{"id": "e97b2890-65da-4131-b49d-addec375565a", "companyName": "CodeBrew", "role": "Cloud Architect", "location": "Chicago, IL", "link": "https://CodeBrew/jobs.example.com/apply/699", "postedAt": "1724442582115"}' to topic='job-topic'
+2024-08-23 19:49:42 [kafka-producer-network-thread | producer-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Received new metadata. Topic: job-topic; Partition 2; Offset 28; Timestamp 1724442582119, at time 221408807089636
+2024-08-23 19:49:52 [pool-4-thread-1] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Generated mock job posting: Fullstack Developer at TechCorp
+2024-08-23 19:49:52 [pool-4-thread-1] INFO  c.j.j.t.k.s.l.NewJobPostedEventPublisher - Received job post TechCorp-Fullstack Developer-Seattle, WA-https://TechCorp/jobs.example.com/apply/807-1724442592121 sending to kafka topic job-topic
+2024-08-23 19:49:52 [pool-4-thread-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Sending message='{"id": "c70ee96f-c87d-4cc2-adcd-ccdb0889fc76", "companyName": "TechCorp", "role": "Fullstack Developer", "location": "Seattle, WA", "link": "https://TechCorp/jobs.example.com/apply/807", "postedAt": "1724442592121"}' to topic='job-topic'
+2024-08-23 19:49:52 [kafka-producer-network-thread | producer-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Received new metadata. Topic: job-topic; Partition 0; Offset 28; Timestamp 1724442592129, at time 221418837321724
+2024-08-23 19:50:02 [pool-4-thread-1] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Generated mock job posting: Backend Developer at AI Dynamics
+2024-08-23 19:50:02 [pool-4-thread-1] INFO  c.j.j.t.k.s.l.NewJobPostedEventPublisher - Received job post AI Dynamics-Backend Developer-Seattle, WA-https://AI Dynamics/jobs.example.com/apply/995-1724442602142 sending to kafka topic job-topic
+2024-08-23 19:50:02 [pool-4-thread-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Sending message='{"id": "f7242205-83ba-495a-8dff-4a27667248c2", "companyName": "AI Dynamics", "role": "Backend Developer", "location": "Seattle, WA", "link": "https://AI Dynamics/jobs.example.com/apply/995", "postedAt": "1724442602142"}' to topic='job-topic'
+2024-08-23 19:50:02 [kafka-producer-network-thread | producer-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Received new metadata. Topic: job-topic; Partition 0; Offset 29; Timestamp 1724442602158, at time 221428855289146
+2024-08-23 19:50:12 [pool-4-thread-1] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Generated mock job posting: Software Engineer at AI Dynamics
+2024-08-23 19:50:12 [pool-4-thread-1] INFO  c.j.j.t.k.s.l.NewJobPostedEventPublisher - Received job post AI Dynamics-Software Engineer-Los Angeles, CA-https://AI Dynamics/jobs.example.com/apply/565-1724442612170 sending to kafka topic job-topic
+2024-08-23 19:50:12 [pool-4-thread-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Sending message='{"id": "a3256f9b-783b-4bba-ac38-c94d8a442f21", "companyName": "AI Dynamics", "role": "Software Engineer", "location": "Los Angeles, CA", "link": "https://AI Dynamics/jobs.example.com/apply/565", "postedAt": "1724442612170"}' to topic='job-topic'
+2024-08-23 19:50:12 [kafka-producer-network-thread | producer-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Received new metadata. Topic: job-topic; Partition 0; Offset 30; Timestamp 1724442612178, at time 221438867254691
+2024-08-23 19:50:22 [pool-4-thread-1] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Generated mock job posting: Fullstack Developer at AI Dynamics
+2024-08-23 19:50:22 [pool-4-thread-1] INFO  c.j.j.t.k.s.l.NewJobPostedEventPublisher - Received job post AI Dynamics-Fullstack Developer-Austin, TX-https://AI Dynamics/jobs.example.com/apply/718-1724442622181 sending to kafka topic job-topic
+2024-08-23 19:50:22 [pool-4-thread-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Sending message='{"id": "6a251297-5573-40d1-a89e-fd1f8fddaf97", "companyName": "AI Dynamics", "role": "Fullstack Developer", "location": "Austin, TX", "link": "https://AI Dynamics/jobs.example.com/apply/718", "postedAt": "1724442622181"}' to topic='job-topic'
+2024-08-23 19:50:22 [kafka-producer-network-thread | producer-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Received new metadata. Topic: job-topic; Partition 2; Offset 29; Timestamp 1724442622191, at time 221448881107238
+2024-08-23 19:50:32 [pool-4-thread-1] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Generated mock job posting: Frontend Developer at AI Dynamics
+2024-08-23 19:50:32 [pool-4-thread-1] INFO  c.j.j.t.k.s.l.NewJobPostedEventPublisher - Received job post AI Dynamics-Frontend Developer-Boston, MA-https://AI Dynamics/jobs.example.com/apply/610-1724442632195 sending to kafka topic job-topic
+2024-08-23 19:50:32 [pool-4-thread-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Sending message='{"id": "6ace44ef-4a58-4713-a1f2-edd40b6e2ed9", "companyName": "AI Dynamics", "role": "Frontend Developer", "location": "Boston, MA", "link": "https://AI Dynamics/jobs.example.com/apply/610", "postedAt": "1724442632195"}' to topic='job-topic'
+2024-08-23 19:50:32 [kafka-producer-network-thread | producer-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Received new metadata. Topic: job-topic; Partition 1; Offset 37; Timestamp 1724442632201, at time 221458895655618
+2024-08-23 19:50:42 [pool-4-thread-1] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Generated mock job posting: Backend Developer at InnovateX
+2024-08-23 19:50:42 [pool-4-thread-1] INFO  c.j.j.t.k.s.l.NewJobPostedEventPublisher - Received job post InnovateX-Backend Developer-Los Angeles, CA-https://InnovateX/jobs.example.com/apply/826-1724442642204 sending to kafka topic job-topic
+2024-08-23 19:50:42 [pool-4-thread-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Sending message='{"id": "41618960-eb91-4d24-b470-ce7b743c07fa", "companyName": "InnovateX", "role": "Backend Developer", "location": "Los Angeles, CA", "link": "https://InnovateX/jobs.example.com/apply/826", "postedAt": "1724442642204"}' to topic='job-topic'
+2024-08-23 19:50:42 [kafka-producer-network-thread | producer-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Received new metadata. Topic: job-topic; Partition 1; Offset 38; Timestamp 1724442642209, at time 221468894681080
+2024-08-23 19:50:52 [pool-4-thread-1] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Generated mock job posting: DevOps Engineer at CyberNext
+2024-08-23 19:50:52 [pool-4-thread-1] INFO  c.j.j.t.k.s.l.NewJobPostedEventPublisher - Received job post CyberNext-DevOps Engineer-San Francisco, CA-https://CyberNext/jobs.example.com/apply/262-1724442652213 sending to kafka topic job-topic
+2024-08-23 19:50:52 [pool-4-thread-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Sending message='{"id": "94f2b8e3-6e52-4998-9610-f9cde2b2404c", "companyName": "CyberNext", "role": "DevOps Engineer", "location": "San Francisco, CA", "link": "https://CyberNext/jobs.example.com/apply/262", "postedAt": "1724442652213"}' to topic='job-topic'
+2024-08-23 19:50:52 [kafka-producer-network-thread | producer-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Received new metadata. Topic: job-topic; Partition 2; Offset 30; Timestamp 1724442652220, at time 221478906325043
+2024-08-23 19:51:02 [pool-4-thread-1] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Generated mock job posting: Product Manager at AI Dynamics
+2024-08-23 19:51:02 [pool-4-thread-1] INFO  c.j.j.t.k.s.l.NewJobPostedEventPublisher - Received job post AI Dynamics-Product Manager-Austin, TX-https://AI Dynamics/jobs.example.com/apply/923-1724442662226 sending to kafka topic job-topic
+2024-08-23 19:51:02 [pool-4-thread-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Sending message='{"id": "7cf84e18-fddd-46ea-bf6c-241a5fc30f8d", "companyName": "AI Dynamics", "role": "Product Manager", "location": "Austin, TX", "link": "https://AI Dynamics/jobs.example.com/apply/923", "postedAt": "1724442662226"}' to topic='job-topic'
+2024-08-23 19:51:02 [kafka-producer-network-thread | producer-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Received new metadata. Topic: job-topic; Partition 2; Offset 31; Timestamp 1724442662237, at time 221488933814881
+2024-08-23 19:51:12 [pool-4-thread-1] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Generated mock job posting: Cloud Architect at SoftSolutions
+2024-08-23 19:51:12 [pool-4-thread-1] INFO  c.j.j.t.k.s.l.NewJobPostedEventPublisher - Received job post SoftSolutions-Cloud Architect-San Francisco, CA-https://SoftSolutions/jobs.example.com/apply/413-1724442672249 sending to kafka topic job-topic
+2024-08-23 19:51:12 [pool-4-thread-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Sending message='{"id": "4d83a59c-71f6-4033-8786-d34000dccd19", "companyName": "SoftSolutions", "role": "Cloud Architect", "location": "San Francisco, CA", "link": "https://SoftSolutions/jobs.example.com/apply/413", "postedAt": "1724442672249"}' to topic='job-topic'
+2024-08-23 19:51:12 [kafka-producer-network-thread | producer-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Received new metadata. Topic: job-topic; Partition 2; Offset 32; Timestamp 1724442672281, at time 221498978138219
+2024-08-23 19:51:22 [pool-4-thread-1] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Generated mock job posting: Data Scientist at CyberNext
+2024-08-23 19:51:22 [pool-4-thread-1] INFO  c.j.j.t.k.s.l.NewJobPostedEventPublisher - Received job post CyberNext-Data Scientist-Denver, CO-https://CyberNext/jobs.example.com/apply/110-1724442682297 sending to kafka topic job-topic
+2024-08-23 19:51:22 [pool-4-thread-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Sending message='{"id": "1c97617e-8379-42a5-97de-e2ccf40ffb90", "companyName": "CyberNext", "role": "Data Scientist", "location": "Denver, CO", "link": "https://CyberNext/jobs.example.com/apply/110", "postedAt": "1724442682297"}' to topic='job-topic'
+2024-08-23 19:51:22 [kafka-producer-network-thread | producer-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Received new metadata. Topic: job-topic; Partition 0; Offset 31; Timestamp 1724442682305, at time 221508999789473
+2024-08-23 19:51:32 [pool-4-thread-1] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Generated mock job posting: Frontend Developer at AI Dynamics
+2024-08-23 19:51:32 [pool-4-thread-1] INFO  c.j.j.t.k.s.l.NewJobPostedEventPublisher - Received job post AI Dynamics-Frontend Developer-New York, NY-https://AI Dynamics/jobs.example.com/apply/757-1724442692308 sending to kafka topic job-topic
+2024-08-23 19:51:32 [pool-4-thread-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Sending message='{"id": "34ae5259-df22-4f55-a708-5d5087ab8659", "companyName": "AI Dynamics", "role": "Frontend Developer", "location": "New York, NY", "link": "https://AI Dynamics/jobs.example.com/apply/757", "postedAt": "1724442692308"}' to topic='job-topic'
+2024-08-23 19:51:32 [kafka-producer-network-thread | producer-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Received new metadata. Topic: job-topic; Partition 2; Offset 33; Timestamp 1724442692313, at time 221519004590937
+2024-08-23 19:51:42 [pool-4-thread-1] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Generated mock job posting: Backend Developer at AI Dynamics
+2024-08-23 19:51:42 [pool-4-thread-1] INFO  c.j.j.t.k.s.l.NewJobPostedEventPublisher - Received job post AI Dynamics-Backend Developer-Los Angeles, CA-https://AI Dynamics/jobs.example.com/apply/553-1724442702323 sending to kafka topic job-topic
+2024-08-23 19:51:42 [pool-4-thread-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Sending message='{"id": "cd66b7a6-e12c-474f-817d-df87671ed553", "companyName": "AI Dynamics", "role": "Backend Developer", "location": "Los Angeles, CA", "link": "https://AI Dynamics/jobs.example.com/apply/553", "postedAt": "1724442702323"}' to topic='job-topic'
+2024-08-23 19:51:42 [kafka-producer-network-thread | producer-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Received new metadata. Topic: job-topic; Partition 0; Offset 32; Timestamp 1724442702333, at time 221529037464440
+2024-08-23 19:51:52 [pool-4-thread-1] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Generated mock job posting: Product Manager at InnovateX
+2024-08-23 19:51:52 [pool-4-thread-1] INFO  c.j.j.t.k.s.l.NewJobPostedEventPublisher - Received job post InnovateX-Product Manager-Boston, MA-https://InnovateX/jobs.example.com/apply/580-1724442712337 sending to kafka topic job-topic
+2024-08-23 19:51:52 [pool-4-thread-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Sending message='{"id": "8bd03bf1-4079-471d-8fbf-24da442ac71f", "companyName": "InnovateX", "role": "Product Manager", "location": "Boston, MA", "link": "https://InnovateX/jobs.example.com/apply/580", "postedAt": "1724442712337"}' to topic='job-topic'
+2024-08-23 19:51:52 [kafka-producer-network-thread | producer-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Received new metadata. Topic: job-topic; Partition 2; Offset 34; Timestamp 1724442712345, at time 221539034197029
+2024-08-23 19:52:02 [pool-4-thread-1] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Generated mock job posting: DevOps Engineer at DevWorks
+2024-08-23 19:52:02 [pool-4-thread-1] INFO  c.j.j.t.k.s.l.NewJobPostedEventPublisher - Received job post DevWorks-DevOps Engineer-Boston, MA-https://DevWorks/jobs.example.com/apply/741-1724442722347 sending to kafka topic job-topic
+2024-08-23 19:52:02 [pool-4-thread-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Sending message='{"id": "10699cba-7a57-4e3b-bdbd-6c254f11e225", "companyName": "DevWorks", "role": "DevOps Engineer", "location": "Boston, MA", "link": "https://DevWorks/jobs.example.com/apply/741", "postedAt": "1724442722347"}' to topic='job-topic'
+2024-08-23 19:52:02 [kafka-producer-network-thread | producer-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Received new metadata. Topic: job-topic; Partition 1; Offset 39; Timestamp 1724442722356, at time 221549047446117
+2024-08-23 19:52:12 [pool-4-thread-1] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Generated mock job posting: Fullstack Developer at DevWorks
+2024-08-23 19:52:12 [pool-4-thread-1] INFO  c.j.j.t.k.s.l.NewJobPostedEventPublisher - Received job post DevWorks-Fullstack Developer-Boston, MA-https://DevWorks/jobs.example.com/apply/957-1724442732366 sending to kafka topic job-topic
+2024-08-23 19:52:12 [pool-4-thread-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Sending message='{"id": "e97bd6c0-8746-4219-8e68-1d3745e62b70", "companyName": "DevWorks", "role": "Fullstack Developer", "location": "Boston, MA", "link": "https://DevWorks/jobs.example.com/apply/957", "postedAt": "1724442732366"}' to topic='job-topic'
+2024-08-23 19:52:12 [kafka-producer-network-thread | producer-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Received new metadata. Topic: job-topic; Partition 0; Offset 33; Timestamp 1724442732386, at time 221559096459329
+2024-08-23 19:52:22 [pool-4-thread-1] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Generated mock job posting: Software Engineer at DevWorks
+2024-08-23 19:52:22 [pool-4-thread-1] INFO  c.j.j.t.k.s.l.NewJobPostedEventPublisher - Received job post DevWorks-Software Engineer-Seattle, WA-https://DevWorks/jobs.example.com/apply/892-1724442742410 sending to kafka topic job-topic
+2024-08-23 19:52:22 [pool-4-thread-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Sending message='{"id": "2902e0a5-c117-4aa2-8404-2a9078f966d5", "companyName": "DevWorks", "role": "Software Engineer", "location": "Seattle, WA", "link": "https://DevWorks/jobs.example.com/apply/892", "postedAt": "1724442742410"}' to topic='job-topic'
+2024-08-23 19:52:22 [kafka-producer-network-thread | producer-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Received new metadata. Topic: job-topic; Partition 2; Offset 35; Timestamp 1724442742430, at time 221569158475626
+2024-08-23 19:52:32 [pool-4-thread-1] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Generated mock job posting: Fullstack Developer at DevWorks
+2024-08-23 19:52:32 [pool-4-thread-1] INFO  c.j.j.t.k.s.l.NewJobPostedEventPublisher - Received job post DevWorks-Fullstack Developer-Chicago, IL-https://DevWorks/jobs.example.com/apply/300-1724442752444 sending to kafka topic job-topic
+2024-08-23 19:52:32 [pool-4-thread-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Sending message='{"id": "b5e5dea9-6433-45c7-a741-f01a23179762", "companyName": "DevWorks", "role": "Fullstack Developer", "location": "Chicago, IL", "link": "https://DevWorks/jobs.example.com/apply/300", "postedAt": "1724442752444"}' to topic='job-topic'
+2024-08-23 19:52:32 [kafka-producer-network-thread | producer-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Received new metadata. Topic: job-topic; Partition 1; Offset 40; Timestamp 1724442752461, at time 221579155051464
+2024-08-23 19:52:44 [pool-4-thread-1] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Generated mock job posting: Product Manager at TechCorp
+2024-08-23 19:52:44 [pool-4-thread-1] INFO  c.j.j.t.k.s.l.NewJobPostedEventPublisher - Received job post TechCorp-Product Manager-San Francisco, CA-https://TechCorp/jobs.example.com/apply/938-1724442764863 sending to kafka topic job-topic
+2024-08-23 19:52:44 [pool-4-thread-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Sending message='{"id": "065c0ed8-1b8a-47de-b509-d276b6730a99", "companyName": "TechCorp", "role": "Product Manager", "location": "San Francisco, CA", "link": "https://TechCorp/jobs.example.com/apply/938", "postedAt": "1724442764863"}' to topic='job-topic'
+2024-08-23 19:52:44 [kafka-producer-network-thread | producer-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Received new metadata. Topic: job-topic; Partition 2; Offset 36; Timestamp 1724442764881, at time 221589176754009
+2024-08-23 19:52:54 [pool-4-thread-1] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Generated mock job posting: Data Scientist at InnovateX
+2024-08-23 19:52:54 [pool-4-thread-1] INFO  c.j.j.t.k.s.l.NewJobPostedEventPublisher - Received job post InnovateX-Data Scientist-Los Angeles, CA-https://InnovateX/jobs.example.com/apply/477-1724442774885 sending to kafka topic job-topic
+2024-08-23 19:52:54 [pool-4-thread-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Sending message='{"id": "d897fd32-bf8e-4a03-b331-38f5cf2c0a0b", "companyName": "InnovateX", "role": "Data Scientist", "location": "Los Angeles, CA", "link": "https://InnovateX/jobs.example.com/apply/477", "postedAt": "1724442774885"}' to topic='job-topic'
+2024-08-23 19:52:54 [kafka-producer-network-thread | producer-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Received new metadata. Topic: job-topic; Partition 1; Offset 41; Timestamp 1724442774896, at time 221599191577973
+2024-08-23 19:53:04 [pool-4-thread-1] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Generated mock job posting: Data Scientist at CyberNext
+2024-08-23 19:53:04 [pool-4-thread-1] INFO  c.j.j.t.k.s.l.NewJobPostedEventPublisher - Received job post CyberNext-Data Scientist-Boston, MA-https://CyberNext/jobs.example.com/apply/679-1724442784904 sending to kafka topic job-topic
+2024-08-23 19:53:04 [pool-4-thread-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Sending message='{"id": "2783801c-eeb3-40b9-9ce9-7afe0db07f27", "companyName": "CyberNext", "role": "Data Scientist", "location": "Boston, MA", "link": "https://CyberNext/jobs.example.com/apply/679", "postedAt": "1724442784904"}' to topic='job-topic'
+2024-08-23 19:53:04 [kafka-producer-network-thread | producer-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Received new metadata. Topic: job-topic; Partition 0; Offset 34; Timestamp 1724442784912, at time 221609213061477
+2024-08-23 19:53:14 [pool-4-thread-1] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Generated mock job posting: DevOps Engineer at SoftSolutions
+2024-08-23 19:53:14 [pool-4-thread-1] INFO  c.j.j.t.k.s.l.NewJobPostedEventPublisher - Received job post SoftSolutions-DevOps Engineer-Seattle, WA-https://SoftSolutions/jobs.example.com/apply/864-1724442794918 sending to kafka topic job-topic
+2024-08-23 19:53:14 [pool-4-thread-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Sending message='{"id": "cc921c38-9873-4489-aeda-99193faffa2d", "companyName": "SoftSolutions", "role": "DevOps Engineer", "location": "Seattle, WA", "link": "https://SoftSolutions/jobs.example.com/apply/864", "postedAt": "1724442794918"}' to topic='job-topic'
+2024-08-23 19:53:14 [kafka-producer-network-thread | producer-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Received new metadata. Topic: job-topic; Partition 1; Offset 42; Timestamp 1724442794922, at time 221619213323398
+2024-08-23 19:53:24 [pool-4-thread-1] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Generated mock job posting: Fullstack Developer at DevWorks
+2024-08-23 19:53:24 [pool-4-thread-1] INFO  c.j.j.t.k.s.l.NewJobPostedEventPublisher - Received job post DevWorks-Fullstack Developer-Denver, CO-https://DevWorks/jobs.example.com/apply/202-1724442804929 sending to kafka topic job-topic
+2024-08-23 19:53:24 [pool-4-thread-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Sending message='{"id": "2e491ca9-f2d3-4560-a1a4-6235845aa52c", "companyName": "DevWorks", "role": "Fullstack Developer", "location": "Denver, CO", "link": "https://DevWorks/jobs.example.com/apply/202", "postedAt": "1724442804929"}' to topic='job-topic'
+2024-08-23 19:53:24 [kafka-producer-network-thread | producer-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Received new metadata. Topic: job-topic; Partition 2; Offset 37; Timestamp 1724442804940, at time 221629243961819
+2024-08-23 19:53:34 [pool-4-thread-1] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Generated mock job posting: Frontend Developer at AlgoSoft
+2024-08-23 19:53:34 [pool-4-thread-1] INFO  c.j.j.t.k.s.l.NewJobPostedEventPublisher - Received job post AlgoSoft-Frontend Developer-New York, NY-https://AlgoSoft/jobs.example.com/apply/16-1724442814945 sending to kafka topic job-topic
+2024-08-23 19:53:34 [pool-4-thread-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Sending message='{"id": "3c588933-13ca-495f-8158-03a88d9a7d1b", "companyName": "AlgoSoft", "role": "Frontend Developer", "location": "New York, NY", "link": "https://AlgoSoft/jobs.example.com/apply/16", "postedAt": "1724442814945"}' to topic='job-topic'
+2024-08-23 19:53:34 [kafka-producer-network-thread | producer-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Received new metadata. Topic: job-topic; Partition 1; Offset 43; Timestamp 1724442814952, at time 221639239214366
+2024-08-23 19:53:44 [pool-4-thread-1] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Generated mock job posting: Cloud Architect at AI Dynamics
+2024-08-23 19:53:44 [pool-4-thread-1] INFO  c.j.j.t.k.s.l.NewJobPostedEventPublisher - Received job post AI Dynamics-Cloud Architect-Seattle, WA-https://AI Dynamics/jobs.example.com/apply/855-1724442824956 sending to kafka topic job-topic
+2024-08-23 19:53:44 [pool-4-thread-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Sending message='{"id": "b13797dd-bcc5-4621-a57f-308d3d75b649", "companyName": "AI Dynamics", "role": "Cloud Architect", "location": "Seattle, WA", "link": "https://AI Dynamics/jobs.example.com/apply/855", "postedAt": "1724442824956"}' to topic='job-topic'
+2024-08-23 19:53:45 [kafka-producer-network-thread | producer-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Received new metadata. Topic: job-topic; Partition 0; Offset 35; Timestamp 1724442824962, at time 221649274243537
+2024-08-23 19:53:54 [pool-4-thread-1] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Generated mock job posting: Software Engineer at InnovateX
+2024-08-23 19:53:54 [pool-4-thread-1] INFO  c.j.j.t.k.s.l.NewJobPostedEventPublisher - Received job post InnovateX-Software Engineer-New York, NY-https://InnovateX/jobs.example.com/apply/102-1724442834971 sending to kafka topic job-topic
+2024-08-23 19:53:54 [pool-4-thread-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Sending message='{"id": "cd0f393a-5474-4f01-bb82-9367cd2cbb53", "companyName": "InnovateX", "role": "Software Engineer", "location": "New York, NY", "link": "https://InnovateX/jobs.example.com/apply/102", "postedAt": "1724442834971"}' to topic='job-topic'
+2024-08-23 19:53:54 [kafka-producer-network-thread | producer-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Received new metadata. Topic: job-topic; Partition 2; Offset 38; Timestamp 1724442834975, at time 221659266433083
+2024-08-23 19:54:04 [pool-4-thread-1] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Generated mock job posting: Software Engineer at CyberNext
+2024-08-23 19:54:04 [pool-4-thread-1] INFO  c.j.j.t.k.s.l.NewJobPostedEventPublisher - Received job post CyberNext-Software Engineer-Los Angeles, CA-https://CyberNext/jobs.example.com/apply/714-1724442844981 sending to kafka topic job-topic
+2024-08-23 19:54:04 [pool-4-thread-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Sending message='{"id": "3ed57d1a-7185-4d1a-9d02-89f13ca7e031", "companyName": "CyberNext", "role": "Software Engineer", "location": "Los Angeles, CA", "link": "https://CyberNext/jobs.example.com/apply/714", "postedAt": "1724442844981"}' to topic='job-topic'
+2024-08-23 19:54:05 [kafka-producer-network-thread | producer-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Received new metadata. Topic: job-topic; Partition 0; Offset 36; Timestamp 1724442844992, at time 221669281210963
+2024-08-23 19:54:15 [pool-4-thread-1] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Generated mock job posting: Backend Developer at CyberNext
+2024-08-23 19:54:15 [pool-4-thread-1] INFO  c.j.j.t.k.s.l.NewJobPostedEventPublisher - Received job post CyberNext-Backend Developer-Seattle, WA-https://CyberNext/jobs.example.com/apply/538-1724442855005 sending to kafka topic job-topic
+2024-08-23 19:54:15 [pool-4-thread-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Sending message='{"id": "0ef0130e-abb6-4bfb-84e5-40008bdcb86a", "companyName": "CyberNext", "role": "Backend Developer", "location": "Seattle, WA", "link": "https://CyberNext/jobs.example.com/apply/538", "postedAt": "1724442855005"}' to topic='job-topic'
+2024-08-23 19:54:15 [kafka-producer-network-thread | producer-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Received new metadata. Topic: job-topic; Partition 2; Offset 39; Timestamp 1724442855023, at time 221679343365967
+2024-08-23 19:54:22 [kafka-admin-client-thread | adminclient-1] INFO  o.apache.kafka.clients.NetworkClient - [AdminClient clientId=adminclient-1] Node 3 disconnected.
+2024-08-23 19:54:25 [pool-4-thread-1] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Generated mock job posting: DevOps Engineer at AlgoSoft
+2024-08-23 19:54:25 [pool-4-thread-1] INFO  c.j.j.t.k.s.l.NewJobPostedEventPublisher - Received job post AlgoSoft-DevOps Engineer-Boston, MA-https://AlgoSoft/jobs.example.com/apply/746-1724442865030 sending to kafka topic job-topic
+2024-08-23 19:54:25 [pool-4-thread-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Sending message='{"id": "6a4942ac-21be-4e01-88a5-43e981e8a514", "companyName": "AlgoSoft", "role": "DevOps Engineer", "location": "Boston, MA", "link": "https://AlgoSoft/jobs.example.com/apply/746", "postedAt": "1724442865030"}' to topic='job-topic'
+2024-08-23 19:54:25 [kafka-producer-network-thread | producer-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Received new metadata. Topic: job-topic; Partition 0; Offset 37; Timestamp 1724442865038, at time 221689336621346
+2024-08-23 19:54:35 [pool-4-thread-1] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Generated mock job posting: Software Engineer at CyberNext
+2024-08-23 19:54:35 [pool-4-thread-1] INFO  c.j.j.t.k.s.l.NewJobPostedEventPublisher - Received job post CyberNext-Software Engineer-New York, NY-https://CyberNext/jobs.example.com/apply/450-1724442875047 sending to kafka topic job-topic
+2024-08-23 19:54:35 [pool-4-thread-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Sending message='{"id": "d12f4296-8307-46ee-9cb3-d4bedb120670", "companyName": "CyberNext", "role": "Software Engineer", "location": "New York, NY", "link": "https://CyberNext/jobs.example.com/apply/450", "postedAt": "1724442875047"}' to topic='job-topic'
+2024-08-23 19:54:35 [kafka-producer-network-thread | producer-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Received new metadata. Topic: job-topic; Partition 0; Offset 38; Timestamp 1724442875052, at time 221699349452143
+2024-08-23 21:02:39 [pool-4-thread-1] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Generated mock job posting: Cloud Architect at InnovateX
+2024-08-23 21:02:39 [pool-4-thread-1] INFO  c.j.j.t.k.s.l.NewJobPostedEventPublisher - Received job post InnovateX-Cloud Architect-Chicago, IL-https://InnovateX/jobs.example.com/apply/486-1724446959927 sending to kafka topic job-topic
+2024-08-23 21:02:39 [pool-4-thread-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Sending message='{"id": "d6096f28-b0cc-4175-a758-6f028fb2b176", "companyName": "InnovateX", "role": "Cloud Architect", "location": "Chicago, IL", "link": "https://InnovateX/jobs.example.com/apply/486", "postedAt": "1724446959927"}' to topic='job-topic'
+2024-08-23 21:02:39 [kafka-producer-network-thread | producer-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Received new metadata. Topic: job-topic; Partition 0; Offset 39; Timestamp 1724446959932, at time 221709349288022
+2024-08-23 21:02:49 [pool-4-thread-1] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Generated mock job posting: Fullstack Developer at TechCorp
+2024-08-23 21:02:49 [pool-4-thread-1] INFO  c.j.j.t.k.s.l.NewJobPostedEventPublisher - Received job post TechCorp-Fullstack Developer-Austin, TX-https://TechCorp/jobs.example.com/apply/777-1724446969942 sending to kafka topic job-topic
+2024-08-23 21:02:49 [pool-4-thread-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Sending message='{"id": "e61c7eac-e9c5-46c3-9ba5-fd564374fe4d", "companyName": "TechCorp", "role": "Fullstack Developer", "location": "Austin, TX", "link": "https://TechCorp/jobs.example.com/apply/777", "postedAt": "1724446969942"}' to topic='job-topic'
+2024-08-23 21:02:49 [kafka-producer-network-thread | producer-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Received new metadata. Topic: job-topic; Partition 0; Offset 40; Timestamp 1724446969959, at time 221719388059610
+2024-08-23 21:02:59 [pool-4-thread-1] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Generated mock job posting: Fullstack Developer at CyberNext
+2024-08-23 21:02:59 [pool-4-thread-1] INFO  c.j.j.t.k.s.l.NewJobPostedEventPublisher - Received job post CyberNext-Fullstack Developer-Boston, MA-https://CyberNext/jobs.example.com/apply/586-1724446979974 sending to kafka topic job-topic
+2024-08-23 21:02:59 [pool-4-thread-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Sending message='{"id": "6fa64e15-5e22-4cea-b119-d4053846ba22", "companyName": "CyberNext", "role": "Fullstack Developer", "location": "Boston, MA", "link": "https://CyberNext/jobs.example.com/apply/586", "postedAt": "1724446979974"}' to topic='job-topic'
+2024-08-23 21:03:00 [kafka-producer-network-thread | producer-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Received new metadata. Topic: job-topic; Partition 1; Offset 44; Timestamp 1724446979997, at time 221729458140490
+2024-08-23 21:23:03 [pool-4-thread-1] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Generated mock job posting: Data Scientist at CodeBrew
+2024-08-23 21:23:03 [pool-4-thread-1] INFO  c.j.j.t.k.s.l.NewJobPostedEventPublisher - Received job post CodeBrew-Data Scientist-Chicago, IL-https://CodeBrew/jobs.example.com/apply/641-1724448183000 sending to kafka topic job-topic
+2024-08-23 21:23:03 [pool-4-thread-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Sending message='{"id": "658b5c1e-9bed-42b9-a6d2-68001dd22b6c", "companyName": "CodeBrew", "role": "Data Scientist", "location": "Chicago, IL", "link": "https://CodeBrew/jobs.example.com/apply/641", "postedAt": "1724448183000"}' to topic='job-topic'
+2024-08-23 21:23:03 [kafka-producer-network-thread | producer-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Received new metadata. Topic: job-topic; Partition 0; Offset 41; Timestamp 1724448183004, at time 221739436862453
+2024-08-23 21:23:13 [pool-4-thread-1] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Generated mock job posting: Backend Developer at CyberNext
+2024-08-23 21:23:13 [pool-4-thread-1] INFO  c.j.j.t.k.s.l.NewJobPostedEventPublisher - Received job post CyberNext-Backend Developer-Seattle, WA-https://CyberNext/jobs.example.com/apply/771-1724448193009 sending to kafka topic job-topic
+2024-08-23 21:23:13 [pool-4-thread-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Sending message='{"id": "712689b3-138e-4963-a68e-73b1656e0c25", "companyName": "CyberNext", "role": "Backend Developer", "location": "Seattle, WA", "link": "https://CyberNext/jobs.example.com/apply/771", "postedAt": "1724448193009"}' to topic='job-topic'
+2024-08-23 21:23:13 [kafka-producer-network-thread | producer-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Received new metadata. Topic: job-topic; Partition 2; Offset 40; Timestamp 1724448193039, at time 221749484435499
+2024-08-23 21:23:23 [pool-4-thread-1] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Generated mock job posting: Cloud Architect at CodeBrew
+2024-08-23 21:23:23 [pool-4-thread-1] INFO  c.j.j.t.k.s.l.NewJobPostedEventPublisher - Received job post CodeBrew-Cloud Architect-Boston, MA-https://CodeBrew/jobs.example.com/apply/680-1724448203055 sending to kafka topic job-topic
+2024-08-23 21:23:23 [pool-4-thread-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Sending message='{"id": "6234b408-75d1-483a-89cd-ce037d6d3440", "companyName": "CodeBrew", "role": "Cloud Architect", "location": "Boston, MA", "link": "https://CodeBrew/jobs.example.com/apply/680", "postedAt": "1724448203055"}' to topic='job-topic'
+2024-08-23 21:23:23 [kafka-producer-network-thread | producer-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Received new metadata. Topic: job-topic; Partition 2; Offset 41; Timestamp 1724448203064, at time 221759493322754
+2024-08-23 21:39:07 [pool-4-thread-1] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Generated mock job posting: Cloud Architect at SoftSolutions
+2024-08-23 21:39:07 [pool-4-thread-1] INFO  c.j.j.t.k.s.l.NewJobPostedEventPublisher - Received job post SoftSolutions-Cloud Architect-Seattle, WA-https://SoftSolutions/jobs.example.com/apply/230-1724449147638 sending to kafka topic job-topic
+2024-08-23 21:39:07 [pool-4-thread-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Sending message='{"id": "e9c85ee5-300d-431a-984b-c516b2758b33", "companyName": "SoftSolutions", "role": "Cloud Architect", "location": "Seattle, WA", "link": "https://SoftSolutions/jobs.example.com/apply/230", "postedAt": "1724449147638"}' to topic='job-topic'
+2024-08-23 21:39:07 [kafka-producer-network-thread | producer-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Received new metadata. Topic: job-topic; Partition 0; Offset 42; Timestamp 1724449147662, at time 221769542622466
+2024-08-23 21:39:17 [pool-4-thread-1] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Generated mock job posting: Fullstack Developer at CodeBrew
+2024-08-23 21:39:17 [pool-4-thread-1] INFO  c.j.j.t.k.s.l.NewJobPostedEventPublisher - Received job post CodeBrew-Fullstack Developer-Boston, MA-https://CodeBrew/jobs.example.com/apply/926-1724449157675 sending to kafka topic job-topic
+2024-08-23 21:39:17 [pool-4-thread-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Sending message='{"id": "3e38ebc5-7fb9-424a-874b-d0dec1de8e9f", "companyName": "CodeBrew", "role": "Fullstack Developer", "location": "Boston, MA", "link": "https://CodeBrew/jobs.example.com/apply/926", "postedAt": "1724449157675"}' to topic='job-topic'
+2024-08-23 21:39:17 [kafka-producer-network-thread | producer-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Received new metadata. Topic: job-topic; Partition 0; Offset 43; Timestamp 1724449157682, at time 221779536460971
+2024-08-23 21:39:27 [pool-4-thread-1] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Generated mock job posting: Fullstack Developer at CyberNext
+2024-08-23 21:39:27 [pool-4-thread-1] INFO  c.j.j.t.k.s.l.NewJobPostedEventPublisher - Received job post CyberNext-Fullstack Developer-San Francisco, CA-https://CyberNext/jobs.example.com/apply/388-1724449167692 sending to kafka topic job-topic
+2024-08-23 21:39:27 [pool-4-thread-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Sending message='{"id": "36b8a46d-c4bf-4257-b640-b378c7782875", "companyName": "CyberNext", "role": "Fullstack Developer", "location": "San Francisco, CA", "link": "https://CyberNext/jobs.example.com/apply/388", "postedAt": "1724449167692"}' to topic='job-topic'
+2024-08-23 21:39:27 [kafka-producer-network-thread | producer-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Received new metadata. Topic: job-topic; Partition 1; Offset 45; Timestamp 1724449167695, at time 221789551540267
+2024-08-23 22:47:36 [pool-4-thread-1] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Generated mock job posting: Data Scientist at TechCorp
+2024-08-23 22:47:36 [pool-4-thread-1] INFO  c.j.j.t.k.s.l.NewJobPostedEventPublisher - Received job post TechCorp-Data Scientist-San Francisco, CA-https://TechCorp/jobs.example.com/apply/333-1724453256047 sending to kafka topic job-topic
+2024-08-23 22:47:36 [pool-4-thread-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Sending message='{"id": "8cd74793-24ed-4eb5-8ea9-e940a59d2110", "companyName": "TechCorp", "role": "Data Scientist", "location": "San Francisco, CA", "link": "https://TechCorp/jobs.example.com/apply/333", "postedAt": "1724453256047"}' to topic='job-topic'
+2024-08-23 22:47:36 [kafka-producer-network-thread | producer-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Received new metadata. Topic: job-topic; Partition 1; Offset 46; Timestamp 1724453256060, at time 221799577475564
+2024-08-23 22:47:46 [pool-4-thread-1] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Generated mock job posting: Cloud Architect at AI Dynamics
+2024-08-23 22:47:46 [pool-4-thread-1] INFO  c.j.j.t.k.s.l.NewJobPostedEventPublisher - Received job post AI Dynamics-Cloud Architect-San Francisco, CA-https://AI Dynamics/jobs.example.com/apply/553-1724453266069 sending to kafka topic job-topic
+2024-08-23 22:47:46 [pool-4-thread-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Sending message='{"id": "f7398a79-4498-4d3b-a127-cf23a985fa1f", "companyName": "AI Dynamics", "role": "Cloud Architect", "location": "San Francisco, CA", "link": "https://AI Dynamics/jobs.example.com/apply/553", "postedAt": "1724453266069"}' to topic='job-topic'
+2024-08-23 22:47:46 [kafka-producer-network-thread | producer-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Received new metadata. Topic: job-topic; Partition 1; Offset 47; Timestamp 1724453266076, at time 221809586364943
+2024-08-23 22:47:56 [pool-4-thread-1] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Generated mock job posting: Software Engineer at AI Dynamics
+2024-08-23 22:47:56 [pool-4-thread-1] INFO  c.j.j.t.k.s.l.NewJobPostedEventPublisher - Received job post AI Dynamics-Software Engineer-Chicago, IL-https://AI Dynamics/jobs.example.com/apply/271-1724453276081 sending to kafka topic job-topic
+2024-08-23 22:47:56 [pool-4-thread-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Sending message='{"id": "69c09cf3-478d-4708-9d6e-4ea1e34123f9", "companyName": "AI Dynamics", "role": "Software Engineer", "location": "Chicago, IL", "link": "https://AI Dynamics/jobs.example.com/apply/271", "postedAt": "1724453276081"}' to topic='job-topic'
+2024-08-23 22:47:56 [kafka-producer-network-thread | producer-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Received new metadata. Topic: job-topic; Partition 2; Offset 42; Timestamp 1724453276089, at time 221819606307782
+2024-08-23 22:48:06 [pool-4-thread-1] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Generated mock job posting: DevOps Engineer at DevWorks
+2024-08-23 22:48:06 [pool-4-thread-1] INFO  c.j.j.t.k.s.l.NewJobPostedEventPublisher - Received job post DevWorks-DevOps Engineer-San Francisco, CA-https://DevWorks/jobs.example.com/apply/304-1724453286094 sending to kafka topic job-topic
+2024-08-23 22:48:06 [pool-4-thread-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Sending message='{"id": "a5ccf320-38b9-4a35-afc8-cb72f33f6c74", "companyName": "DevWorks", "role": "DevOps Engineer", "location": "San Francisco, CA", "link": "https://DevWorks/jobs.example.com/apply/304", "postedAt": "1724453286094"}' to topic='job-topic'
+2024-08-23 22:48:06 [kafka-producer-network-thread | producer-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Received new metadata. Topic: job-topic; Partition 2; Offset 43; Timestamp 1724453286102, at time 221829627718078
+2024-08-23 22:48:16 [pool-4-thread-1] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Generated mock job posting: Data Scientist at DevWorks
+2024-08-23 22:48:16 [pool-4-thread-1] INFO  c.j.j.t.k.s.l.NewJobPostedEventPublisher - Received job post DevWorks-Data Scientist-Denver, CO-https://DevWorks/jobs.example.com/apply/451-1724453296110 sending to kafka topic job-topic
+2024-08-23 22:48:16 [pool-4-thread-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Sending message='{"id": "59bb6940-b24d-45d0-89b3-29133246f7a9", "companyName": "DevWorks", "role": "Data Scientist", "location": "Denver, CO", "link": "https://DevWorks/jobs.example.com/apply/451", "postedAt": "1724453296110"}' to topic='job-topic'
+2024-08-23 22:48:16 [kafka-producer-network-thread | producer-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Received new metadata. Topic: job-topic; Partition 0; Offset 44; Timestamp 1724453296121, at time 221839637577874
+2024-08-23 22:48:26 [pool-4-thread-1] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Generated mock job posting: Data Scientist at InnovateX
+2024-08-23 22:48:26 [pool-4-thread-1] INFO  c.j.j.t.k.s.l.NewJobPostedEventPublisher - Received job post InnovateX-Data Scientist-Seattle, WA-https://InnovateX/jobs.example.com/apply/56-1724453306124 sending to kafka topic job-topic
+2024-08-23 22:48:26 [pool-4-thread-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Sending message='{"id": "a8c41ab2-2c71-4acc-b8ae-f56887984e7d", "companyName": "InnovateX", "role": "Data Scientist", "location": "Seattle, WA", "link": "https://InnovateX/jobs.example.com/apply/56", "postedAt": "1724453306124"}' to topic='job-topic'
+2024-08-23 22:48:26 [kafka-producer-network-thread | producer-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Received new metadata. Topic: job-topic; Partition 2; Offset 44; Timestamp 1724453306131, at time 221849643087379
+2024-08-23 22:48:36 [pool-4-thread-1] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Generated mock job posting: Fullstack Developer at AlgoSoft
+2024-08-23 22:48:36 [pool-4-thread-1] INFO  c.j.j.t.k.s.l.NewJobPostedEventPublisher - Received job post AlgoSoft-Fullstack Developer-Denver, CO-https://AlgoSoft/jobs.example.com/apply/609-1724453316137 sending to kafka topic job-topic
+2024-08-23 22:48:36 [pool-4-thread-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Sending message='{"id": "4f28e0f0-754e-4062-838b-c2593067a0a4", "companyName": "AlgoSoft", "role": "Fullstack Developer", "location": "Denver, CO", "link": "https://AlgoSoft/jobs.example.com/apply/609", "postedAt": "1724453316137"}' to topic='job-topic'
+2024-08-23 22:48:36 [kafka-producer-network-thread | producer-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Received new metadata. Topic: job-topic; Partition 2; Offset 45; Timestamp 1724453316141, at time 221859653220966
+2024-08-23 22:48:46 [pool-4-thread-1] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Generated mock job posting: Fullstack Developer at SoftSolutions
+2024-08-23 22:48:46 [pool-4-thread-1] INFO  c.j.j.t.k.s.l.NewJobPostedEventPublisher - Received job post SoftSolutions-Fullstack Developer-Austin, TX-https://SoftSolutions/jobs.example.com/apply/457-1724453326150 sending to kafka topic job-topic
+2024-08-23 22:48:46 [pool-4-thread-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Sending message='{"id": "e9de51a2-8d0c-477c-b95e-913a0f12485b", "companyName": "SoftSolutions", "role": "Fullstack Developer", "location": "Austin, TX", "link": "https://SoftSolutions/jobs.example.com/apply/457", "postedAt": "1724453326150"}' to topic='job-topic'
+2024-08-23 22:48:46 [kafka-producer-network-thread | producer-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Received new metadata. Topic: job-topic; Partition 0; Offset 45; Timestamp 1724453326170, at time 221869688671804
+2024-08-23 22:48:56 [pool-4-thread-1] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Generated mock job posting: Frontend Developer at InnovateX
+2024-08-23 22:48:56 [pool-4-thread-1] INFO  c.j.j.t.k.s.l.NewJobPostedEventPublisher - Received job post InnovateX-Frontend Developer-Boston, MA-https://InnovateX/jobs.example.com/apply/848-1724453336180 sending to kafka topic job-topic
+2024-08-23 22:48:56 [pool-4-thread-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Sending message='{"id": "867068f4-4343-43b1-a7a1-bd2a6687e7ed", "companyName": "InnovateX", "role": "Frontend Developer", "location": "Boston, MA", "link": "https://InnovateX/jobs.example.com/apply/848", "postedAt": "1724453336180"}' to topic='job-topic'
+2024-08-23 22:48:56 [kafka-producer-network-thread | producer-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Received new metadata. Topic: job-topic; Partition 0; Offset 46; Timestamp 1724453336184, at time 221879694944684
+2024-08-23 22:49:06 [pool-4-thread-1] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Generated mock job posting: Frontend Developer at TechCorp
+2024-08-23 22:49:06 [pool-4-thread-1] INFO  c.j.j.t.k.s.l.NewJobPostedEventPublisher - Received job post TechCorp-Frontend Developer-Austin, TX-https://TechCorp/jobs.example.com/apply/375-1724453346188 sending to kafka topic job-topic
+2024-08-23 22:49:06 [pool-4-thread-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Sending message='{"id": "310447f1-e3e2-47a8-b5ed-29c65ba5d1ca", "companyName": "TechCorp", "role": "Frontend Developer", "location": "Austin, TX", "link": "https://TechCorp/jobs.example.com/apply/375", "postedAt": "1724453346188"}' to topic='job-topic'
+2024-08-23 22:49:06 [kafka-producer-network-thread | producer-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Received new metadata. Topic: job-topic; Partition 0; Offset 47; Timestamp 1724453346198, at time 221889720527105
+2024-08-23 22:49:16 [pool-4-thread-1] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Generated mock job posting: Backend Developer at AlgoSoft
+2024-08-23 22:49:16 [pool-4-thread-1] INFO  c.j.j.t.k.s.l.NewJobPostedEventPublisher - Received job post AlgoSoft-Backend Developer-Chicago, IL-https://AlgoSoft/jobs.example.com/apply/542-1724453356205 sending to kafka topic job-topic
+2024-08-23 22:49:16 [pool-4-thread-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Sending message='{"id": "04560336-3307-4e50-8039-701319873eec", "companyName": "AlgoSoft", "role": "Backend Developer", "location": "Chicago, IL", "link": "https://AlgoSoft/jobs.example.com/apply/542", "postedAt": "1724453356205"}' to topic='job-topic'
+2024-08-23 22:49:16 [kafka-producer-network-thread | producer-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Received new metadata. Topic: job-topic; Partition 1; Offset 48; Timestamp 1724453356211, at time 221899735674984
+2024-08-23 22:49:26 [pool-4-thread-1] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Generated mock job posting: Software Engineer at CodeBrew
+2024-08-23 22:49:26 [pool-4-thread-1] INFO  c.j.j.t.k.s.l.NewJobPostedEventPublisher - Received job post CodeBrew-Software Engineer-Seattle, WA-https://CodeBrew/jobs.example.com/apply/654-1724453366219 sending to kafka topic job-topic
+2024-08-23 22:49:26 [pool-4-thread-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Sending message='{"id": "ce0e2d56-d280-42d0-9e2a-040c7ce340de", "companyName": "CodeBrew", "role": "Software Engineer", "location": "Seattle, WA", "link": "https://CodeBrew/jobs.example.com/apply/654", "postedAt": "1724453366219"}' to topic='job-topic'
+2024-08-23 22:49:26 [kafka-producer-network-thread | producer-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Received new metadata. Topic: job-topic; Partition 0; Offset 48; Timestamp 1724453366225, at time 221909742217906
+2024-08-23 22:49:36 [pool-4-thread-1] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Generated mock job posting: Software Engineer at AlgoSoft
+2024-08-23 22:49:36 [pool-4-thread-1] INFO  c.j.j.t.k.s.l.NewJobPostedEventPublisher - Received job post AlgoSoft-Software Engineer-Chicago, IL-https://AlgoSoft/jobs.example.com/apply/792-1724453376228 sending to kafka topic job-topic
+2024-08-23 22:49:36 [pool-4-thread-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Sending message='{"id": "6b34dd58-9403-4121-9951-51a17ca1d2e6", "companyName": "AlgoSoft", "role": "Software Engineer", "location": "Chicago, IL", "link": "https://AlgoSoft/jobs.example.com/apply/792", "postedAt": "1724453376228"}' to topic='job-topic'
+2024-08-23 22:49:36 [kafka-producer-network-thread | producer-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Received new metadata. Topic: job-topic; Partition 1; Offset 49; Timestamp 1724453376239, at time 221919756897743
+2024-08-23 22:49:46 [pool-4-thread-1] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Generated mock job posting: Product Manager at CyberNext
+2024-08-23 22:49:46 [pool-4-thread-1] INFO  c.j.j.t.k.s.l.NewJobPostedEventPublisher - Received job post CyberNext-Product Manager-Denver, CO-https://CyberNext/jobs.example.com/apply/339-1724453386248 sending to kafka topic job-topic
+2024-08-23 22:49:46 [pool-4-thread-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Sending message='{"id": "60fe5419-0de1-458c-a6d0-68dc4cdb8cf2", "companyName": "CyberNext", "role": "Product Manager", "location": "Denver, CO", "link": "https://CyberNext/jobs.example.com/apply/339", "postedAt": "1724453386248"}' to topic='job-topic'
+2024-08-23 22:49:46 [kafka-producer-network-thread | producer-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Received new metadata. Topic: job-topic; Partition 2; Offset 46; Timestamp 1724453386254, at time 221929764874498
+2024-08-23 22:49:56 [pool-4-thread-1] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Generated mock job posting: Software Engineer at AI Dynamics
+2024-08-23 22:49:56 [pool-4-thread-1] INFO  c.j.j.t.k.s.l.NewJobPostedEventPublisher - Received job post AI Dynamics-Software Engineer-New York, NY-https://AI Dynamics/jobs.example.com/apply/293-1724453396259 sending to kafka topic job-topic
+2024-08-23 22:49:56 [pool-4-thread-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Sending message='{"id": "2b7bef38-859a-43a9-b942-ee269af57a34", "companyName": "AI Dynamics", "role": "Software Engineer", "location": "New York, NY", "link": "https://AI Dynamics/jobs.example.com/apply/293", "postedAt": "1724453396259"}' to topic='job-topic'
+2024-08-23 22:49:56 [kafka-producer-network-thread | producer-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Received new metadata. Topic: job-topic; Partition 1; Offset 50; Timestamp 1724453396264, at time 221939776316711
+2024-08-23 22:50:06 [pool-4-thread-1] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Generated mock job posting: DevOps Engineer at AI Dynamics
+2024-08-23 22:50:06 [pool-4-thread-1] INFO  c.j.j.t.k.s.l.NewJobPostedEventPublisher - Received job post AI Dynamics-DevOps Engineer-San Francisco, CA-https://AI Dynamics/jobs.example.com/apply/113-1724453406271 sending to kafka topic job-topic
+2024-08-23 22:50:06 [pool-4-thread-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Sending message='{"id": "dd4590e8-3e5b-4db0-b9ac-871d44cac7ef", "companyName": "AI Dynamics", "role": "DevOps Engineer", "location": "San Francisco, CA", "link": "https://AI Dynamics/jobs.example.com/apply/113", "postedAt": "1724453406271"}' to topic='job-topic'
+2024-08-23 22:50:06 [kafka-producer-network-thread | producer-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Received new metadata. Topic: job-topic; Partition 1; Offset 51; Timestamp 1724453406276, at time 221949799936590
+2024-08-23 22:50:16 [pool-4-thread-1] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Generated mock job posting: Cloud Architect at AI Dynamics
+2024-08-23 22:50:16 [pool-4-thread-1] INFO  c.j.j.t.k.s.l.NewJobPostedEventPublisher - Received job post AI Dynamics-Cloud Architect-Chicago, IL-https://AI Dynamics/jobs.example.com/apply/383-1724453416287 sending to kafka topic job-topic
+2024-08-23 22:50:16 [pool-4-thread-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Sending message='{"id": "b770ebd9-f25b-4fc6-818e-533c3ceb0caa", "companyName": "AI Dynamics", "role": "Cloud Architect", "location": "Chicago, IL", "link": "https://AI Dynamics/jobs.example.com/apply/383", "postedAt": "1724453416287"}' to topic='job-topic'
+2024-08-23 22:50:16 [kafka-producer-network-thread | producer-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Received new metadata. Topic: job-topic; Partition 1; Offset 52; Timestamp 1724453416293, at time 221959810994928
+2024-08-23 22:50:26 [pool-4-thread-1] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Generated mock job posting: Product Manager at CodeBrew
+2024-08-23 22:50:26 [pool-4-thread-1] INFO  c.j.j.t.k.s.l.NewJobPostedEventPublisher - Received job post CodeBrew-Product Manager-San Francisco, CA-https://CodeBrew/jobs.example.com/apply/849-1724453426298 sending to kafka topic job-topic
+2024-08-23 22:50:26 [pool-4-thread-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Sending message='{"id": "2ec2956c-ad2b-46a7-aaf7-46954f27746f", "companyName": "CodeBrew", "role": "Product Manager", "location": "San Francisco, CA", "link": "https://CodeBrew/jobs.example.com/apply/849", "postedAt": "1724453426298"}' to topic='job-topic'
+2024-08-23 22:50:26 [kafka-producer-network-thread | producer-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Received new metadata. Topic: job-topic; Partition 0; Offset 49; Timestamp 1724453426305, at time 221969818504517
+2024-08-23 22:50:36 [pool-4-thread-1] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Generated mock job posting: Backend Developer at CodeBrew
+2024-08-23 22:50:36 [pool-4-thread-1] INFO  c.j.j.t.k.s.l.NewJobPostedEventPublisher - Received job post CodeBrew-Backend Developer-Denver, CO-https://CodeBrew/jobs.example.com/apply/385-1724453436307 sending to kafka topic job-topic
+2024-08-23 22:50:36 [pool-4-thread-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Sending message='{"id": "dee960a1-c3d2-4843-8bef-f80b32839736", "companyName": "CodeBrew", "role": "Backend Developer", "location": "Denver, CO", "link": "https://CodeBrew/jobs.example.com/apply/385", "postedAt": "1724453436307"}' to topic='job-topic'
+2024-08-23 22:50:36 [kafka-producer-network-thread | producer-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Received new metadata. Topic: job-topic; Partition 2; Offset 47; Timestamp 1724453436320, at time 221979831842021
+2024-08-23 22:50:43 [kafka-admin-client-thread | adminclient-1] INFO  o.apache.kafka.clients.NetworkClient - [AdminClient clientId=adminclient-1] Node 1 disconnected.
+2024-08-23 22:50:46 [pool-4-thread-1] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Generated mock job posting: Fullstack Developer at CodeBrew
+2024-08-23 22:50:46 [pool-4-thread-1] INFO  c.j.j.t.k.s.l.NewJobPostedEventPublisher - Received job post CodeBrew-Fullstack Developer-Chicago, IL-https://CodeBrew/jobs.example.com/apply/888-1724453446329 sending to kafka topic job-topic
+2024-08-23 22:50:46 [pool-4-thread-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Sending message='{"id": "5e18508d-e018-41de-8588-43fe6245c487", "companyName": "CodeBrew", "role": "Fullstack Developer", "location": "Chicago, IL", "link": "https://CodeBrew/jobs.example.com/apply/888", "postedAt": "1724453446329"}' to topic='job-topic'
+2024-08-23 22:50:46 [kafka-producer-network-thread | producer-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Received new metadata. Topic: job-topic; Partition 2; Offset 48; Timestamp 1724453446340, at time 221989860992401
+2024-08-23 22:50:56 [pool-4-thread-1] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Generated mock job posting: DevOps Engineer at AlgoSoft
+2024-08-23 22:50:56 [pool-4-thread-1] INFO  c.j.j.t.k.s.l.NewJobPostedEventPublisher - Received job post AlgoSoft-DevOps Engineer-San Francisco, CA-https://AlgoSoft/jobs.example.com/apply/369-1724453456345 sending to kafka topic job-topic
+2024-08-23 22:50:56 [pool-4-thread-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Sending message='{"id": "8cb3f864-4066-435d-881e-1d3816d199a3", "companyName": "AlgoSoft", "role": "DevOps Engineer", "location": "San Francisco, CA", "link": "https://AlgoSoft/jobs.example.com/apply/369", "postedAt": "1724453456345"}' to topic='job-topic'
+2024-08-23 22:50:56 [kafka-producer-network-thread | producer-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Received new metadata. Topic: job-topic; Partition 0; Offset 50; Timestamp 1724453456349, at time 221999861385281
+2024-08-23 22:51:06 [pool-4-thread-1] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Generated mock job posting: Frontend Developer at SoftSolutions
+2024-08-23 22:51:06 [pool-4-thread-1] INFO  c.j.j.t.k.s.l.NewJobPostedEventPublisher - Received job post SoftSolutions-Frontend Developer-Denver, CO-https://SoftSolutions/jobs.example.com/apply/908-1724453466354 sending to kafka topic job-topic
+2024-08-23 22:51:06 [pool-4-thread-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Sending message='{"id": "134b6282-89c4-4fe4-8839-5e6d406aaa36", "companyName": "SoftSolutions", "role": "Frontend Developer", "location": "Denver, CO", "link": "https://SoftSolutions/jobs.example.com/apply/908", "postedAt": "1724453466354"}' to topic='job-topic'
+2024-08-23 22:51:06 [kafka-producer-network-thread | producer-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Received new metadata. Topic: job-topic; Partition 1; Offset 53; Timestamp 1724453466366, at time 222009917053160
+2024-08-23 22:51:16 [pool-4-thread-1] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Generated mock job posting: Backend Developer at InnovateX
+2024-08-23 22:51:16 [pool-4-thread-1] INFO  c.j.j.t.k.s.l.NewJobPostedEventPublisher - Received job post InnovateX-Backend Developer-Chicago, IL-https://InnovateX/jobs.example.com/apply/47-1724453476372 sending to kafka topic job-topic
+2024-08-23 22:51:16 [pool-4-thread-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Sending message='{"id": "0c6bd624-0618-43d1-b81b-23bb430ac413", "companyName": "InnovateX", "role": "Backend Developer", "location": "Chicago, IL", "link": "https://InnovateX/jobs.example.com/apply/47", "postedAt": "1724453476372"}' to topic='job-topic'
+2024-08-23 22:51:16 [kafka-producer-network-thread | producer-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Received new metadata. Topic: job-topic; Partition 1; Offset 54; Timestamp 1724453476379, at time 222019890857123
+2024-08-23 22:51:26 [pool-4-thread-1] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Generated mock job posting: Backend Developer at DevWorks
+2024-08-23 22:51:26 [pool-4-thread-1] INFO  c.j.j.t.k.s.l.NewJobPostedEventPublisher - Received job post DevWorks-Backend Developer-New York, NY-https://DevWorks/jobs.example.com/apply/815-1724453486401 sending to kafka topic job-topic
+2024-08-23 22:51:26 [pool-4-thread-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Sending message='{"id": "c9054b4e-da4e-4b71-bbcf-fd3aaba4e9ea", "companyName": "DevWorks", "role": "Backend Developer", "location": "New York, NY", "link": "https://DevWorks/jobs.example.com/apply/815", "postedAt": "1724453486401"}' to topic='job-topic'
+2024-08-23 22:51:26 [kafka-producer-network-thread | producer-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Received new metadata. Topic: job-topic; Partition 2; Offset 49; Timestamp 1724453486482, at time 222030148068295
+2024-08-23 22:51:36 [pool-4-thread-1] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Generated mock job posting: Backend Developer at AI Dynamics
+2024-08-23 22:51:36 [pool-4-thread-1] INFO  c.j.j.t.k.s.l.NewJobPostedEventPublisher - Received job post AI Dynamics-Backend Developer-Denver, CO-https://AI Dynamics/jobs.example.com/apply/84-1724453496588 sending to kafka topic job-topic
+2024-08-23 22:51:36 [pool-4-thread-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Sending message='{"id": "c8e3766e-79a3-4e55-ab51-0987b8f457a4", "companyName": "AI Dynamics", "role": "Backend Developer", "location": "Denver, CO", "link": "https://AI Dynamics/jobs.example.com/apply/84", "postedAt": "1724453496588"}' to topic='job-topic'
+2024-08-23 22:51:36 [kafka-producer-network-thread | producer-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Received new metadata. Topic: job-topic; Partition 1; Offset 55; Timestamp 1724453496610, at time 222040149416466
+2024-08-23 22:51:46 [pool-4-thread-1] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Generated mock job posting: Cloud Architect at AI Dynamics
+2024-08-23 22:51:46 [pool-4-thread-1] INFO  c.j.j.t.k.s.l.NewJobPostedEventPublisher - Received job post AI Dynamics-Cloud Architect-Seattle, WA-https://AI Dynamics/jobs.example.com/apply/898-1724453506621 sending to kafka topic job-topic
+2024-08-23 22:51:46 [pool-4-thread-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Sending message='{"id": "4ebd3ad1-08be-4bb8-8c90-95ea8d1c07e4", "companyName": "AI Dynamics", "role": "Cloud Architect", "location": "Seattle, WA", "link": "https://AI Dynamics/jobs.example.com/apply/898", "postedAt": "1724453506621"}' to topic='job-topic'
+2024-08-23 22:51:46 [kafka-producer-network-thread | producer-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Received new metadata. Topic: job-topic; Partition 2; Offset 50; Timestamp 1724453506627, at time 222050147694304
+2024-08-23 22:51:56 [pool-4-thread-1] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Generated mock job posting: Product Manager at AI Dynamics
+2024-08-23 22:51:56 [pool-4-thread-1] INFO  c.j.j.t.k.s.l.NewJobPostedEventPublisher - Received job post AI Dynamics-Product Manager-Los Angeles, CA-https://AI Dynamics/jobs.example.com/apply/132-1724453516633 sending to kafka topic job-topic
+2024-08-23 22:51:56 [pool-4-thread-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Sending message='{"id": "672dc09e-43ef-4f58-9121-1938bce36fb4", "companyName": "AI Dynamics", "role": "Product Manager", "location": "Los Angeles, CA", "link": "https://AI Dynamics/jobs.example.com/apply/132", "postedAt": "1724453516633"}' to topic='job-topic'
+2024-08-23 22:51:56 [kafka-producer-network-thread | producer-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Received new metadata. Topic: job-topic; Partition 0; Offset 51; Timestamp 1724453516639, at time 222060171475933
+2024-08-23 22:52:06 [pool-4-thread-1] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Generated mock job posting: Frontend Developer at AlgoSoft
+2024-08-23 22:52:06 [pool-4-thread-1] INFO  c.j.j.t.k.s.l.NewJobPostedEventPublisher - Received job post AlgoSoft-Frontend Developer-New York, NY-https://AlgoSoft/jobs.example.com/apply/195-1724453526655 sending to kafka topic job-topic
+2024-08-23 22:52:06 [pool-4-thread-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Sending message='{"id": "481c9eb0-6fd3-4b4e-90af-c3e9f8107b75", "companyName": "AlgoSoft", "role": "Frontend Developer", "location": "New York, NY", "link": "https://AlgoSoft/jobs.example.com/apply/195", "postedAt": "1724453526655"}' to topic='job-topic'
+2024-08-23 22:52:06 [kafka-producer-network-thread | producer-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Received new metadata. Topic: job-topic; Partition 0; Offset 52; Timestamp 1724453526667, at time 222070186884771
+2024-08-23 22:52:16 [pool-4-thread-1] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Generated mock job posting: Cloud Architect at InnovateX
+2024-08-23 22:52:16 [pool-4-thread-1] INFO  c.j.j.t.k.s.l.NewJobPostedEventPublisher - Received job post InnovateX-Cloud Architect-San Francisco, CA-https://InnovateX/jobs.example.com/apply/787-1724453536678 sending to kafka topic job-topic
+2024-08-23 22:52:16 [pool-4-thread-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Sending message='{"id": "a6ecc0bc-1d92-4021-a296-8a64c6a00191", "companyName": "InnovateX", "role": "Cloud Architect", "location": "San Francisco, CA", "link": "https://InnovateX/jobs.example.com/apply/787", "postedAt": "1724453536678"}' to topic='job-topic'
+2024-08-23 22:52:16 [kafka-producer-network-thread | producer-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Received new metadata. Topic: job-topic; Partition 0; Offset 53; Timestamp 1724453536684, at time 222080197214734
+2024-08-23 22:52:26 [pool-4-thread-1] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Generated mock job posting: Cloud Architect at InnovateX
+2024-08-23 22:52:26 [pool-4-thread-1] INFO  c.j.j.t.k.s.l.NewJobPostedEventPublisher - Received job post InnovateX-Cloud Architect-San Francisco, CA-https://InnovateX/jobs.example.com/apply/495-1724453546690 sending to kafka topic job-topic
+2024-08-23 22:52:26 [pool-4-thread-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Sending message='{"id": "aad14123-7c42-4587-ae0c-97467b8d35b7", "companyName": "InnovateX", "role": "Cloud Architect", "location": "San Francisco, CA", "link": "https://InnovateX/jobs.example.com/apply/495", "postedAt": "1724453546690"}' to topic='job-topic'
+2024-08-23 22:52:26 [kafka-producer-network-thread | producer-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Received new metadata. Topic: job-topic; Partition 2; Offset 51; Timestamp 1724453546693, at time 222090198669030
+2024-08-23 22:52:36 [pool-4-thread-1] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Generated mock job posting: Data Scientist at CyberNext
+2024-08-23 22:52:36 [pool-4-thread-1] INFO  c.j.j.t.k.s.l.NewJobPostedEventPublisher - Received job post CyberNext-Data Scientist-Seattle, WA-https://CyberNext/jobs.example.com/apply/91-1724453556696 sending to kafka topic job-topic
+2024-08-23 22:52:36 [pool-4-thread-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Sending message='{"id": "7cdf5fff-de14-40b7-8014-27154ffc9fe5", "companyName": "CyberNext", "role": "Data Scientist", "location": "Seattle, WA", "link": "https://CyberNext/jobs.example.com/apply/91", "postedAt": "1724453556696"}' to topic='job-topic'
+2024-08-23 22:52:36 [kafka-producer-network-thread | producer-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Received new metadata. Topic: job-topic; Partition 0; Offset 54; Timestamp 1724453556703, at time 222100231741993
+2024-08-23 22:52:46 [pool-4-thread-1] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Generated mock job posting: Cloud Architect at CyberNext
+2024-08-23 22:52:46 [pool-4-thread-1] INFO  c.j.j.t.k.s.l.NewJobPostedEventPublisher - Received job post CyberNext-Cloud Architect-Los Angeles, CA-https://CyberNext/jobs.example.com/apply/767-1724453566711 sending to kafka topic job-topic
+2024-08-23 22:52:46 [pool-4-thread-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Sending message='{"id": "f34dddea-92b1-4c41-9192-288082260f05", "companyName": "CyberNext", "role": "Cloud Architect", "location": "Los Angeles, CA", "link": "https://CyberNext/jobs.example.com/apply/767", "postedAt": "1724453566711"}' to topic='job-topic'
+2024-08-23 22:52:46 [kafka-producer-network-thread | producer-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Received new metadata. Topic: job-topic; Partition 0; Offset 55; Timestamp 1724453566726, at time 222110238242998
+2024-08-23 22:52:56 [pool-4-thread-1] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Generated mock job posting: Backend Developer at CodeBrew
+2024-08-23 22:52:56 [pool-4-thread-1] INFO  c.j.j.t.k.s.l.NewJobPostedEventPublisher - Received job post CodeBrew-Backend Developer-Boston, MA-https://CodeBrew/jobs.example.com/apply/868-1724453576734 sending to kafka topic job-topic
+2024-08-23 22:52:56 [pool-4-thread-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Sending message='{"id": "46f1cb8a-287e-4c2e-853b-f7bbe45fc528", "companyName": "CodeBrew", "role": "Backend Developer", "location": "Boston, MA", "link": "https://CodeBrew/jobs.example.com/apply/868", "postedAt": "1724453576734"}' to topic='job-topic'
+2024-08-23 22:52:56 [kafka-producer-network-thread | producer-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Received new metadata. Topic: job-topic; Partition 1; Offset 56; Timestamp 1724453576748, at time 222120291311919
+2024-08-23 23:56:58 [pool-4-thread-1] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Generated mock job posting: Frontend Developer at SoftSolutions
+2024-08-23 23:56:58 [pool-4-thread-1] INFO  c.j.j.t.k.s.l.NewJobPostedEventPublisher - Received job post SoftSolutions-Frontend Developer-Los Angeles, CA-https://SoftSolutions/jobs.example.com/apply/855-1724457418968 sending to kafka topic job-topic
+2024-08-23 23:56:58 [pool-4-thread-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Sending message='{"id": "b67d6e10-cd02-4e29-9146-119bee066809", "companyName": "SoftSolutions", "role": "Frontend Developer", "location": "Los Angeles, CA", "link": "https://SoftSolutions/jobs.example.com/apply/855", "postedAt": "1724457418968"}' to topic='job-topic'
+2024-08-23 23:56:59 [kafka-producer-network-thread | producer-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Received new metadata. Topic: job-topic; Partition 2; Offset 52; Timestamp 1724457418985, at time 222130338895215
+2024-08-23 23:57:08 [pool-4-thread-1] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Generated mock job posting: Software Engineer at InnovateX
+2024-08-23 23:57:08 [pool-4-thread-1] INFO  c.j.j.t.k.s.l.NewJobPostedEventPublisher - Received job post InnovateX-Software Engineer-Seattle, WA-https://InnovateX/jobs.example.com/apply/306-1724457428994 sending to kafka topic job-topic
+2024-08-23 23:57:08 [pool-4-thread-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Sending message='{"id": "5dfbb1dc-3f69-4dc4-bd71-b30d60dd2171", "companyName": "InnovateX", "role": "Software Engineer", "location": "Seattle, WA", "link": "https://InnovateX/jobs.example.com/apply/306", "postedAt": "1724457428994"}' to topic='job-topic'
+2024-08-23 23:57:09 [kafka-producer-network-thread | producer-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Received new metadata. Topic: job-topic; Partition 1; Offset 57; Timestamp 1724457428999, at time 222140328120970
+2024-08-23 23:57:19 [pool-4-thread-1] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Generated mock job posting: Product Manager at InnovateX
+2024-08-23 23:57:19 [pool-4-thread-1] INFO  c.j.j.t.k.s.l.NewJobPostedEventPublisher - Received job post InnovateX-Product Manager-New York, NY-https://InnovateX/jobs.example.com/apply/522-1724457439002 sending to kafka topic job-topic
+2024-08-23 23:57:19 [pool-4-thread-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Sending message='{"id": "7e112e83-9597-4524-a88f-3e363e41d7b6", "companyName": "InnovateX", "role": "Product Manager", "location": "New York, NY", "link": "https://InnovateX/jobs.example.com/apply/522", "postedAt": "1724457439002"}' to topic='job-topic'
+2024-08-23 23:57:19 [kafka-producer-network-thread | producer-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Received new metadata. Topic: job-topic; Partition 0; Offset 56; Timestamp 1724457439008, at time 222150340938808
+2024-08-23 23:57:29 [pool-4-thread-1] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Generated mock job posting: Backend Developer at DevWorks
+2024-08-23 23:57:29 [pool-4-thread-1] INFO  c.j.j.t.k.s.l.NewJobPostedEventPublisher - Received job post DevWorks-Backend Developer-Boston, MA-https://DevWorks/jobs.example.com/apply/491-1724457449029 sending to kafka topic job-topic
+2024-08-23 23:57:29 [pool-4-thread-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Sending message='{"id": "f1d7bde1-64da-4631-80a1-6af5fdbd2bb5", "companyName": "DevWorks", "role": "Backend Developer", "location": "Boston, MA", "link": "https://DevWorks/jobs.example.com/apply/491", "postedAt": "1724457449029"}' to topic='job-topic'
+2024-08-23 23:57:29 [kafka-producer-network-thread | producer-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Received new metadata. Topic: job-topic; Partition 2; Offset 53; Timestamp 1724457449042, at time 222160361109021
+2024-08-23 23:57:39 [pool-4-thread-1] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Generated mock job posting: Data Scientist at CodeBrew
+2024-08-23 23:57:39 [pool-4-thread-1] INFO  c.j.j.t.k.s.l.NewJobPostedEventPublisher - Received job post CodeBrew-Data Scientist-San Francisco, CA-https://CodeBrew/jobs.example.com/apply/335-1724457459050 sending to kafka topic job-topic
+2024-08-23 23:57:39 [pool-4-thread-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Sending message='{"id": "b2156b23-86ce-4e17-8e2d-8792373e42df", "companyName": "CodeBrew", "role": "Data Scientist", "location": "San Francisco, CA", "link": "https://CodeBrew/jobs.example.com/apply/335", "postedAt": "1724457459050"}' to topic='job-topic'
+2024-08-23 23:57:39 [kafka-producer-network-thread | producer-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Received new metadata. Topic: job-topic; Partition 0; Offset 57; Timestamp 1724457459056, at time 222170374659442
+2024-08-23 23:57:49 [pool-4-thread-1] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Generated mock job posting: Cloud Architect at AI Dynamics
+2024-08-23 23:57:49 [pool-4-thread-1] INFO  c.j.j.t.k.s.l.NewJobPostedEventPublisher - Received job post AI Dynamics-Cloud Architect-Los Angeles, CA-https://AI Dynamics/jobs.example.com/apply/829-1724457469058 sending to kafka topic job-topic
+2024-08-23 23:57:49 [pool-4-thread-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Sending message='{"id": "26a73e4a-1d38-4703-88e0-79d1bfb31800", "companyName": "AI Dynamics", "role": "Cloud Architect", "location": "Los Angeles, CA", "link": "https://AI Dynamics/jobs.example.com/apply/829", "postedAt": "1724457469058"}' to topic='job-topic'
+2024-08-23 23:57:49 [kafka-producer-network-thread | producer-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Received new metadata. Topic: job-topic; Partition 2; Offset 54; Timestamp 1724457469064, at time 222180378095697
+2024-08-23 23:57:59 [pool-4-thread-1] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Generated mock job posting: DevOps Engineer at CyberNext
+2024-08-23 23:57:59 [pool-4-thread-1] INFO  c.j.j.t.k.s.l.NewJobPostedEventPublisher - Received job post CyberNext-DevOps Engineer-Austin, TX-https://CyberNext/jobs.example.com/apply/22-1724457479068 sending to kafka topic job-topic
+2024-08-23 23:57:59 [pool-4-thread-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Sending message='{"id": "eaba5e61-1189-433f-8ae6-20158980fb63", "companyName": "CyberNext", "role": "DevOps Engineer", "location": "Austin, TX", "link": "https://CyberNext/jobs.example.com/apply/22", "postedAt": "1724457479068"}' to topic='job-topic'
+2024-08-23 23:57:59 [kafka-producer-network-thread | producer-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Received new metadata. Topic: job-topic; Partition 1; Offset 58; Timestamp 1724457479078, at time 222190398740952
+2024-08-23 23:58:09 [pool-4-thread-1] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Generated mock job posting: Frontend Developer at CodeBrew
+2024-08-23 23:58:09 [pool-4-thread-1] INFO  c.j.j.t.k.s.l.NewJobPostedEventPublisher - Received job post CodeBrew-Frontend Developer-Chicago, IL-https://CodeBrew/jobs.example.com/apply/652-1724457489084 sending to kafka topic job-topic
+2024-08-23 23:58:09 [pool-4-thread-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Sending message='{"id": "c4c50066-586f-4b5b-af5d-f069ff35d92a", "companyName": "CodeBrew", "role": "Frontend Developer", "location": "Chicago, IL", "link": "https://CodeBrew/jobs.example.com/apply/652", "postedAt": "1724457489084"}' to topic='job-topic'
+2024-08-23 23:58:09 [kafka-producer-network-thread | producer-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Received new metadata. Topic: job-topic; Partition 2; Offset 55; Timestamp 1724457489089, at time 222200408372706
+2024-08-23 23:58:19 [pool-4-thread-1] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Generated mock job posting: Software Engineer at CyberNext
+2024-08-23 23:58:19 [pool-4-thread-1] INFO  c.j.j.t.k.s.l.NewJobPostedEventPublisher - Received job post CyberNext-Software Engineer-Denver, CO-https://CyberNext/jobs.example.com/apply/555-1724457499093 sending to kafka topic job-topic
+2024-08-23 23:58:19 [pool-4-thread-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Sending message='{"id": "1196daf3-912b-42ed-941e-77ff98996476", "companyName": "CyberNext", "role": "Software Engineer", "location": "Denver, CO", "link": "https://CyberNext/jobs.example.com/apply/555", "postedAt": "1724457499093"}' to topic='job-topic'
+2024-08-23 23:58:19 [kafka-producer-network-thread | producer-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Received new metadata. Topic: job-topic; Partition 2; Offset 56; Timestamp 1724457499099, at time 222210411917336
+2024-08-23 23:58:29 [pool-4-thread-1] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Generated mock job posting: Software Engineer at AlgoSoft
+2024-08-23 23:58:29 [pool-4-thread-1] INFO  c.j.j.t.k.s.l.NewJobPostedEventPublisher - Received job post AlgoSoft-Software Engineer-Boston, MA-https://AlgoSoft/jobs.example.com/apply/649-1724457509106 sending to kafka topic job-topic
+2024-08-23 23:58:29 [pool-4-thread-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Sending message='{"id": "80f4bdea-1169-4aff-9f00-de4f216589c2", "companyName": "AlgoSoft", "role": "Software Engineer", "location": "Boston, MA", "link": "https://AlgoSoft/jobs.example.com/apply/649", "postedAt": "1724457509106"}' to topic='job-topic'
+2024-08-23 23:58:29 [kafka-producer-network-thread | producer-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Received new metadata. Topic: job-topic; Partition 1; Offset 59; Timestamp 1724457509113, at time 222220429323799
+2024-08-23 23:58:39 [pool-4-thread-1] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Generated mock job posting: Product Manager at AlgoSoft
+2024-08-23 23:58:39 [pool-4-thread-1] INFO  c.j.j.t.k.s.l.NewJobPostedEventPublisher - Received job post AlgoSoft-Product Manager-Denver, CO-https://AlgoSoft/jobs.example.com/apply/730-1724457519123 sending to kafka topic job-topic
+2024-08-23 23:58:39 [pool-4-thread-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Sending message='{"id": "02a907b3-7bfd-47d8-a472-4b56363dd862", "companyName": "AlgoSoft", "role": "Product Manager", "location": "Denver, CO", "link": "https://AlgoSoft/jobs.example.com/apply/730", "postedAt": "1724457519123"}' to topic='job-topic'
+2024-08-23 23:58:39 [kafka-producer-network-thread | producer-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Received new metadata. Topic: job-topic; Partition 2; Offset 57; Timestamp 1724457519143, at time 222230469906679
+2024-08-23 23:58:49 [pool-4-thread-1] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Generated mock job posting: Frontend Developer at TechCorp
+2024-08-23 23:58:49 [pool-4-thread-1] INFO  c.j.j.t.k.s.l.NewJobPostedEventPublisher - Received job post TechCorp-Frontend Developer-Seattle, WA-https://TechCorp/jobs.example.com/apply/75-1724457529161 sending to kafka topic job-topic
+2024-08-23 23:58:49 [pool-4-thread-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Sending message='{"id": "fd373416-1b98-43dd-a22f-5bb8e1eecfe4", "companyName": "TechCorp", "role": "Frontend Developer", "location": "Seattle, WA", "link": "https://TechCorp/jobs.example.com/apply/75", "postedAt": "1724457529161"}' to topic='job-topic'
+2024-08-23 23:58:49 [kafka-producer-network-thread | producer-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Received new metadata. Topic: job-topic; Partition 2; Offset 58; Timestamp 1724457529168, at time 222240485444392
+2024-08-23 23:58:59 [pool-4-thread-1] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Generated mock job posting: DevOps Engineer at AI Dynamics
+2024-08-23 23:58:59 [pool-4-thread-1] INFO  c.j.j.t.k.s.l.NewJobPostedEventPublisher - Received job post AI Dynamics-DevOps Engineer-Boston, MA-https://AI Dynamics/jobs.example.com/apply/144-1724457539176 sending to kafka topic job-topic
+2024-08-23 23:58:59 [pool-4-thread-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Sending message='{"id": "89cb0da0-4675-4832-85f8-4046f91c0649", "companyName": "AI Dynamics", "role": "DevOps Engineer", "location": "Boston, MA", "link": "https://AI Dynamics/jobs.example.com/apply/144", "postedAt": "1724457539176"}' to topic='job-topic'
+2024-08-23 23:58:59 [kafka-producer-network-thread | producer-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Received new metadata. Topic: job-topic; Partition 2; Offset 59; Timestamp 1724457539184, at time 222250494862313
+2024-08-23 23:59:09 [pool-4-thread-1] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Generated mock job posting: Frontend Developer at CodeBrew
+2024-08-23 23:59:09 [pool-4-thread-1] INFO  c.j.j.t.k.s.l.NewJobPostedEventPublisher - Received job post CodeBrew-Frontend Developer-Seattle, WA-https://CodeBrew/jobs.example.com/apply/210-1724457549187 sending to kafka topic job-topic
+2024-08-23 23:59:09 [pool-4-thread-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Sending message='{"id": "69dc372b-cd86-4c0c-ba67-0bc9e27507e6", "companyName": "CodeBrew", "role": "Frontend Developer", "location": "Seattle, WA", "link": "https://CodeBrew/jobs.example.com/apply/210", "postedAt": "1724457549187"}' to topic='job-topic'
+2024-08-23 23:59:09 [kafka-producer-network-thread | producer-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Received new metadata. Topic: job-topic; Partition 1; Offset 60; Timestamp 1724457549193, at time 222260514216484
+2024-08-23 23:59:19 [pool-4-thread-1] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Generated mock job posting: Software Engineer at CodeBrew
+2024-08-23 23:59:19 [pool-4-thread-1] INFO  c.j.j.t.k.s.l.NewJobPostedEventPublisher - Received job post CodeBrew-Software Engineer-Chicago, IL-https://CodeBrew/jobs.example.com/apply/416-1724457559197 sending to kafka topic job-topic
+2024-08-23 23:59:19 [pool-4-thread-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Sending message='{"id": "7a595bd3-faaf-4f30-a7a0-65621942edbe", "companyName": "CodeBrew", "role": "Software Engineer", "location": "Chicago, IL", "link": "https://CodeBrew/jobs.example.com/apply/416", "postedAt": "1724457559197"}' to topic='job-topic'
+2024-08-23 23:59:19 [kafka-producer-network-thread | producer-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Received new metadata. Topic: job-topic; Partition 2; Offset 60; Timestamp 1724457559203, at time 222270514576697
+2024-08-23 23:59:29 [pool-4-thread-1] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Generated mock job posting: Fullstack Developer at AlgoSoft
+2024-08-23 23:59:29 [pool-4-thread-1] INFO  c.j.j.t.k.s.l.NewJobPostedEventPublisher - Received job post AlgoSoft-Fullstack Developer-San Francisco, CA-https://AlgoSoft/jobs.example.com/apply/662-1724457569208 sending to kafka topic job-topic
+2024-08-23 23:59:29 [pool-4-thread-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Sending message='{"id": "82f70bcc-ba3d-4940-bf73-c4a228ec221c", "companyName": "AlgoSoft", "role": "Fullstack Developer", "location": "San Francisco, CA", "link": "https://AlgoSoft/jobs.example.com/apply/662", "postedAt": "1724457569208"}' to topic='job-topic'
+2024-08-23 23:59:29 [kafka-producer-network-thread | producer-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Received new metadata. Topic: job-topic; Partition 1; Offset 61; Timestamp 1724457569219, at time 222280532791243
+2024-08-23 23:59:36 [kafka-admin-client-thread | adminclient-1] INFO  o.apache.kafka.clients.NetworkClient - [AdminClient clientId=adminclient-1] Node 2 disconnected.
+2024-08-23 23:59:39 [pool-4-thread-1] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Generated mock job posting: Software Engineer at CodeBrew
+2024-08-23 23:59:39 [pool-4-thread-1] INFO  c.j.j.t.k.s.l.NewJobPostedEventPublisher - Received job post CodeBrew-Software Engineer-Boston, MA-https://CodeBrew/jobs.example.com/apply/651-1724457579221 sending to kafka topic job-topic
+2024-08-23 23:59:39 [pool-4-thread-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Sending message='{"id": "1d0f18b3-6c56-4bbb-9709-21625bb5ad82", "companyName": "CodeBrew", "role": "Software Engineer", "location": "Boston, MA", "link": "https://CodeBrew/jobs.example.com/apply/651", "postedAt": "1724457579221"}' to topic='job-topic'
+2024-08-23 23:59:39 [kafka-producer-network-thread | producer-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Received new metadata. Topic: job-topic; Partition 0; Offset 58; Timestamp 1724457579229, at time 222290555048498
+2024-08-23 23:59:49 [pool-4-thread-1] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Generated mock job posting: Fullstack Developer at AI Dynamics
+2024-08-23 23:59:49 [pool-4-thread-1] INFO  c.j.j.t.k.s.l.NewJobPostedEventPublisher - Received job post AI Dynamics-Fullstack Developer-Los Angeles, CA-https://AI Dynamics/jobs.example.com/apply/916-1724457589240 sending to kafka topic job-topic
+2024-08-23 23:59:49 [pool-4-thread-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Sending message='{"id": "d7d1ed9b-2cf6-40cb-8074-4a4117678fcb", "companyName": "AI Dynamics", "role": "Fullstack Developer", "location": "Los Angeles, CA", "link": "https://AI Dynamics/jobs.example.com/apply/916", "postedAt": "1724457589240"}' to topic='job-topic'
+2024-08-23 23:59:49 [kafka-producer-network-thread | producer-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Received new metadata. Topic: job-topic; Partition 2; Offset 61; Timestamp 1724457589248, at time 222300568073169
+2024-08-23 23:59:59 [pool-4-thread-1] INFO  c.j.j.t.k.s.r.i.MockKafkaStreamRunner - Generated mock job posting: Product Manager at CodeBrew
+2024-08-23 23:59:59 [pool-4-thread-1] INFO  c.j.j.t.k.s.l.NewJobPostedEventPublisher - Received job post CodeBrew-Product Manager-Austin, TX-https://CodeBrew/jobs.example.com/apply/694-1724457599256 sending to kafka topic job-topic
+2024-08-23 23:59:59 [pool-4-thread-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Sending message='{"id": "5347f830-0433-4ea0-8d1d-6f1e3fce7c55", "companyName": "CodeBrew", "role": "Product Manager", "location": "Austin, TX", "link": "https://CodeBrew/jobs.example.com/apply/694", "postedAt": "1724457599256"}' to topic='job-topic'
+2024-08-23 23:59:59 [kafka-producer-network-thread | producer-1] INFO  c.j.k.p.c.s.impl.JobKafkaProducer - Received new metadata. Topic: job-topic; Partition 0; Offset 59; Timestamp 1724457599262, at time 222310574314798
