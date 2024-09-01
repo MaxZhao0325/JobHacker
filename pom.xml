@@ -27,6 +27,7 @@
         <module>elastic</module>
         <module>elastic-query-service</module>
         <module>common-util</module>
+        <module>elastic-query-web-client</module>
     </modules>
 	<packaging>pom</packaging>
 	<url/>
@@ -224,6 +225,11 @@
 			<dependency>
 				<groupId>org.springframework.cloud</groupId>
 				<artifactId>spring-cloud-starter-config</artifactId>
+				<version>${spring-cloud.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework.cloud</groupId>
+				<artifactId>spring-cloud-loadbalancer</artifactId>
 				<version>${spring-cloud.version}</version>
 			</dependency>
 			<dependency>

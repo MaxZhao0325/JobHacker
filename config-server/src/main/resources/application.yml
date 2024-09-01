@@ -13,7 +13,7 @@ spring:
     config:
       server:
         git:
-#          uri: file:///Users/zhaohanzhang/Desktop/job-hacker/config-server-repository
+          #uri: file:///Users/zhaohanzhang/Desktop/job-hacker/config-server-repository
           uri: https://github.com/MaxZhao0325/jobhacker-config-server
           username: MaxZhao0325
           password: ${GITHUB_PASSWORD}
