@@ -160,3 +160,26 @@ services:
       - "ENCRYPT_KEY=${ENCRYPT_KEY}"
     networks:
       - ${GLOBAL_NETWORK:-services}
+
+  gateway-service:
+    image: ${GROUP_ID}/gateway.service:${SERVICE_VERSION:-latest}
+    ports:
+      - "5016:5016"
+      - "9092:9092"
+    volumes:
+      - "./docker-logs:/workspace/gateway-service/logs"
+      - "./check-config-server-started.sh:/usr/local/bin/check-config-server-started.sh"
+    user: root
+    entrypoint: [ "check-config-server-started.sh" ]
+    links:
+      - "redis-master:redis"
+    environment:
+      - "JAVA_OPTS=-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=*:5016 -Xms128m -Xmx256m"
+      - "LOGGING_LEVEL_ROOT=debug"
+      - "SERVER_PORT=9092"
+      - "SPRING_CLOUD_CONFIG_URI=http://config-server:8888"
+      - "SPRING_REDIS_HOST=redis"
+      - "LOG_APP-NAME=gateway-service"
+      - "ENCRYPT_KEY=${ENCRYPT_KEY}"
+    networks:
+      - ${GLOBAL_NETWORK:-services}

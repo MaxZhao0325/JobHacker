@@ -1,0 +1,18 @@
+logging:
+  level.root: DEBUG
+
+server:
+  port: 9092
+
+spring:
+  application:
+    name: gateway-service
+  profiles:
+    active: gateway
+  config:
+    import: 'configserver:'
+  cloud:
+    config:
+      name: gateway-service,config-client
+#      username: spring_cloud_user
+#      password: '1234'

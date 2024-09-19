@@ -28,6 +28,7 @@
         <module>elastic-query-service</module>
         <module>common-util</module>
         <module>elastic-query-web-client</module>
+        <module>gateway-service</module>
     </modules>
 	<packaging>pom</packaging>
 	<url/>
@@ -63,6 +64,7 @@
 		<kafka-avro-serializer.version>7.4.0</kafka-avro-serializer.version>
 		<kafka-clients.version>3.5.1</kafka-clients.version>
 		<elastic.version>7.17.4</elastic.version>
+		<spring-cloud-starter-circuitbreaker-reactor-resilience4j.version>3.0.3</spring-cloud-starter-circuitbreaker-reactor-resilience4j.version>
 	</properties>
 	<dependencyManagement>
 		<dependencies>
@@ -229,8 +231,23 @@
 			</dependency>
 			<dependency>
 				<groupId>org.springframework.cloud</groupId>
+				<artifactId>spring-cloud-starter-gateway</artifactId>
+				<version>${spring-cloud.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-starter-data-redis-reactive</artifactId>
+				<version>${spring-boot.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework.cloud</groupId>
 				<artifactId>spring-cloud-loadbalancer</artifactId>
 				<version>${spring-cloud.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework.cloud</groupId>
+				<artifactId>spring-cloud-starter-circuitbreaker-reactor-resilience4j</artifactId>
+				<version>${spring-cloud-starter-circuitbreaker-reactor-resilience4j.version}</version>
 			</dependency>
 			<dependency>
 				<groupId>org.springframework.cloud</groupId>
